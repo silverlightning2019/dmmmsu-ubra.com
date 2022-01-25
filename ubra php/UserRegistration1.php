@@ -42,22 +42,22 @@
 						<p class="step center">Step 1 - Account</p>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="fname" class="validate">
 							<label>Enter First Name</label>
 						</div>
 						
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="mname" class="validate">
 							<label>Enter Midle Name</label>
 						</div>
 
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="lname" class="validate">
 							<label>Enter Last Name</label>
 						</div>
 								
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="uname" class="validate">
 							<label>Enter Username</label>
 						</div>
 							
