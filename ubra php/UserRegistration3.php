@@ -46,50 +46,50 @@
 						<p class="step center">Step 3 - Educational</p>
 
 						<div class="input-field col s6">
-					    <select>
-					      <option value="" disabled selected>Choose your option</option>
-					      <option value="1">Elementary</option>
-					      <option value="2">High School</option>
-					      <option value="2">Vocational/Trade Course</option>
-					      <option value="2">College</option>
-					      <option value="2">Graduate Studies</option>
-					      <option value="2">N/A</option>
-					    </select>
-					    <label>Level</label>
-					  </div>
+						    <select>
+						      <option value="" disabled selected>Choose your option</option>
+						      <option value="1">Elementary</option>
+						      <option value="2">High School</option>
+						      <option value="2">Vocational/Trade Course</option>
+						      <option value="2">College</option>
+						      <option value="2">Graduate Studies</option>
+						      <option value="2">N/A</option>
+						    </select>
+						    <label>Level</label>
+						  </div>
 						
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="school" class="validate">
 							<label>Name of School</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="basic" class="validate">
 							<label>Basic Education/Degree/Course</label>
 						</div>
 								
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate" placeholder="Year">
+							<input type="text" name="from" class="validate" placeholder="Year">
 							<label>From</label>
 						</div>
 							
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate" placeholder="Year">
+							<input type="text" name="to" class="validate" placeholder="Year">
 							<label>To</label>
 						</div>
 								  
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="level" class="validate">
 							<label>Highest Level/Unit Earned</label>
 						</div>
 
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate" placeholder="Year">
+							<input type="text" name="graduated" class="validate" placeholder="Year">
 							<label>Year Graduated</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="schoolarship" class="validate">
 							<label>Scholarship/Academic Honors Received</label>
 						</div>
 
