@@ -43,42 +43,43 @@
 						<p class="step center">Step 1 - Account</p>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
-							<label>Enter First Name</label>
+							<input type="text" name="fname" class="validate">
+							<span class="helper-text" >Enter First Name</span>
 						</div>
 						
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Enter Midle Name</label>
+						<div class="input-field col s12">
+							<input type="text" name="mname" class="validate">
+							<span class="helper-text" >Enter Middle Name</span>
 						</div>
 
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Enter Last Name</label>
+						<div class="input-field col s12">
+							<input type="text" name="lname" class="validate">
+							<span class="helper-text" >Enter Last Name</span>
 						</div>
 								
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Enter Username</label>
+						<div class="input-field col s12">
+							<input type="text" name="uname" class="validate">
+							<span class="helper-text" >Enter User Name</span>
 						</div>
-							
-						<div class="input-field col s6">
+
+						<div class="input-field col s12">
 							<input type="email" name="email" class="validate">
-							<label>Enter email</label>
+							<span class="helper-text" >Enter Email Address</span>
 						</div>
 								  
 						<div class="input-field col s12">
 							<input type="password" name="pass1">
-							<label>Enter password</label>
+							<span class="helper-text" >Enter Password</span>
 						</div>
 
 						<div class="input-field col s12">
 							<input type="password" name="pass1">
-							<label>Confirm password</label>
+							<span class="helper-text" >Confirm Password</span>
 						</div>
 							
+							<p class="center">
 							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">NEXT</a>
-							
+							</p>
 							<div class="clearfix"></div>
 					</div>
 				</form>
