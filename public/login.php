@@ -61,13 +61,12 @@
 			<div class="col l6 m6 s12">
 				<form action="complain.php" method="POST">
 					<div class="card-panel z-depth-5">
-						<a href="GuestDashboard.php" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+						<a href="javascript:history.back()" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Log In Now!</p>
 							
 							<!--Select-->	
 						  <select class="pick center-align browser-default">
-						    <option disabled selected>Log In As</option>
 						    <option value="1">Applicant</option>
 						    <option value="2">Employer</option>
 						    <option value="3">Admin</option>
@@ -93,7 +92,7 @@
 						      <h3 class="center reg">UBRA</h3>
 									<p class="center">Register As</p>
 										<p class="center">
-											<a class="waves-effect blue btn-large" href="UserRegistration1.html">Applicant</a>
+											<a class="waves-effect blue btn-large" href="userregistration1.php">Applicant</a>
 							      	<a class="waves-effect blue btn-large">Employer</a>
 						    		</p>
 						    </div>
