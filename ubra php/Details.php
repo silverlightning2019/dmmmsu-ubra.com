@@ -11,6 +11,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+    .body{
+      background:#e3f2fd;
+    }
+
     .logo{
       color:#64b5f6;
       font-weight: bolder;
@@ -103,60 +107,48 @@
 
 <!--Details-->
 <div class="container">
-   <div class="col s12 m7">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          <h3 class="center job-title">Job Title</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <br>
   <div class="col s12 m7">
-    <div class="card horizontal cardcard">
-        <div class="card-content">
-          <h4 class="job-title1">Job Qualification/s:</h4><br>
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3 class="center job-title">Job Title</h3><hr><br>
+            <h4 class="job-title1">Job Qualification/s:</h4><br>
             <p class="left-align qualifications"> Qualifications </p>
             <p class="left-align qualifications"> Qualifications </p>
             <p class="left-align qualifications"> Qualifications </p>
             <p class="left-align qualifications"> Qualifications </p>
-            <p class="left-align qualifications"> Qualifications </p>.
+            <p class="left-align qualifications"> Qualifications </p><br>
 
             <h4 class="job-title1">Job Requirement/s:</h4><br>
             <p class="left-align qualifications"> Requirements </p>
             <p class="left-align qualifications"> Requirements </p>
             <p class="left-align qualifications"> Requirements </p>
+            <p class="left-align qualifications"> Requirements </p><br>
+
+            <h4 class="job-title1">Other Note/s:</h4><br>
             <p class="left-align qualifications"> Requirements </p>
-            <br><br>
-        </div>
-    </div>
-  </div>
+            <br><hr><br>
 
-
-    <div class="col s12 m7">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          <p class="center button">
-            <!-- Modal Trigger -->
-              <button class="waves-effect blue lighten-2 btn modal-trigger btn1" href="#modal3">Apply Now</button>
-              <!-- Modal Structure -->
+            <!--Modal Trigger-->
+            <p class="center">
+              <button class="waves-effect blue btn modal-trigger btn1" href="#modal3">Apply Now</button>
+            </p>
+               <!--Modal Structure-->
                     <div id="modal3" class="modal">
                       <div class="modal-content">
                         <h3 class="center reg">UBRA</h3>
                         <p class="center black-text">You Apply Successfully!</p><br>
-                      </div>
-                        <div class="modal-footer">
+                          <div class="modal-footer">
                           <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
                         </div>
+                      </div>
                     </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-
-
+    </div><br>
+  </div>       
 </div>
 
 <!--Footer-->
