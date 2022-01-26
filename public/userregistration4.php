@@ -87,7 +87,7 @@
 
 						<div class="input-field col s6">
 							<input type="email" name="email" class="validate">
-							<label>Department/Agency/Office/Company</label>
+							<label>Agency/Company</label>
 						</div>
 
 						<div class="input-field col s12">
