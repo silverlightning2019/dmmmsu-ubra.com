@@ -11,11 +11,15 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+    .body{
+      background:#e3f2fd;
+    }
+
     .material{
       display: inline-flex;
       vertical-align: top;
       margin-right: 10px;
-   
+      color: #64b5f6;
     }
 
     .logo{
@@ -118,6 +122,7 @@
 
 <!--Part 1-->
 <div class="container">
+  <br>
       <div class="card">
           <div class="card1">
             <form class="col s12">
@@ -158,7 +163,7 @@
 <!--Part 2-->
 <div class="container">
 <div class="card">
-    <div class="card horizontal ulol">
+    <div class="card horizontal">
       <div class="card-stacked">
         <div class="card-content">
             <p class="center black-text joblist">Job Listing:</p>
