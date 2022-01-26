@@ -69,32 +69,17 @@
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Log In Now!</p>
 							
-							<!--Select-->	
-						  <select class="pick center-align browser-default">
-						    <option disabled selected>Log In As</option>
-						    <option value="1">Applicant</option>
-						    <option value="2">Employer</option>
-						    <option value="3">Admin</option>
-						  </select>
-						
 						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i>
-							<input type="email" name="email" class="validate">
-							<span class="helper-text" >Enter Email</span>
+							<input type="email" name="email" class="validate" placeholder="Enter Username/Email Address">
 						</div>
 								  
 						<div class="input-field col s12">
 							<i class="material-icons prefix">lock</i>
-							<input type="password" name="pass1">
-							<span class="helper-text" >Enter Password</span>
+							<input type="password" name="pass1" placeholder="Enter Password">
 						</div>
 						
-						<p class="center-align">Create Account? Register Below.</p>
-						 <p class="center-align">
-						 	<a href="UserRegistration1.php" class="waves-effect blue-text btn-flat click">Register as Applicant</a>
-						 	<a class="waves-effect blue-text btn-flat click">Register as Employer</a>
-						 </p>
-
+						<p class="right-align">Create Account?<a href="UserRegistration1.php" class="blue-text click">Register Here!</a></p>
 						<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
 						<div class="clearfix"></div>
 					</div>
