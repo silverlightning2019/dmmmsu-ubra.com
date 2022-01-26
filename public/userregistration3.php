@@ -94,7 +94,7 @@
 								  
 						<div class="input-field col s6">
 							<input type="email" name="email" class="validate">
-							<label>Highest Level/Unit Earned</label>
+							<label>Unit Earned</label>
 						</div>
 
 						<div class="input-field col s6">
