@@ -438,7 +438,7 @@
           <div class="col s6 m3">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/dmmmsu.jpg">
+                <img src="imfdmmmsu.jpg">
               </div>
               <div class="card-content">
                 <p class="center">Don Mariano Marcos Memorial State University</p><br>
