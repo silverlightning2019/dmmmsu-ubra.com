@@ -91,7 +91,7 @@
 						
 						<p class="center-align">Create Account? Register Below.</p>
 						 <p class="center-align">
-						 	<a class="waves-effect blue-text btn-flat click">Register as Applicant</a>
+						 	<a href="UserRegistration1.php" class="waves-effect blue-text btn-flat click">Register as Applicant</a>
 						 	<a class="waves-effect blue-text btn-flat click">Register as Employer</a>
 						 </p>
 
