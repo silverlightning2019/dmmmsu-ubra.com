@@ -140,11 +140,11 @@
                       <label for="user_name">User Name</label>
                     </div>
 
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">edit</i></a>
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">update</i></a> 
+                      <a class="btn btn-small waves-effect  blue"><i class="material-icons">edit</i></a>
+                      <a class="btn btn-small waves-effect  blue"><i class="material-icons">update</i></a> 
 
                     <!-- Modal Trigger -->
-                    <a class="waves-effect waves-light btn modal-trigger btn2" href="#modal2">Change Password</a>
+                    <a class="waves-effect btn modal-trigger btn2" href="#modal2">Change Password</a>
                     <!-- Modal Structure -->
                     <div id="modal2" class="modal1 modal">
                       <div class="modal-content">
@@ -259,8 +259,8 @@
                       <label>Employment Status</label>
                     </div>
 
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">edit</i></a>
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">update</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">edit</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">update</i></a>
                   </div>
                 </form>
               </div>
@@ -324,8 +324,8 @@
                       <label>Scholarship/Academic Honors Received</label>
                     </div>
 
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">edit</i></a>
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">update</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">edit</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">update</i></a>
                   </div>
                 </form>
               </div>
@@ -381,8 +381,8 @@
                     </div>
 
 
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">edit</i></a>
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">update</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">edit</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">update</i></a>
                   </div>
                 </form>
               </div>
@@ -421,8 +421,8 @@
                     </div>
                   </div>
 
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">visibility</i></a>
-                      <a class="btn btn-small waves-effect waves-light blue"><i class="material-icons">delete</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">visibility</i></a>
+                      <a class="btn btn-small waves-effect blue"><i class="material-icons">delete</i></a>
                 </form>
               </div>
             </div>
