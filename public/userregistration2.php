@@ -50,68 +50,58 @@
 						<p class="step center">Step 2 - Personal</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="province" class="validate">
-							<span class="helper-text" >Province</span>
+							<input type="text" name="province" class="validate" placeholder="Province">
 						</div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="municipality" class="validate">
-							<span class="helper-text" >Municipality</span>
+							<input type="text" name="municipality" class="validate" placeholder="Municipality">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="barangay" class="validate">
-							<span class="helper-text">Barangay</span>
+							<input type="text" name="barangay" class="validate" placeholder="Barangay">
 						</div>
 								
 						<div class="input-field col s12">
-							<input type="text" name="house" class="validate">
-							<span class="helper-text" >House Number/Street Number</span>
+							<input type="text" name="house" class="validate" placeholder="House Number/Street Number">
 						</div>
 							
 						<div class="input-field col s12">
-							<input type="text" class="datepicker">
-							<span class="helper-text" >Birth Date</span>
+							<input type="text" class="datepicker" placeholder="Birth Date">
 						</div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="age" class="validate">
-							<span class="helper-text" >Age</span>
+							<input type="text" name="age" class="validate" placeholder="Age">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="cnumber" class="validate">
-							<span class="helper-text" >Contact Number</span>
+							<input type="text" name="cnumber" class="validate" placeholder="Contact Number">
 						</div>
 
 						<div class="input-field col s12">
 					    <select>
-					      <option value="" disabled selected>Choose your option</option>
+					      <option value="" disabled selected>Gender</option>
 					      <option value="1">Male</option>
 					      <option value="2">Female</option>
 					    </select>
-					    <span class="helper-text" >Gender</span>
 					  </div>
 						
 						<div class="input-field col s12">
 					    <select>
-					      <option value="" disabled selected>Choose your option</option>
+					      <option value="" disabled selected>Civil Status</option>
 					      <option value="1">Single</option>
 					      <option value="2">Married</option>
 					      <option value="2">Widowed</option>
 					      <option value="2">Separated</option>
 					      <option value="2">Live In</option>
 					    </select>
-					    <span class="helper-text" >Civil Status</span>
 					  </div>
 
 					  <div class="input-field col s12">
 					    <select>
-					      <option value="" disabled selected>Choose your option</option>
+					      <option value="" disabled selected>Employement Status</option>
 					      <option value="1">Employed</option>
 					      <option value="2">Unemployed</option>
 					    </select>
-					    <span class="helper-text" >Employment Status</span>
 					  </div>
 							
 							<p class="center">
