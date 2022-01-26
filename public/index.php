@@ -157,7 +157,7 @@
 <section class="slider">
   <ul class="slides">
     <li>
-      <img src="image.jpg">
+      <img src="img/image.jpg">
       <div class="caption center-align">
         <h3 class="welcome">Welcome to <span class="logo">UBRA</span> : DMMMSU-MLUC Job Finder System</h3>
         <h5 class="slogan">"You can find the Job that suits you!"</h5><br>        
@@ -327,7 +327,7 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="Engineers.jpg">
+                <img src="img/Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -342,7 +342,7 @@
          <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="Engineers.jpg">
+                <img src="img/Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -357,7 +357,7 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="Engineers.jpg">
+                <img src="img/Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -441,7 +441,7 @@
           <div class="col s12 m3">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="dmmmsu.jpg">
+                <img src="img/dmmmsu.jpg">
               </div>
               <div class="card-content">
                 <p class="center">Don Mariano Marcos Memorial State University</p><br>
