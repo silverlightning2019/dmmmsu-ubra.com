@@ -32,6 +32,10 @@
 			.step{
 				font-weight: bold;
 			}
+
+			.card-panel{
+				margin-top: 115px;
+			}
 		</style>
 </head>
 <body>
@@ -67,23 +71,23 @@
 						</div>
 
 						<div class="input-field col s6">
-							<input type="text" name="title" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Position Title</label>
 						</div>
 
 						<div class="input-field col s6">
-							<input type="text" name="dept" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Department/Agency/Office/Company</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="appoint" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Status Appointment</label>
 						</div>
 
 							
-							<a href="UserRegistration3.php" class="cwaves-effect waves-light btn btn1">PREVIOUS</a>
-							<a href="Login.php" class="cwaves-effect waves-light btn btn1">REGISTER</a>
+							<a href="UserRegistration3.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
+							<a href="Login.php" class="waves-effect waves-light btn blue">Finish</a>
 							
 							<div class="clearfix"></div>
 					</div>

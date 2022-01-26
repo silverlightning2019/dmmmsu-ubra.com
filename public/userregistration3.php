@@ -32,10 +32,13 @@
 			.step{
 				font-weight: bold;
 			}
+
+			.card-panel{
+				margin-top: 30px;
+			}
 		</style>
 </head>
 <body>
-
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
@@ -46,56 +49,56 @@
 						<p class="step center">Step 3 - Educational</p>
 
 						<div class="input-field col s6">
-						    <select>
-						      <option value="" disabled selected>Choose your option</option>
-						      <option value="1">Elementary</option>
-						      <option value="2">High School</option>
-						      <option value="2">Vocational/Trade Course</option>
-						      <option value="2">College</option>
-						      <option value="2">Graduate Studies</option>
-						      <option value="2">N/A</option>
-						    </select>
-						    <label>Level</label>
-						  </div>
+					    <select>
+					      <option value="" disabled selected>Choose your option</option>
+					      <option value="1">Elementary</option>
+					      <option value="2">High School</option>
+					      <option value="2">Vocational/Trade Course</option>
+					      <option value="2">College</option>
+					      <option value="2">Graduate Studies</option>
+					      <option value="2">N/A</option>
+					    </select>
+					    <label>Level</label>
+					  </div>
 						
 						<div class="input-field col s6">
-							<input type="text" name="school" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Name of School</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="basic" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Basic Education/Degree/Course</label>
 						</div>
 								
 						<div class="input-field col s6">
-							<input type="text" name="from" class="validate" placeholder="Year">
+							<input type="email" name="email" class="validate" placeholder="Year">
 							<label>From</label>
 						</div>
 							
 						<div class="input-field col s6">
-							<input type="text" name="to" class="validate" placeholder="Year">
+							<input type="email" name="email" class="validate" placeholder="Year">
 							<label>To</label>
 						</div>
 								  
 						<div class="input-field col s6">
-							<input type="text" name="level" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Highest Level/Unit Earned</label>
 						</div>
 
 						<div class="input-field col s6">
-							<input type="text" name="graduated" class="validate" placeholder="Year">
+							<input type="email" name="email" class="validate" placeholder="Year">
 							<label>Year Graduated</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="schoolarship" class="validate">
+							<input type="email" name="email" class="validate">
 							<label>Scholarship/Academic Honors Received</label>
 						</div>
 
 							
-							<a href="UserRegistration2.php" class="cwaves-effect waves-light btn btn1">PREVIOUS</a>
-							<a href="UserRegistration4.php" class="cwaves-effect waves-light btn btn1">NEXT</a>
+						<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
+						<a href="UserRegistration4.php" class="waves-effect waves-light btn blue">NEXT</a>
 							
 							<div class="clearfix"></div>
 					</div>
