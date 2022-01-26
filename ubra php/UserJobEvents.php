@@ -11,6 +11,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+     .body{
+      background:#e3f2fd;
+    }
+
     .logo{
       color:#64b5f6;
       font-weight: bolder;
@@ -83,6 +87,7 @@
 
 <!--Events-->
 <div class="container">
+  <br>
   <div class="row">
     <div class="col s12 m6">
       <div class="card card1">
