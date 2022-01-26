@@ -52,8 +52,8 @@
 				margin-top: 35px;
 			}
 
-			.content{
-				margin-top: 50px;
+			.click{
+				font-weight: bold;
 			}
 		</style>
 </head>
@@ -77,34 +77,26 @@
 						    <option value="3">Admin</option>
 						  </select>
 						
-						<div class="input-field">
+						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i>
 							<input type="email" name="email" class="validate">
-							<label>Enter email</label>
+							<span class="helper-text" >Enter Email</span>
 						</div>
 								  
-						<div class="input-field">
+						<div class="input-field col s12">
 							<i class="material-icons prefix">lock</i>
 							<input type="password" name="pass1">
-							<label>Enter password</label>
+							<span class="helper-text" >Enter Password</span>
 						</div>
-							
-							 <!-- Modal Trigger -->
-  							<a class="waves-effect waves-light modal-trigger" href="#modal1"><span class="create">Create an Account?</span> Register Here</a>
-							<!-- Modal Structure -->
-						  <div id="modal1" class="modal">
-						    <div class="modal-content content">
-						      <h3 class="center reg">UBRA</h3>
-									<p class="center">Register As</p>
-										<p class="center">
-											<a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a><br><br>
-							      	<a class="waves-effect blue btn-large" href="CompanyRegistration.html">Employer</a>
-						    		</p>
-						    </div>
-						  </div>
-          
-							<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
-							<div class="clearfix"></div>
+						
+						<p class="center-align">Create Account? Register Below.</p>
+						 <p class="center-align">
+						 	<a class="waves-effect blue-text btn-flat click">Register as Applicant</a>
+						 	<a class="waves-effect blue-text btn-flat click">Register as Employer</a>
+						 </p>
+
+						<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
+						<div class="clearfix"></div>
 					</div>
 				</form>
 			</div>
