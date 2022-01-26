@@ -11,6 +11,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+    .body{
+      background:#e3f2fd;
+    }
+
     .logo{
       color:#64b5f6;
       font-weight: bolder;
@@ -21,10 +25,6 @@
     .pi{
       font-size: 20px;
       font-weight: bold;
-    }
-
-    .card{
-      background-color: #e3f2fd;
     }
 
     .card1{
@@ -87,6 +87,7 @@
 
 <!--PROFILE-->
 <div class="container">
+  <br>
       <div class="col s12">
         <ul class="tab tabs">
           <li class="tab col s3"><a href="#test1">Account</a></li>
