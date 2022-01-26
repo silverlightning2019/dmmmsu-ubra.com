@@ -68,9 +68,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue lighten-2 btn">Log In</a></li>
+        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
         <!-- Modal Trigger -->
-        <li><a class="waves-effect blue lighten-2 btn modal-trigger" href="#modal1">Sign Up</a></li>
+        <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
         <!-- Modal Structure -->
               <div id="modal1" class="modal">
                 <div class="modal-content">
@@ -89,9 +89,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue lighten-2 btn">Log In</a></li>
+        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
        <!-- Modal Trigger -->
-        <li><a class="waves-effect blue lighten-2 btn modal-trigger" href="#modal2">Sign Up</a></li>
+        <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
         <!-- Modal Structure -->
               <div id="modal2" class="modal">
                 <div class="modal-content">
