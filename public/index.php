@@ -108,7 +108,7 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue lighten-2 btn">Log In</a></li>
+        <li><a href="login.php" class="waves-effect blue lighten-2 btn">Log In</a></li>
         <!-- Modal Trigger -->
         <li><a class="waves-effect blue lighten-2 btn modal-trigger" href="#modal1">Sign Up</a></li>
         <!-- Modal Structure -->
@@ -117,7 +117,7 @@
                   <h3 class="center reg">UBRA</h3>
                   <p class="center black-text">Register As</p>
                     <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
+                      <a class="waves-effect blue btn-large" href="userregistration1.php">Applicant</a>
                       <a class="waves-effect blue btn-large" href="">Employer</a>
                     </p>
                 </div>
