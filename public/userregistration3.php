@@ -37,9 +37,6 @@
 				margin-top: 35px;
 			}
 
-			.buttonton{
-				float: right;
-			}
 		</style>
 </head>
 <body>
@@ -54,12 +51,12 @@
 						<p class="step center">Step 3 - Educational</p>
 
 						<div class="input-field col s12">
-						<p class="buttonton">
+						<p class="center">
 							<a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Educational</a>
 						</p>
 						</div>
 
-						<div class="input-field col s6">
+						<div class="input-field col s12">
 					    <select>
 					      <option value="" disabled selected>Choose your option</option>
 					      <option value="1">Elementary</option>
@@ -69,48 +66,49 @@
 					      <option value="2">Graduate Studies</option>
 					      <option value="2">N/A</option>
 					    </select>
-					    <label>Level</label>
+					    <span class="helper-text" >Level</span>
 					  </div>
 						
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Name of School</label>
+						<div class="input-field col s12">
+							<input type="text" name="school" class="validate">
+							<span class="helper-text" >Name of School</span>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
-							<label>Basic Education/Degree/Course</label>
+							<input type="text" name="basic" class="validate">
+							<span class="helper-text" >Basic Education/Degree/Course</span>
 						</div>
 								
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate" placeholder="Year">
-							<label>From</label>
+						<div class="input-field col s12">
+							<input type="text" name="to" class="validate" placeholder="Year">
+							<span class="helper-text" >From</span>
 						</div>
 							
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate" placeholder="Year">
-							<label>To</label>
+						<div class="input-field col s12">
+							<input type="text" name="to" class="validate" placeholder="Year">
+							<span class="helper-text" >To</span>
 						</div>
 								  
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Unit Earned</label>
-						</div>
-
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate" placeholder="Year">
-							<label>Year Graduated</label>
+						<div class="input-field col s12">
+							<input type="text" name="hlevel" class="validate">
+							<span class="helper-text" >Highest Level/Unit Earned</span>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
-							<label>Scholarship/Academic Honors Received</label>
+							<input type="text" name="graduated" class="validate">
+							<span class="helper-text" >Year Graduated</span>
 						</div>
 
-							
+						<div class="input-field col s12">
+							<input type="text" name="scholarsip" class="validate">
+							<span class="helper-text" >Scholarship/Academic Honors Received</span>
+						</div>
+
+							<p class="center">
 							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
 							<a href="UserRegistration4.php" class="waves-effect waves-light btn blue">NEXT</a>
-
+							</p>
+							
 							<div class="clearfix"></div>
 					</div>
 				</form>
