@@ -46,60 +46,60 @@
 						<p class="step center">Step 2 - Personal</p>
 
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="province" class="validate">
 							<label>Province</label>
 						</div>
 						
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="municipality" class="validate">
 							<label>Municipality</label>
 						</div>
 
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="barangay" class="validate">
 							<label>Barangay</label>
 						</div>
 								
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="house" class="validate">
 							<label>House/Block/Number</label>
 						</div>
 							
 						<div class="input-field col s6">
-							 <input type="text" class="datepicker">
+							<input type="text" class="datepicker">
 							<label>Birthday</label>
 						</div>
 						
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="age" class="validate">
 							<label>Age</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="cnumber" class="validate">
 							<label>Contact Number</label>
 						</div>
 
 						<div class="input-field col s6">
-					    <select>
-					      <option value="" disabled selected>Choose your option</option>
-					      <option value="1">Male</option>
-					      <option value="2">Female</option>
-					    </select>
-					    <label>Sex</label>
-					  </div>
+						    <select>
+						      <option value="" disabled selected>Choose your option</option>
+						      <option value="1">Male</option>
+						      <option value="2">Female</option>
+						    </select>
+						    <label>Sex</label>
+					  	</div>
 						
 						<div class="input-field col s6">
-					    <select>
-					      <option value="" disabled selected>Choose your option</option>
-					      <option value="1">Single</option>
-					      <option value="2">Married</option>
-					      <option value="2">Widowed</option>
-					      <option value="2">Separated</option>
-					      <option value="2">Live In</option>
-					    </select>
-					    <label>Civil Status</label>
-					  </div>
+						    <select>
+						      <option value="" disabled selected>Choose your option</option>
+						      <option value="1">Single</option>
+						      <option value="2">Married</option>
+						      <option value="2">Widowed</option>
+						      <option value="2">Separated</option>
+						      <option value="2">Live In</option>
+						    </select>
+						    <label>Civil Status</label>
+						  </div>
 
 					  <div class="input-field col s12">
 					    <select>

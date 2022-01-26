@@ -67,17 +67,17 @@
 						</div>
 
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="title" class="validate">
 							<label>Position Title</label>
 						</div>
 
 						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="dept" class="validate">
 							<label>Department/Agency/Office/Company</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
+							<input type="text" name="appoint" class="validate">
 							<label>Status Appointment</label>
 						</div>
 
