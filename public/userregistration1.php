@@ -26,7 +26,7 @@
 			}
 
 			.card-panel{
-				margin-top: 25px;
+				margin-top: 35px;
 			}
 		</style>
 </head>
@@ -37,7 +37,7 @@
 			<div class="col l6 m6 s12">
 				<form action="complain.php" method="POST">
 					<div class="card-panel z-depth-5">
-						<a href="./" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+						<a href="GuestDashboard.php" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 1 - Account</p>
@@ -49,7 +49,7 @@
 						
 						<div class="input-field col s6">
 							<input type="email" name="email" class="validate">
-							<label>Enter Middle Name</label>
+							<label>Enter Midle Name</label>
 						</div>
 
 						<div class="input-field col s6">
@@ -64,17 +64,17 @@
 							
 						<div class="input-field col s6">
 							<input type="email" name="email" class="validate">
-							<label>Enter Email</label>
+							<label>Enter email</label>
 						</div>
 								  
 						<div class="input-field col s12">
 							<input type="password" name="pass1">
-							<label>Enter Password</label>
+							<label>Enter password</label>
 						</div>
 
 						<div class="input-field col s12">
 							<input type="password" name="pass1">
-							<label>Confirm Password</label>
+							<label>Confirm password</label>
 						</div>
 							
 							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">NEXT</a>
