@@ -11,6 +11,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+    .body{
+      background:#e3f2fd;
+    }
+
     .logo{
       color:#64b5f6;
       font-weight: bolder;
@@ -68,20 +72,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
-        <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
-        <!-- Modal Structure -->
-              <div id="modal1" class="modal">
-                <div class="modal-content">
-                  <h3 class="center reg">UBRA</h3>
-                  <p class="center black-text">Register As</p>
-                    <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-                      <a class="waves-effect blue btn-large" href="">Employer</a>
-                    </p>
-                </div>
-              </div>
+        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -89,20 +82,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
-       <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
-        <!-- Modal Structure -->
-              <div id="modal2" class="modal">
-                <div class="modal-content">
-                  <h3 class="center reg">UBRA</h3>
-                  <p class="center black-text">Register As</p>
-                    <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-                      <a class="waves-effect blue btn-large" href="">Employer</a>
-                    </p>
-                </div>
-              </div>
+        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
@@ -112,6 +94,7 @@
 
 <!--Events-->
 <div class="container">
+  <br>
   <div class="row">
     <div class="col s12 m6">
       <div class="card card1">
