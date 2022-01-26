@@ -93,7 +93,7 @@
 						      <h3 class="center reg">UBRA</h3>
 									<p class="center">Register As</p>
 										<p class="center">
-											<a class="waves-effect blue btn-large" href="UserRegistration1.html">Applicant</a>
+											<a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
 							      	<a class="waves-effect blue btn-large">Employer</a>
 						    		</p>
 						    </div>
