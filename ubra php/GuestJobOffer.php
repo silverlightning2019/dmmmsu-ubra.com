@@ -101,9 +101,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue lighten-2 btn">Log In</a></li>
+        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
         <!-- Modal Trigger -->
-        <li><a class="waves-effect blue lighten-2 btn modal-trigger" href="#modal1">Sign Up</a></li>
+        <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
         <!-- Modal Structure -->
               <div id="modal1" class="modal">
                 <div class="modal-content">
@@ -122,9 +122,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue lighten-2 btn">Log In</a></li>
+        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
        <!-- Modal Trigger -->
-        <li><a class="waves-effect blue lighten-2 btn modal-trigger" href="#modal2">Sign Up</a></li>
+        <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
         <!-- Modal Structure -->
               <div id="modal2" class="modal">
                 <div class="modal-content">
@@ -172,7 +172,7 @@
                 </div>
 
                 <div class="input-field col s12 m3">
-                  <a class="waves-effect waves-effect blue lighten-2 btn-large btn1">Job Matching</a>
+                  <a class="waves-effect waves-effect blue btn-large btn1">Job Matching</a>
                 </div>
 
               </div>
@@ -211,7 +211,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.html" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -226,7 +226,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.html" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -241,22 +241,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.html" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-               <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.html" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -271,7 +256,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.html" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -286,7 +271,22 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.html" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="Engineers.jpg">
+              </div>
+              <div class="card-content">
+                <p class="job">Civil Engineer</p>
+                <i class="material material-icons">place</i>San Fernando City of La Union<br>
+                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -294,17 +294,6 @@
         </div>
   </div>
 </div>
-
-<!--Part 4-->
-<div class="container">
-  <ul class="pagination page">
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class=" waves-effect"><a href="#!">1</a></li>
-    <li class=" waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
-</div>
-
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
