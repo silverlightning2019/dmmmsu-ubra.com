@@ -11,6 +11,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+    .body{
+      background:#e3f2fd;
+    }
+
     .logo{
       color:#64b5f6;
       font-weight: bolder;
@@ -19,8 +23,11 @@
 
     .table{
       margin-bottom: 164px !important;
-      margin-top: 20px;
       font-weight: 400;
+      background: white;
+      border-radius: 5px;
+      padding: 10px 10px;
+      text-align: center;
     }
 
     .material1{
@@ -62,6 +69,7 @@
 
 <!--Table-->
 <div class="container">
+  <br>
   <table class="responsive-table table">
             <thead>
               <tr>
@@ -106,7 +114,7 @@
 
             </tbody>
           </table>
-</div>
+</div
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
