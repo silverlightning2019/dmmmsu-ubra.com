@@ -58,7 +58,7 @@
 
 						<div class="input-field col s12">
 					    <select>
-					      <option value="" disabled selected>Choose your option</option>
+					      <option value="" disabled selected>Level</option>
 					      <option value="1">Elementary</option>
 					      <option value="2">High School</option>
 					      <option value="2">Vocational/Trade Course</option>
@@ -66,42 +66,34 @@
 					      <option value="2">Graduate Studies</option>
 					      <option value="2">N/A</option>
 					    </select>
-					    <span class="helper-text" >Level</span>
 					  </div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="school" class="validate">
-							<span class="helper-text" >Name of School</span>
+							<input type="text" name="school" class="validate" placeholder="Name of School">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="basic" class="validate">
-							<span class="helper-text" >Basic Education/Degree/Course</span>
+							<input type="text" name="basic" class="validate" placeholder="Basic Education/Degree/Course">
 						</div>
 								
 						<div class="input-field col s12">
-							<input type="text" name="to" class="validate" placeholder="Year">
-							<span class="helper-text" >From</span>
+							<input type="text" name="to" class="validate" placeholder="Year" placeholder="From">
 						</div>
 							
 						<div class="input-field col s12">
-							<input type="text" name="to" class="validate" placeholder="Year">
-							<span class="helper-text" >To</span>
+							<input type="text" name="to" class="validate" placeholder="Year" placeholder="To">
 						</div>
 								  
 						<div class="input-field col s12">
-							<input type="text" name="hlevel" class="validate">
-							<span class="helper-text" >Highest Level/Unit Earned</span>
+							<input type="text" name="hlevel" class="validate" placeholder="Highest Level/Unit Earned">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="graduated" class="validate">
-							<span class="helper-text" >Year Graduated</span>
+							<input type="text" name="graduated" class="validate" placeholder="Year Graduated">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="scholarsip" class="validate">
-							<span class="helper-text" >Scholarship/Academic Honors Received</span>
+							<input type="text" name="scholarsip" class="validate" placeholder="Scholarship/Academic Honors Received">
 						</div>
 
 							<p class="center">
