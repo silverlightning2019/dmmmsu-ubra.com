@@ -135,9 +135,9 @@
         <li><a href="">My Applications</a></li>
         <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
        <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
+        <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
         <!-- Modal Structure -->
-              <div id="modal2" class="modal">
+              <div id="modal1" class="modal">
                 <div class="modal-content">
                   <h3 class="center reg">UBRA</h3>
                   <p class="center black-text">Register As</p>
