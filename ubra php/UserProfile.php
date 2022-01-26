@@ -32,7 +32,7 @@
     }
 
     .modal1{
-      height: 225px !important;
+      height: 400px !important;
     }
 
     .tab{
@@ -115,27 +115,27 @@
 
                 <form class="col s12">
                   <div class="row">
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <input id="first_name" type="text" class="validate">
                       <label for="first_name">First Name</label>
                     </div>
 
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <input id="middle_name" type="text" class="validate">
                       <label for="middle_name">Middle Name</label>
                     </div>
 
-                     <div class="input-field col s4">
+                     <div class="input-field col s12">
                       <input id="last_name" type="text" class="validate">
                       <label for="last_name">Last Name</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="email" type="text" class="validate">
                       <label for="email">Email Address</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="user_name" type="text" class="validate">
                       <label for="user_name">User Name</label>
                     </div>
@@ -149,15 +149,15 @@
                     <div id="modal2" class="modal1 modal">
                       <div class="modal-content">
                         <h4>Change Password</h4>
-                          <div class="input-field col s4">
+                          <div class="input-field col s12">
                             <input id="password1" type="Password" class="validate">
                             <label for="password1">Old Password</label>
                           </div>
-                          <div class="input-field col s4">
+                          <div class="input-field col s12">
                             <input id="password2" type="Password" class="validate">
                             <label for="password2">New Password</label>
                           </div>
-                          <div class="input-field col s4">
+                          <div class="input-field col s12">
                             <input id="password3" type="Password" class="validate">
                             <label for="password3">Confirm New Password</label>
                           </div>
@@ -194,42 +194,42 @@
 
                 <form class="col s12">
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="province" type="text" class="validate">
                       <label for="province">Province</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="municipality" type="text" class="validate">
                       <label for="municipality">Municipality</label>
                     </div>
 
-                     <div class="input-field col s6">
+                     <div class="input-field col s12">
                       <input id="barangay" type="text" class="validate">
                       <label for="barangay">Barangay</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input id="house_number" type="text" class="validate">
                       <label for="house_number">House/Block/Number</label>
                     </div>
 
-                     <div class="input-field col s4">
+                     <div class="input-field col s12">
                       <input id="bday" type="text" class="datepicker">
                       <label for="bday">Birthday</label>
                     </div>
 
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <input id="age" type="text" class="validate">
                       <label for="age">Age</label>
                     </div>
 
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <input id="contact" type="text" class="validate">
                       <label for="contact">Contact</label>
                     </div>
 
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <select>
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">Male</option>
@@ -238,7 +238,7 @@
                       <label>Sex</label>
                     </div>
                     
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <select>
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">Single</option>
@@ -250,7 +250,7 @@
                       <label>Civil Status</label>
                     </div>
 
-                    <div class="input-field col s4">
+                    <div class="input-field col s12">
                       <select>
                         <option value="" disabled selected>Choose your option</option>
                         <option value="1">Employed</option>
@@ -289,32 +289,32 @@
 
                 <form class="col s12">
                   <div class="row">
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate">
                       <label>Name of School</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate">
                       <label>Basic Education/Degree/Course</label>
                     </div>
                         
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate" placeholder="Year">
                       <label>From</label>
                     </div>
                       
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate" placeholder="Year">
                       <label>To</label>
                     </div>
                           
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate">
-                      <label>Highest Level/Unit Earned</label>
+                      <label>Unit Earned</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate" placeholder="Year">
                       <label>Year Graduated</label>
                     </div>
@@ -353,26 +353,25 @@
             <div class="card-stacked">
               <div class="card-content">
 
-                <form class="col input-field s12">
-                  <div class="row">
-                    <div class="input-field col s6">
-                       <input type="text" class="datepicker" placeholder="mm/dd/yy">
-                      <label>From</label>
-                    </div>
+                <form>
+                  <div class="input-field col s6">
+                     <input type="text" class="datepicker" placeholder="mm/dd/yy">
+                    <label>From</label>
+                  </div>
 
-                    <div class="input-field col s6">
-                       <input type="text" class="datepicker" placeholder="mm/dd/yy">
-                      <label>To</label>
-                    </div>
+                  <div class="input-field col s6">
+                     <input type="text" class="datepicker" placeholder="mm/dd/yy">
+                    <label>To</label>
+                  </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate">
                       <label>Position Title</label>
                     </div>
 
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                       <input type="email" name="email" class="validate">
-                      <label>Department/Agency/Office/Company</label>
+                      <label>Agency/Company</label>
                     </div>
 
                     <div class="input-field col s12">
