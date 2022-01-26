@@ -34,11 +34,12 @@
 			}
 
 			.card-panel{
-				margin-top: 25px;
+				margin-top: 35px;
 			}
 		</style>
 </head>
 <body>
+
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
@@ -114,9 +115,9 @@
 					  </div>
 							
 							
-					<a href="UserRegistration1.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
-					<a href="UserRegistration3.php" class="waves-effect waves-light btn blue">NEXT</a>
-			
+							<a href="UserRegistration1.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
+							<a href="UserRegistration3.php" class="waves-effect waves-light btn blue">NEXT</a>
+							
 							<div class="clearfix"></div>
 					</div>
 				</form>
