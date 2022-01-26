@@ -40,8 +40,8 @@
 			}
 
 			.modal{
-				height: 225px !important;
-				width: 500px !important;
+				height: 400px !important;
+				width: 300px !important;
 			}
 
 			.create{
@@ -49,7 +49,11 @@
 			}
 
 			.card-panel{
-				margin-top: 115px;
+				margin-top: 35px;
+			}
+
+			.click{
+				font-weight: bold;
 			}
 		</style>
 </head>
@@ -61,46 +65,23 @@
 			<div class="col l6 m6 s12">
 				<form action="" method="">
 					<div class="card-panel z-depth-5">
-						<a href="UserDashboard.php" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+						<a href="GuestDashboard.php" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Log In Now!</p>
 							
-							<!--Select-->	
-						  <select class="pick center-align browser-default">
-						    <option disabled selected>Log In As</option>
-						    <option value="1">Applicant</option>
-						    <option value="2">Employer</option>
-						    <option value="3">Admin</option>
-						  </select>
-						
-						<div class="input-field">
+						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i>
-							<input type="email" name="email" class="validate">
-							<label>Enter email</label>
+							<input type="email" name="email" class="validate" placeholder="Enter Username/Email Address">
 						</div>
 								  
-						<div class="input-field">
+						<div class="input-field col s12">
 							<i class="material-icons prefix">lock</i>
-							<input type="password" name="pass1">
-							<label>Enter password</label>
+							<input type="password" name="pass1" placeholder="Enter Password">
 						</div>
-							
-							 <!-- Modal Trigger -->
-  							<a class="waves-effect waves-light modal-trigger" href="#modal1"><span class="create">Create an Account?</span> Register Here</a>
-							<!-- Modal Structure -->
-						  <div id="modal1" class="modal">
-						    <div class="modal-content">
-						      <h3 class="center reg">UBRA</h3>
-									<p class="center">Register As</p>
-										<p class="center">
-											<a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-							      	<a class="waves-effect blue btn-large">Employer</a>
-						    		</p>
-						    </div>
-						  </div>
-          
-							<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
-							<div class="clearfix"></div>
+						
+						<p class="right-align">Create Account?<a href="UserRegistration1.php" class="blue-text click">Register Here!</a></p>
+						<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
+						<div class="clearfix"></div>
 					</div>
 				</form>
 			</div>
