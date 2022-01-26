@@ -18,7 +18,7 @@
 			}
 			
 			.material-icons{
-				color: #03a9f4;
+				color: white;
 			}
 
 			.btn1{
@@ -34,7 +34,11 @@
 			}
 
 			.card-panel{
-				margin-top: 115px;
+				margin-top:35px;
+			}
+
+			.buttonton{
+				float: right;
 			}
 		</style>
 </head>
@@ -48,6 +52,12 @@
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 4 - Work</p>
+
+						<div class="input-field col s12">
+						<p class="buttonton">
+							<a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Work</a>
+						</p>
+						</div>
 
 						<div class="input-field col s4">
 							 <input type="text" class="datepicker" placeholder="mm/dd/yy">
