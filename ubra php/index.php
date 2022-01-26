@@ -55,17 +55,16 @@
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
-				<form action="complain.php" method="POST">
 					<div class="card-panel z-depth-5">
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Log In Now!</p>
 							
 							<!--Select-->	
-						  <select class="pick center-align browser-default">
+						  <select class="pick center-align browser-default" id="type" name="type">
 						    <option disabled selected>Log In As</option>
-						    <option value="1">Applicant</option>
-						    <option value="2">Employer</option>
-						    <option value="3">Admin</option>
+						    <option value="applicant">Applicant</option>
+						    <option value="employer">Employer</option>
+						    <option value="admin">Admin</option>
 						  </select>
 						
 						<div class="input-field">
@@ -97,7 +96,6 @@
 							<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
 							<div class="clearfix"></div>
 					</div>
-				</form>
 			</div>
 		</div>
      </div>
