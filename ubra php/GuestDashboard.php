@@ -54,6 +54,7 @@
       display: inline-flex;
       vertical-align: top;
       margin-right: 10px;
+      color: #64b5f6;
     }
 
     .material1{
@@ -96,6 +97,20 @@
         font-weight: bold;
         text-transform: uppercase;
       }
+
+    .caption{
+      margin-top: -50px;
+    }
+
+    .content{
+      margin-top: 50px;
+    }
+
+    .modal{
+        height: 400px !important;
+        width: 300px !important;
+      }
+
   </style>
 </head>
 <body class="body">
@@ -108,20 +123,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
-        <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
-        <!-- Modal Structure -->
-              <div id="modal1" class="modal">
-                <div class="modal-content">
-                  <h3 class="center reg">UBRA</h3>
-                  <p class="center black-text">Register As</p>
-                    <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-                      <a class="waves-effect blue btn-large" href="">Employer</a>
-                    </p>
-                </div>
-              </div>
+        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -129,26 +133,14 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
-       <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
-        <!-- Modal Structure -->
-              <div id="modal2" class="modal">
-                <div class="modal-content">
-                  <h3 class="center reg">UBRA</h3>
-                  <p class="center black-text">Register As</p>
-                    <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-                      <a class="waves-effect blue btn-large" href="">Employer</a>
-                    </p>
-                </div>
-              </div>
+        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
   </nav>
 <!--End-->
-
 
 <!--Slider-->
 <section class="slider">
@@ -331,7 +323,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -346,7 +338,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html"class="waves-effect btn-flat" >Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -361,7 +353,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat" href="Details.html">Show Details</a></p>
+                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -435,7 +427,7 @@
         <h5 class="col s12 light start">UBRA helps job seekers and employers the right fit everyday.
         </h5>
          <div class="row">
-          <div class="col s6 m3">
+          <div class="col s12 m3">
             <div class="card hoverable">
               <div class="card-image">
                 <img src="dmmmsu.jpg">
