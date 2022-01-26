@@ -232,7 +232,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">health_and_safety</i></h2>
                   <h5 class="center black-text">HealthCare</h5>
-                    <p class="center black-text">(1 Jobs)</p> 
+                    <p class="center black-text">(1 Jobs)</p>
             </div>
             </a>
           </div>
@@ -379,7 +379,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons ">task</i></h2>
                    <p class="number center">50</p>
-                  <h5 class="center black-text">Jobs Filled</h5> 
+                  <h5 class="center black-text">Jobs Filled</h5><br> 
             </div>
           </div>
       </div>
@@ -389,7 +389,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">groups</i></h2>
                   <p class="number center">100</p>
-                  <h5 class="center black-text">Members</h5>
+                  <h5 class="center black-text">Members</h5><br>
             </div>
           </div>
       </div>
@@ -399,7 +399,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">corporate_fare</i></h2>
                   <p class="number center">1</p>
-                  <h5 class="center black-text">Companies</h5>
+                  <h5 class="center black-text">Companies</h5><br>
             </div>
           </div>
       </div>
@@ -409,7 +409,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">post_add</i></h2>
                   <p class="number center">145</p>
-                  <h5 class="center black-text">Jobs Posted</h5>
+                  <h5 class="center black-text">Jobs Posted</h5><br>
             </div>
           </div>
       </div>
