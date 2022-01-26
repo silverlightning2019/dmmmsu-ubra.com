@@ -100,6 +100,16 @@
     .caption{
       margin-top: -50px;
     }
+
+    .content{
+      margin-top: 50px;
+    }
+
+    .modal{
+        height: 400px !important;
+        width: 300px !important;
+      }
+
   </style>
 </head>
 <body class="body">
@@ -117,7 +127,7 @@
         <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
         <!-- Modal Structure -->
               <div id="modal1" class="modal">
-                <div class="modal-content">
+                <div class="modal-content .content">
                   <h3 class="center reg">UBRA</h3>
                   <p class="center black-text">Register As</p>
                     <p class="center">
@@ -138,11 +148,11 @@
         <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
         <!-- Modal Structure -->
               <div id="modal2" class="modal">
-                <div class="modal-content">
+                <div class="modal-content .content">
                   <h3 class="center reg">UBRA</h3>
                   <p class="center black-text">Register As</p>
                     <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
+                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a><br><br>
                       <a class="waves-effect blue btn-large" href="">Employer</a>
                     </p>
                 </div>
