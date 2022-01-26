@@ -49,51 +49,51 @@
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 2 - Personal</p>
 
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Province</label>
+						<div class="input-field col s12">
+							<input type="text" name="province" class="validate">
+							<span class="helper-text" >Province</span>
 						</div>
 						
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Municipality</label>
-						</div>
-
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Barangay</label>
-						</div>
-								
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>House/Block/Number</label>
-						</div>
-							
-						<div class="input-field col s6">
-							 <input type="text" class="datepicker">
-							<label>Birthday</label>
-						</div>
-						
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Age</label>
+						<div class="input-field col s12">
+							<input type="text" name="municipality" class="validate">
+							<span class="helper-text" >Municipality</span>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
-							<label>Contact Number</label>
+							<input type="text" name="barangay" class="validate">
+							<span class="helper-text">Barangay</span>
+						</div>
+								
+						<div class="input-field col s12">
+							<input type="text" name="house" class="validate">
+							<span class="helper-text" >House Number/Street Number</span>
+						</div>
+							
+						<div class="input-field col s12">
+							<input type="text" class="datepicker">
+							<span class="helper-text" >Birth Date</span>
+						</div>
+						
+						<div class="input-field col s12">
+							<input type="text" name="age" class="validate">
+							<span class="helper-text" >Age</span>
 						</div>
 
-						<div class="input-field col s6">
+						<div class="input-field col s12">
+							<input type="text" name="cnumber" class="validate">
+							<span class="helper-text" >Contact Number</span>
+						</div>
+
+						<div class="input-field col s12">
 					    <select>
 					      <option value="" disabled selected>Choose your option</option>
 					      <option value="1">Male</option>
 					      <option value="2">Female</option>
 					    </select>
-					    <label>Sex</label>
+					    <span class="helper-text" >Gender</span>
 					  </div>
 						
-						<div class="input-field col s6">
+						<div class="input-field col s12">
 					    <select>
 					      <option value="" disabled selected>Choose your option</option>
 					      <option value="1">Single</option>
@@ -102,7 +102,7 @@
 					      <option value="2">Separated</option>
 					      <option value="2">Live In</option>
 					    </select>
-					    <label>Civil Status</label>
+					    <span class="helper-text" >Civil Status</span>
 					  </div>
 
 					  <div class="input-field col s12">
@@ -111,13 +111,13 @@
 					      <option value="1">Employed</option>
 					      <option value="2">Unemployed</option>
 					    </select>
-					    <label>Employment Status</label>
+					    <span class="helper-text" >Employment Status</span>
 					  </div>
 							
-							
+							<p class="center">
 							<a href="UserRegistration1.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
 							<a href="UserRegistration3.php" class="waves-effect waves-light btn blue">NEXT</a>
-							
+							</p>
 							<div class="clearfix"></div>
 					</div>
 				</form>
