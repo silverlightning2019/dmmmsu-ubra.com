@@ -146,7 +146,7 @@
                 </div>
 
                 <div class="input-field col s12 m3">
-                  <a class="waves-effect waves-effect blue lighten-2 btn-large btn1">Job Matching</a>
+                  <a class="waves-effect blue btn-large btn1">Job Matching</a>
                 </div>
 
               </div>
