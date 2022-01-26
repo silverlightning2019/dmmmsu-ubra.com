@@ -54,6 +54,14 @@
       display: inline-flex;
       vertical-align: top;
       margin-right: 10px;
+      color: #64b5f6;
+    }
+
+    .material1{
+      display: inline-flex;
+      vertical-align: top;
+      margin-right: 10px;
+      margin-bottom: 5px;
     }
 
     .job{
@@ -84,16 +92,25 @@
       background-color: #e0e0e0 ;
     }
 
-    .material1{
-      display: inline-flex;
-      vertical-align: top;
-      margin-right: 10px;
-      margin-bottom: 5px;
-    }
+    .reg{
+        color:#64b5f6;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
 
     .caption{
-      margin-top: -50 px;
+      margin-top: -50px;
     }
+
+    .content{
+      margin-top: 50px;
+    }
+
+    .modal{
+        height: 400px !important;
+        width: 300px !important;
+      }
+
   </style>
 </head>
 <body class="body">
@@ -213,7 +230,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">health_and_safety</i></h2>
                   <h5 class="center black-text">HealthCare</h5>
-                    <p class="center black-text">(1 Jobs)</p> 
+                    <p class="center black-text">(1 Jobs)</p>
             </div>
             </a>
           </div>
@@ -319,7 +336,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.php"class="waves-effect btn-flat" >Show Details</a></p>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -334,7 +351,7 @@
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat" href="Details.html">Show Details</a></p>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -360,7 +377,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons ">task</i></h2>
                    <p class="number center">50</p>
-                  <h5 class="center black-text">Jobs Filled</h5> 
+                  <h5 class="center black-text">Jobs Filled</h5><br> 
             </div>
           </div>
       </div>
@@ -370,7 +387,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">groups</i></h2>
                   <p class="number center">100</p>
-                  <h5 class="center black-text">Members</h5>
+                  <h5 class="center black-text">Members</h5><br>
             </div>
           </div>
       </div>
@@ -380,7 +397,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">corporate_fare</i></h2>
                   <p class="number center">1</p>
-                  <h5 class="center black-text">Companies</h5>
+                  <h5 class="center black-text">Companies</h5><br>
             </div>
           </div>
       </div>
@@ -390,7 +407,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">post_add</i></h2>
                   <p class="number center">145</p>
-                  <h5 class="center black-text">Jobs Posted</h5>
+                  <h5 class="center black-text">Jobs Posted</h5><br>
             </div>
           </div>
       </div>
