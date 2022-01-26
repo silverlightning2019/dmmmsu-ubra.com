@@ -36,10 +36,6 @@
 			.card-panel{
 				margin-top:35px;
 			}
-
-			.buttonton{
-				float: right;
-			}
 		</style>
 </head>
 <body>
@@ -54,14 +50,14 @@
 						<p class="step center">Step 4 - Work</p>
 
 						<div class="input-field col s12">
-						<p class="buttonton">
+						<p class="center">
 							<a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Work</a>
 						</p>
 						</div>
 
-						<div class="input-field col s4">
-							 <input type="text" class="datepicker" placeholder="mm/dd/yy">
-							<label>From</label>
+						<div class="input-field col s8">
+							<input type="text" class="datepicker" placeholder="mm/dd/yy">
+							<span class="helper-text" >From</span>
 						</div>
 
 						<div class="input-field col s4">
@@ -75,29 +71,30 @@
 							  </form>
 						</div>
 
-						<div class="input-field col s4">
-							 <input type="text" class="datepicker" placeholder="mm/dd/yy">
-							<label>To</label>
-						</div>
-
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Position Title</label>
-						</div>
-
-						<div class="input-field col s6">
-							<input type="email" name="email" class="validate">
-							<label>Agency/Company</label>
+						<div class="input-field col s12">
+							<input type="text" class="datepicker" placeholder="mm/dd/yy">
+							<span class="helper-text" >To</span>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
-							<label>Status Appointment</label>
+							<input type="text" name="position" class="validate">
+							<span class="helper-text" >Position Title</span>
 						</div>
 
-							
+						<div class="input-field col s12">
+							<input type="text" name="agency" class="validate">
+							<span class="helper-text" >Agency/Company</span>
+						</div>
+
+						<div class="input-field col s12">
+							<input type="text" name="status" class="validate">
+							<span class="helper-text" >Status Appointment</span>
+						</div>
+
+							<p class="center">
 							<a href="UserRegistration3.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
 							<a href="Login.php" class="waves-effect waves-light btn blue">Finish</a>
+							</p>
 							
 							<div class="clearfix"></div>
 					</div>
