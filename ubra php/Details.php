@@ -55,7 +55,7 @@
 
     .btn1{
       font-weight: 900;
-      width: 400px;
+      width: 200px;
       height: 50px;
     }
 
@@ -105,15 +105,9 @@
 <div class="container">
    <div class="col s12 m7">
     <div class="card horizontal">
-      <div class="card-image">
-        <img class="img" src="Dmmmsu.jpg">
-      </div>
       <div class="card-stacked">
         <div class="card-content">
-          <h3 class="job-title">Job Title</h3>
-          <i class="material material-icons">place</i>San Fernando City of La Union<br>
-          <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-          <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
+          <h3 class="center job-title">Job Title</h3>
         </div>
       </div>
     </div>
