@@ -11,6 +11,10 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
+    .body{
+      background:#e3f2fd;
+    }
+    
     .logo{
       color:#64b5f6;
       font-weight: bolder;
@@ -81,20 +85,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
-        <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal1">Sign Up</a></li>
-        <!-- Modal Structure -->
-              <div id="modal1" class="modal">
-                <div class="modal-content">
-                  <h3 class="center reg">UBRA</h3>
-                  <p class="center black-text">Register As</p>
-                    <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-                      <a class="waves-effect blue btn-large" href="">Employer</a>
-                    </p>
-                </div>
-              </div>
+        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -102,20 +95,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn">Log In</a></li>
-       <!-- Modal Trigger -->
-        <li><a class="waves-effect blue btn modal-trigger" href="#modal2">Sign Up</a></li>
-        <!-- Modal Structure -->
-              <div id="modal2" class="modal">
-                <div class="modal-content">
-                  <h3 class="center reg">UBRA</h3>
-                  <p class="center black-text">Register As</p>
-                    <p class="center">
-                      <a class="waves-effect blue btn-large" href="UserRegistration1.php">Applicant</a>
-                      <a class="waves-effect blue btn-large" href="">Employer</a>
-                    </p>
-                </div>
-              </div>
+        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
@@ -124,45 +106,34 @@
 
 <!--Details-->
 <div class="container">
-   <div class="col s12 m7">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          <h3 class="center job-title">Job Title</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  <br>
   <div class="col s12 m7">
-    <div class="card horizontal cardcard">
-        <div class="card-content">
-          <h4 class="job-title1">Job Qualification/s:</h4><br>
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3 class="center job-title">Job Title</h3><hr><br>
+            <h4 class="job-title1">Job Qualification/s:</h4><br>
             <p class="left-align qualifications"> Qualifications </p>
             <p class="left-align qualifications"> Qualifications </p>
             <p class="left-align qualifications"> Qualifications </p>
             <p class="left-align qualifications"> Qualifications </p>
-            <p class="left-align qualifications"> Qualifications </p>.
+            <p class="left-align qualifications"> Qualifications </p><br>
 
             <h4 class="job-title1">Job Requirement/s:</h4><br>
             <p class="left-align qualifications"> Requirements </p>
             <p class="left-align qualifications"> Requirements </p>
             <p class="left-align qualifications"> Requirements </p>
+            <p class="left-align qualifications"> Requirements </p><br>
+
+            <h4 class="job-title1">Other Note/s:</h4><br>
             <p class="left-align qualifications"> Requirements </p>
-            <br><br>
-        </div>
-    </div>
-  </div>
+            <br><hr><br>
 
-
-    <div class="col s12 m7">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          <p class="center button">
-            <!-- Modal Trigger -->
+            <!--Modal Trigger-->
+            <p class="center">
               <button class="waves-effect blue btn modal-trigger btn1" href="#modal3">Apply Now</button>
-              <!-- Modal Structure -->
+            </p>
+               <!--Modal Structure-->
                     <div id="modal3" class="modal">
                       <div class="modal-content">
                         <h3 class="center reg">UBRA</h3>
@@ -172,12 +143,11 @@
                           </p>
                       </div>
                     </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-
+    </div><br>
+  </div>       
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
