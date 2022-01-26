@@ -18,7 +18,7 @@
 			}
 			
 			.material-icons{
-				color: #03a9f4;
+				color: white;
 			}
 
 			.btn1{
@@ -34,11 +34,16 @@
 			}
 
 			.card-panel{
-				margin-top: 30px;
+				margin-top: 35px;
+			}
+
+			.buttonton{
+				float: right;
 			}
 		</style>
 </head>
 <body>
+
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
@@ -47,6 +52,12 @@
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 3 - Educational</p>
+
+						<div class="input-field col s12">
+						<p class="buttonton">
+							<a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Educational</a>
+						</p>
+						</div>
 
 						<div class="input-field col s6">
 					    <select>
@@ -97,9 +108,9 @@
 						</div>
 
 							
-						<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
-						<a href="UserRegistration4.php" class="waves-effect waves-light btn blue">NEXT</a>
-							
+							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
+							<a href="UserRegistration4.php" class="waves-effect waves-light btn blue">NEXT</a>
+
 							<div class="clearfix"></div>
 					</div>
 				</form>
