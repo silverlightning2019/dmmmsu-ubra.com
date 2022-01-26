@@ -90,6 +90,10 @@
       margin-right: 10px;
       margin-bottom: 5px;
     }
+
+    .caption{
+      margin-top: -50 px;
+    }
   </style>
 </head>
 <body class="body">
@@ -404,7 +408,7 @@
         <h5 class="col s12 light start">UBRA helps job seekers and employers the right fit everyday.
         </h5>
          <div class="row">
-          <div class="col s6 m3">
+          <div class="col s12 m3">
             <div class="card hoverable">
               <div class="card-image">
                 <img src="dmmmsu.jpg">
