@@ -43,38 +43,31 @@
 						<p class="step center">Step 1 - Account</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="fname" class="validate">
-							<span class="helper-text" >Enter First Name</span>
+							<input type="text" name="fname" class="validate" placeholder="Enter First Name">
 						</div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="mname" class="validate">
-							<span class="helper-text" >Enter Middle Name</span>
+							<input type="text" name="mname" class="validate" placeholder="Enter Middle Name">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="lname" class="validate">
-							<span class="helper-text" >Enter Last Name</span>
+							<input type="text" name="lname" class="validate" placeholder="Enter Last Name">
 						</div>
 								
 						<div class="input-field col s12">
-							<input type="text" name="uname" class="validate">
-							<span class="helper-text" >Enter User Name</span>
+							<input type="text" name="uname" class="validate" placeholder="Enter User Name">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate">
-							<span class="helper-text" >Enter Email Address</span>
+							<input type="email" name="email" class="validate" placeholder="Enter Email Address">
 						</div>
 								  
 						<div class="input-field col s12">
-							<input type="password" name="pass1">
-							<span class="helper-text" >Enter Password</span>
+							<input type="password" name="pass1" placeholder="Enter Password">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="password" name="pass1">
-							<span class="helper-text" >Confirm Password</span>
+							<input type="password" name="pass1" placeholder="Confirm Password">
 						</div>
 							
 							<p class="center">
