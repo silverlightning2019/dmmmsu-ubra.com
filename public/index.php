@@ -133,8 +133,8 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="">Log In</a></li>
-        <li><a href="">Sign Up</a></li>
+        <li><a href="login.php">Log In</a></li>
+        <li><a href="userregistration1">Sign Up</a></li>
         <li><a href="" class="waves-effect blue btn">Employer</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
