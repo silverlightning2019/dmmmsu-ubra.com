@@ -316,7 +316,7 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="Engineers.jpg">
+                <img src="img/Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -331,7 +331,7 @@
          <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="Engineers.jpg">
+                <img src="img/Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -346,7 +346,7 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="Engineers.jpg">
+                <img src="img/Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
