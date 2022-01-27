@@ -28,6 +28,10 @@
 			.step{
 				font-weight: bold;
 			}
+
+			.card{
+				margin-top: 35px;
+			}
 		</style>
 </head>
 <body>
@@ -35,92 +39,80 @@
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
 				<form action="complain.php" method="POST">
-					<div class="card-panel z-depth-5">
+					<div class="card card-panel z-depth-5">
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Employer Registration</p>
 						<p class="step center">Employer Other Details</p>
 
-						<div class="input-field col s6">
-							<input type="text" name="cname" class="validate">
-							<label>Employer/Company Name</label>
+						<div class="input-field col s12">
+							<input type="text" name="cname" class="validate" placeholder="Employer/Company Name">
 						</div>
 
-						<div class="input-field col s6">
-							<input type="text" name="cbrand" class="validate">
-							<label>Employer/Company Brand</label>
+						<div class="input-field col s12">
+							<input type="text" name="cbrand" class="validate" placeholder="Employer/Company Brand">
 						</div>
 					  
-					  <div class="input-field col s4">
-					  	<input type="text" name="ctax" class="validate">
-							<label>Tax Identification</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="ctax" class="validate" placeholder="Tax Identification">
 					  </div>
 						
-						<div class="input-field col s4">
+						<div class="input-field col s6">
 							<select>
-					      <option value="" disabled selected>Choose your option</option>
+					      <option value="" disabled selected>Employer Type</option>
 					      <option value="1">Government</option>
 					      <option value="2">Private</option>
 					      <option value="3">Local</option>
 					      <option value="4">Overseas</option>
 					    </select>
-					    <label>Employer Type</label>
 					  </div>
 						
-						<div class="input-field col s4">
+						<div class="input-field col s6">
 							<select>
-					      <option value="" disabled selected>Choose your option</option>
+					      <option value="" disabled selected>Employee's Number</option>
 					      <option value="1">1-9</option>
 					      <option value="2">10-99</option>
 					      <option value="3">100-199</option>
 					      <option value="3">200 and up</option>
 					    </select>
-					    <label>Employee's Number</label>
 					  </div>
 
-					  <div class="input-field col s4">
-					  	<input type="text" name="municipality" class="validate">
-							<label>Municipality</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="municipality" class="validate" placeholder="Municipality">
 					  </div>
 
-					  <div class="input-field col s4">
-					  	<input type="text" name="province" class="validate">
-							<label>Province</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="province" class="validate" placeholder="Province">
 					  </div>
 
-					  <div class="input-field col s4">
-					  	<input type="text" name="barangay" class="validate">
-							<label>Barangay</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="barangay" class="validate" placeholder="Barangay">
 					  </div>
 
 					  <p class="step center">Employer Contact Details</p>
-					  <div class="input-field col s6">
-					  	<input type="text" name="cperson" class="validate">
-							<label>Contact Person (Full Name)</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="cperson" class="validate" placeholder="Contact Person (Full Name)">
 					  </div>
 
-					  <div class="input-field col s6">
-					  	<input type="text" name="cposition" class="validate">
-							<label>Position</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="cposition" class="validate" placeholder="Position">
 					  </div>
 
-					  <div class="input-field col s4">
-					  	<input type="text" name="ctelephone" class="validate">
-							<label>Telephone Number</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="ctelephone" class="validate" placeholder="Telephone Number">
 					  </div>
 
-					  <div class="input-field col s4">
-					  	<input type="text" name="cmobile" class="validate">
-							<label>Mobile Number</label>
+					  <div class="input-field col s12">
+					  	<input type="text" name="cmobile" class="validate" placeholder="Mobile Number">
 					  </div>
 
-					  <div class="input-field col s4">
-					  	<input type="email" name="cemail" class="validate">
-							<label>Email Address</label>
+					  <div class="input-field col s12">
+					  	<input type="email" name="cemail" class="validate" placeholder="Email Address">
 					  </div>
 
+					  <p class="center">
 						<a href="CompanyRegistration.html" class="waves-effect waves-light btn btn1">Previous</a>
-						<a href="LogIn.php" class="waves-effect waves-light btn btn1">Finish</a>
-					
+						<a href="CompanyLogIn.html" class="waves-effect waves-light btn btn1">Finish</a>
+						</p>
 							
 						<div class="clearfix"></div>
 					</div>
