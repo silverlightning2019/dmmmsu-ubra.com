@@ -133,9 +133,9 @@
         <li><a href="GuestJobOffer.php">Job Offers</a></li>
         <li><a href="GuestJobEvents.php">Job Events</a></li>
         <li><a href="">My Applications</a></li>
-        <li><a href="LogIn.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
-        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
-        <li><a href="UserRegistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
+        <li><a href="login.php" class="waves-effect blue btn"><i class="material-icons left">login</i>Log In</a></li>
+        <li><a href="userregistration1.php" class="waves-effect blue btn"><i class="material-icons left">how_to_reg</i>Register</a></li>
+        <li><a href="userregistration1.php" class="waves-effect blue btn"><i class="material-icons left">business</i>Employer</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
