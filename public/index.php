@@ -316,7 +316,7 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/Engineers.jpg">
+                <img src="Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -331,7 +331,7 @@
          <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/Engineers.jpg">
+                <img src="Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -346,7 +346,7 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/Engineers.jpg">
+                <img src="Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
@@ -430,7 +430,7 @@
           <div class="col s12 m3">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/dmmmsu.jpg">
+                <img src="dmmmsu.jpg">
               </div>
               <div class="card-content">
                 <p class="center">Don Mariano Marcos Memorial State University</p><br>
