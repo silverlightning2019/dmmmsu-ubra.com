@@ -37,7 +37,7 @@
 			<div class="col l6 m6 s12">
 				<form action="complain.php" method="POST">
 					<div class="card-panel z-depth-5">
-						<a href="GuestDashboard.php" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
+						<a href="./" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 1 - Account</p>
