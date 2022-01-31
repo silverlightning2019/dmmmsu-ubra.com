@@ -1,3 +1,21 @@
+<?php
+	session_start();
+
+	if (isset($_POST['next'])) {
+		foreach ($_POST as $key => $value)
+		{
+			$_SESSION ['info'][$key] = $value;
+		}
+
+		$keys = array_keys($_SESSION['info']);
+
+		if (in_array('next', $keys)) {
+			unset($_SESSION['info']['next']);
+		}
+
+		header("Location: userregistration4.php");
+	}	
+?>
 <!DOCTYpE html>
 <html lang="en">
 <head>
@@ -97,7 +115,7 @@
 						</div>
 
 							<p class="center">
-							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
+							<a href="userregistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
 							<a href="UserRegistration4.php" class="waves-effect waves-light btn blue">NEXT</a>
 							</p>
 							

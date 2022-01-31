@@ -1,3 +1,21 @@
+<?php
+	session_start();
+
+	if (isset($_POST['next'])) {
+		foreach ($_POST as $key => $value)
+		{
+			$_SESSION ['info'][$key] = $value;
+		}
+
+		$keys = array_keys($_SESSION['info']);
+
+		if (in_array('next', $keys)) {
+			unset($_SESSION['info']['next']);
+		}
+
+		header("Location: userregistration3.php");
+	}	
+?>
 <!DOCTYpE html>
 <html lang="en">
 <head>
@@ -43,70 +61,67 @@
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
-				<form action="complain.php" method="POST">
+				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 2 - Personal</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="province" class="validate" placeholder="Province">
+							<input type="text" name="province" class="validate" value="<?= isset($_SESSION['info']['province']) ? $_SESSION ['info']['province'] : ''?>" placeholder="Province">
 						</div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="municipality" class="validate" placeholder="Municipality">
+							<input type="text" name="municipality" class="validate" value="<?= isset($_SESSION['info']['municipality']) ? $_SESSION ['info']['municipality'] : ''?>" placeholder="Municipality">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="barangay" class="validate" placeholder="Barangay">
+							<input type="text" name="barangay" class="validate" value="<?= isset($_SESSION['info']['barangay']) ? $_SESSION ['info']['barangay'] : ''?>" placeholder="Barangay">
 						</div>
 								
 						<div class="input-field col s12">
-							<input type="text" name="house" class="validate" placeholder="House Number/Street Number">
+							<input type="text" name="house" class="validate" value="<?= isset($_SESSION['info']['house']) ? $_SESSION ['info']['house'] : ''?>" placeholder="House Number/Street Number">
 						</div>
 							
 						<div class="input-field col s12">
-							<input type="text" class="datepicker" placeholder="Birth Date">
+							<input type="text" class="datepicker" name="date" value="<?= isset($_SESSION['info']['date']) ? $_SESSION ['info']['date'] : ''?>" placeholder="Birth Date">
 						</div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="age" class="validate" placeholder="Age">
+							<input type="text" name="age" class="validate" value="<?= isset($_SESSION['info']['age']) ? $_SESSION ['info']['age'] : ''?>" placeholder="Age">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="cnumber" class="validate" placeholder="Contact Number">
+							<input type="text" name="cnumber" class="validate" value="<?= isset($_SESSION['info']['cnumber']) ? $_SESSION ['info']['cnumber'] : ''?>" placeholder="Contact Number">
 						</div>
 
 						<div class="input-field col s12">
-					    <select>
-					      <option value="" disabled selected>Gender</option>
-					      <option value="1">Male</option>
-					      <option value="2">Female</option>
+					    <select name="gender" value="<?= isset($_SESSION['info']['gender']) ? $_SESSION ['info']['gender'] : ''?>" placeholder="Gender"> 
+					      <option value="Male">Male</option>
+					      <option value="Female">Female</option>
 					    </select>
 					  </div>
 						
 						<div class="input-field col s12">
-					    <select>
-					      <option value="" disabled selected>Civil Status</option>
-					      <option value="1">Single</option>
-					      <option value="2">Married</option>
-					      <option value="2">Widowed</option>
-					      <option value="2">Separated</option>
-					      <option value="2">Live In</option>
+					    <select name="cstatus" value="<?= isset($_SESSION['info']['cstatus']) ? $_SESSION ['info']['cstatus'] : ''?>" placeholder="Civil Status">
+					      <option value="Single">Single</option>
+					      <option value="Married">Married</option>
+					      <option value="Widowed">Widowed</option>
+					      <option value="Separated">Separated</option>
+					      <option value="Live In">Live In</option>
 					    </select>
 					  </div>
 
 					  <div class="input-field col s12">
-					    <select>
-					      <option value="" disabled selected>Employement Status</option>
-					      <option value="1">Employed</option>
-					      <option value="2">Unemployed</option>
+					    <select name="estatus" value="<?= isset($_SESSION['info']['estatus']) ? $_SESSION ['info']['estatus'] : ''?>">
+					      <option value="Employed">Employed</option>
+					      <option value="Unemployed">Unemployed</option>
 					    </select>
 					  </div>
 							
 							<p class="center">
-							<a href="UserRegistration1.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
-							<a href="UserRegistration3.php" class="waves-effect waves-light btn blue">NEXT</a>
+							<a href="userregistration1.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
+							<button type="submit" name="next" class="waves-effect waves-light btn blue">Next</button>
 							</p>
 							<div class="clearfix"></div>
 					</div>

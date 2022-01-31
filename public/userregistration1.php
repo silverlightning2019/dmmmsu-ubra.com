@@ -1,3 +1,23 @@
+<?php
+	session_start();
+
+	if (isset($_POST['next'])) {
+		foreach ($_POST as $key => $value)
+		{
+			$_SESSION ['info'][$key] = $value;
+		}
+
+		$keys = array_keys($_SESSION['info']);
+
+		if (in_array('next', $keys)) {
+			unset($_SESSION['info']['next']);
+		}
+
+		header("Location: userregistration2.php");
+	}
+
+	
+?>
 <!DOCTYpE html>
 <html lang="en">
 <head>
@@ -31,11 +51,10 @@
 		</style>
 </head>
 <body>
-
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
-				<form action="complain.php" method="POST">
+				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
 						<a href="./" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
 						<h3 class="center reg">UBRA</h3>
@@ -43,35 +62,36 @@
 						<p class="step center">Step 1 - Account</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="fname" class="validate" placeholder="Enter First Name">
+							<input type="text" name="fname" class="validate" value="<?= isset($_SESSION['info']['fname']) ? $_SESSION ['info']['fname'] : ''?>" placeholder="Enter First Name">
 						</div>
 						
 						<div class="input-field col s12">
-							<input type="text" name="mname" class="validate" placeholder="Enter Middle Name">
+							<input type="text" name="mname" class="validate" value="<?= isset($_SESSION['info']['mname']) ? $_SESSION ['info']['mname'] : ''?>" placeholder="Enter Middle Name">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="text" name="lname" class="validate" placeholder="Enter Last Name">
+							<input type="text" name="lname" class="validate" value="<?= isset($_SESSION['info']['lname']) ? $_SESSION ['info']['lname'] : ''?>" placeholder="Enter Last Name">
 						</div>
 								
 						<div class="input-field col s12">
-							<input type="text" name="uname" class="validate" placeholder="Enter User Name">
+							<input type="text" name="uname" class="validate" value="<?= isset($_SESSION['info']['uname']) ? $_SESSION ['info']['uname'] : ''?>" placeholder="Enter User Name">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="email" name="email" class="validate" placeholder="Enter Email Address">
+							<input type="email" name="email" class="validate" value="<?= isset($_SESSION['info']['email']) ? $_SESSION ['info']['email'] : ''?>" placeholder="Enter Email Address">
 						</div>
 								  
 						<div class="input-field col s12">
-							<input type="password" name="pass1" placeholder="Enter Password">
+							<input type="password" name="pass1" value="<?= isset($_SESSION['info']['pass1']) ? $_SESSION ['info']['pass1'] : ''?>" placeholder="Enter Password">
 						</div>
 
 						<div class="input-field col s12">
-							<input type="password" name="pass1" placeholder="Confirm Password">
+							<input type="password" name="pass2" value="<?= isset($_SESSION['info']['pass2']) ? $_SESSION ['info']['pass2'] : ''?>" placeholder="Confirm Password">
 						</div>
 							
 							<p class="center">
 							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">NEXT</a>
+							<button type="submit" name="next" class="waves-effect waves-light btn blue">Next</button>
 							</p>
 							<div class="clearfix"></div>
 					</div>

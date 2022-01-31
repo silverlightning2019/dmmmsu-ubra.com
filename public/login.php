@@ -79,7 +79,7 @@
 							<input type="password" name="pass1" placeholder="Enter Password">
 						</div>
 						
-						<p class="right-align">Create Account?<a href="UserRegistration1.php" class="blue-text click">Register Here!</a></p>
+						<p class="right-align">Create Account?<a href="UserRegistration1.php" class="blue-text click"> Register Here!</a></p>
 						<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
 						<div class="clearfix"></div>
 					</div>
