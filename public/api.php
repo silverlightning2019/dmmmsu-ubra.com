@@ -1,58 +1,52 @@
 <?php
+    header("Access-Control-Allow-Origin: *");
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
     require '../src/vendor/autoload.php';
     $app = new \Slim\App;
 
     //LOGIN
-    $app->post('/login', function (Request $request, Response $response,array $args) {
+    $app->post('/register', function (Request $request, Response $response,array $args) {
 
-        session_start();
-        
         $data=json_decode($request->getBody());
-        $type =$data->type;
-        $id_num =$data->id_num;
-        $psword =$data->psword;
-        
-        
-        //Database
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "enrollment";
-        
-        // Create connection
-        $conn = new mysqli($servername, $username, $password,$dbname);
+	
+        $app_id =$data->app_id;
+        $fname =$data->fname;
+        $mname =$data->mname;
+        $lname =$data->lname;
+        $uname =$data->uname;
+        $email =$data->email;
+        $pass1 =$data->pass1;
+        $pass2 =$data->pass2;
 
-        // Check connection
-        if ($conn->connect_error) 
+        include 'database.php';
+        
+        try 
         {
-            die("Connection failed: " . $conn->connect_error);
-        }
-        $sql = "INSERT INTO login_info (id_num, type, success) VALUES ('". $id_num ."', '". $type ."', 'Yes')"; 
-        $sql2 = "INSERT INTO login_info (id_num, type, success) VALUES ('". $id_num ."', '". $type ."','No')"; 
-        //$conn->exec($sql);
-        $sql3 = "SELECT * FROM users WHERE id_num='". $id_num ."' AND psword='". $psword ."' AND type='". $type ."'";
-        $result = $conn->query($sql3);  
-        $row  = mysqli_fetch_array($result);
-        $_SESSION['id_num'] = $id_num;  
-            if ($result->num_rows > 0)  
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
+
+            $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+            $query = "SELECT * FROM user WHERE email='". $email ."'";
+            
+            $result = $conn->query($query);
+            
+            if ($result->rowCount() == 0) 
             {
-                if($type == 'admin'){
-                    $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
-                }
-                else{
-                    $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
-                    $conn->query($sql);
-                }
-            } 
-            else 
-            {
-                $response->getBody()->write(json_encode(array("status"=>"fail","data"=>array("title"=>"Access Denied!"))));
-                $conn->query($sql2);
+                $sql = "INSERT INTO user (app_id, fname, mname, lname, uname, email, pass1, pass2) VALUES ('". $app_id ."', '". $fname ."', '". $mname ."', '". $lname ."', '". $uname ."','". $email ."','". $pass1 ."','". $pass2 ."')";
+                $conn->exec($sql);
+                $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
             }
-        $conn->close();
-        return $response;
+            else
+            {
+                $response->getBody()->write(json_encode(array("status"=>"fail","data"=>array("title"=>"Email is already used!"))));
+            }
+        }
+        catch(PDOException $e)
+        {
+            $response->getBody()->write(json_encode(array("status"=>"error","message"=>$e->getMessage())));
+        }
+        $conn = null;
     });
     $app->run();
 ?>

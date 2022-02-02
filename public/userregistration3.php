@@ -62,7 +62,7 @@
 	<div class="row">
 		<div class="col l3 m5 s12"></div>
 			<div class="col l6 m6 s12">
-				<form action="complain.php" method="POST">
+				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
@@ -116,7 +116,7 @@
 
 							<p class="center">
 							<a href="userregistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
-							<a href="UserRegistration4.php" class="waves-effect waves-light btn blue">NEXT</a>
+							<button type="submit" name="next" class="waves-effect waves-light btn blue">Next</button>
 							</p>
 							
 							<div class="clearfix"></div>

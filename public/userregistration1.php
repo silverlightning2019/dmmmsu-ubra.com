@@ -1,6 +1,23 @@
 <?php
 	session_start();
 
+	include 'database.php';
+
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	$query2 = "SELECT * FROM user ORDER BY app_id DESC LIMIT 1";
+    $result2 = mysqli_query($conn,$query2);
+    $row = mysqli_fetch_array($result2);
+    $last_id = $row['app_id'];
+    if ($last_id == "")
+    {
+    	$applicant_id = "APP1";
+    }
+    else
+    {
+        $applicant_id = substr($last_id, 3);
+        $applicant_id = intval($applicant_id);
+        $applicant_id = "APP" . ($applicant_id + 1);
+    }
 	if (isset($_POST['next'])) {
 		foreach ($_POST as $key => $value)
 		{
@@ -60,6 +77,10 @@
 						<h3 class="center reg">UBRA</h3>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 1 - Account</p>
+
+						<div class="input-field col s12">
+							<input type="text" name="app_id" id="app_id" class="validate" value="<?php echo $applicant_id; ?>" placeholder="Applicant ID">
+						</div>
 
 						<div class="input-field col s12">
 							<input type="text" name="fname" class="validate" value="<?= isset($_SESSION['info']['fname']) ? $_SESSION ['info']['fname'] : ''?>" placeholder="Enter First Name">
