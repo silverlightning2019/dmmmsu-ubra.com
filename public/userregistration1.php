@@ -79,7 +79,7 @@
 						<p class="step center">Step 1 - Account</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="app_id" id="app_id" class="validate" value="<?php echo $applicant_id; ?>" placeholder="Applicant ID">
+							<input type="text" name="app_id" id="app_id" class="validate" value="<?php echo $applicant_id; ?>" placeholder="Applicant ID" readonly>
 						</div>
 
 						<div class="input-field col s12">
