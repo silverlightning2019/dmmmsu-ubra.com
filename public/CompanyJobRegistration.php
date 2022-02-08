@@ -187,7 +187,7 @@
           <p class="grey-text text-lighten-4">UBRA is a Job Finder System by DMMMSU-MLUC to help
           people, graduates and working students find the suitable job for them.</p>
         </div>
-        <div class="col l3 s12">
+        <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Connect With Us</h5>
           <ul>
             <li><a class="white-text" href="#!"><i class="material-icons material1">phone</i>09997589145</a></li>
