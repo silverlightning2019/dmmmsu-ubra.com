@@ -109,9 +109,7 @@
   <div class="section no-pad-bot work" id="index-banner">
     <div class="container">
       <h4 class="header left-align blue-grey-text">Welcome, <span class="log">DMMMSU-MLUC</span></h4>
-      <div class="row">
-        <h5 class="col s12 light">Start To Hire, Post and Help People .</h5>
-      </div>
+      <h5 class="col s12 light">Start To Hire, Post and Help People .</h5>
     </div>
   </div>
 
