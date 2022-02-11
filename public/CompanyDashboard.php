@@ -77,6 +77,17 @@
     .btn-flat{
       background-color: #e0e0e0 ;
     }
+    
+    .tables{
+      margin-bottom: 30px;
+      font-size: 15px;
+      white-space: nowrap;
+    }
+
+    .tables .theads th{
+      font-weight:600;
+      background-color:#64b5f6;
+    }
   </style>
 </head>
 <body class="body">
@@ -295,10 +306,12 @@
 <!--Applicants-->
 <div class="container">
 <br>
- <table class="responsive-table">
-        <thead>
+ <table class="responsive-table highlight tables">
+        <thead class="theads">
           <tr>
-              <th>Name</th>
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Last Name</th>
               <th>Position</th>
               <th>Date Apply</th>
               <th>File</th>
@@ -308,7 +321,9 @@
 
         <tbody>
           <tr>
-            <td>Kenneth Lorenzo</td>
+            <td>Kenneth Jhon</td>
+            <td>Robles</td>
+            <td>Lorenzo</td>
             <td>Technician</td>
             <td>January 20, 2022</td>
             <td>files here</td>
@@ -319,7 +334,9 @@
           </tr>
 
           <tr>
-            <td>Kenneth Lorenzo</td>
+            <td>Kenneth Jhon</td>
+            <td>Robles</td>
+            <td>Lorenzo</td>
             <td>Technician</td>
             <td>January 20, 2022</td>
             <td>files here</td>
@@ -330,7 +347,9 @@
           </tr>
 
           <tr>
-            <td>Kenneth Lorenzo</td>
+            <td>Kenneth Jhon</td>
+            <td>Robles</td>
+            <td>Lorenzo</td>
             <td>Technician</td>
             <td>January 20, 2022</td>
             <td>files here</td>
@@ -340,7 +359,7 @@
             </td>
           </tr>
         </tbody>
-      </table><br><br>
+      </table><br><br><br>
 </div>
 
 <!--Footer-->
