@@ -91,8 +91,8 @@
 <!--Search-->
 <div class="container">
   <p class="left-align">
-    <a class="waves-effect waves-light btn blue"><i class="material-icons left">search</i>Search to Edit</a>
-    <a class="btn-flat disabled">1 Job Posted Shown</a>
+    <a class="waves-effect waves-light btn blue"><i class="material-icons left">search</i>Search Job Posted</a>
+
   </p>
 </div>
 
