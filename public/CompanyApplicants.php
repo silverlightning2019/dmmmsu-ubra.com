@@ -77,14 +77,15 @@
   </p>
 </div>
 
-
 <!--Applicants-->
 <div class="container">
 <br>
- <table class="responsive-table">
-        <thead>
+ <table class="responsive-table highlight tables">
+        <thead class="theads">
           <tr>
-              <th>Name</th>
+              <th>First Name</th>
+              <th>Middle Name</th>
+              <th>Last Name</th>
               <th>Position</th>
               <th>Date Apply</th>
               <th>File</th>
@@ -94,7 +95,9 @@
 
         <tbody>
           <tr>
-            <td>Kenneth Lorenzo</td>
+            <td>Kenneth Jhon</td>
+            <td>Robles</td>
+            <td>Lorenzo</td>
             <td>Technician</td>
             <td>January 20, 2022</td>
             <td>files here</td>
@@ -105,7 +108,9 @@
           </tr>
 
           <tr>
-            <td>Kenneth Lorenzo</td>
+            <td>Kenneth Jhon</td>
+            <td>Robles</td>
+            <td>Lorenzo</td>
             <td>Technician</td>
             <td>January 20, 2022</td>
             <td>files here</td>
@@ -116,7 +121,9 @@
           </tr>
 
           <tr>
-            <td>Kenneth Lorenzo</td>
+            <td>Kenneth Jhon</td>
+            <td>Robles</td>
+            <td>Lorenzo</td>
             <td>Technician</td>
             <td>January 20, 2022</td>
             <td>files here</td>
