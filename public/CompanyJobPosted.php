@@ -92,17 +92,10 @@
 
 <!--Search-->
 <div class="container">
-<nav class="search">
-  <div class="nav-wrapper search">
-    <form>
-      <div class="input-field">
-        <input id="search" type="search" placeholder="Search To Edit.." required>
-          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-          <i class="material-icons">close</i>
-      </div>
-    </form>
-  </div>
-</nav><br>
+  <p class="left-align">
+    <a class="waves-effect waves-light btn blue"><i class="material-icons left">search</i>Search to Edit</a>
+    <a class="btn-flat disabled">1 Job Posted Shown</a>
+  </p>
 </div>
 
 <!--Posted Jobs-->
