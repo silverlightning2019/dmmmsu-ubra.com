@@ -19,7 +19,6 @@
 
     .header{
       font-weight: 600;
-      margin-bottom: 20px;
     }
 
     .material1{
