@@ -83,10 +83,8 @@
 <!--Banner-->
   <div class="section no-pad-bot work" id="index-banner">
     <div class="container">
-      <div class="row">
-        <h4 class="header center-align blue-grey-text">Job Posted!</h4>
-        <h5 class="center-align light">Manage your Job Announcements Here!</h5>
-      </div>
+        <h4 class="header blue-grey-text">Job Posted!</h4>
+        <h5 class="light">Manage your Job Announcements Here!</h5>
     </div>
   </div>
 
