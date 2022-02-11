@@ -74,7 +74,7 @@
             <form class="col s12">
               <div class="row">
                 <div class="input-field col s6">
-                  <input placeholder="Placeholder" id="username" type="text" class="validate">
+                  <input placeholder="Username" id="username" type="text" class="validate">
                   <label for="username">Username</label>
                 </div>
                 <div class="input-field col s6">
