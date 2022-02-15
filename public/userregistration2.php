@@ -13,8 +13,6 @@
 			unset($_SESSION['info']['next']);
 		}
 
-		
-
 		header("Location: userregistration3.php");
 	}	
 ?>
@@ -66,9 +64,9 @@
 				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
 						<?php
-							/* echo "<pre>";
+							echo "<pre>";
 							print_r ($_SESSION['info']);
-							echo "</pre>"; */
+							echo "</pre>";
 						?> 
 						<a href="./"><h3 class="center reg">UBRA</h3></a>
 						<p class="center">Register Now!</p>
@@ -104,6 +102,7 @@
 
 						<div class="input-field col s12">
 							<select name="gender" value="<?= isset($_SESSION['info']['gender']) ? $_SESSION ['info']['gender'] : ''?>">
+							<option value="<?php echo isset($_SESSION['info']['gender']) ? '' : $_SESSION ['info']['gender'] = "Male" ?>" disabled></option>
 							<option value="Male" <?php echo $_SESSION['info']['gender'] == 'Male' ? 'selected' : ''; ?> >Male</option>
 							<option value="Female" <?php echo $_SESSION['info']['gender'] == 'Female' ? 'selected' : ''; ?> >Female</option>
 							</select>
@@ -112,7 +111,8 @@
 						
 						<div class="input-field col s12">
 					    <select name="cstatus" value="<?= isset($_SESSION['info']['cstatus']) ? $_SESSION ['info']['cstatus'] : ''?>" placeholder="Civil Status">
-					      <option value="Single" <?php echo $_SESSION['info']['cstatus'] == 'Single' ? ' selected' : ''; ?> >Single</option>
+						  <option value="<?php echo isset($_SESSION['info']['cstatus']) ? '' : $_SESSION ['info']['cstatus'] = "" ?>" disabled></option>
+						  <option value="Single" <?php echo $_SESSION['info']['cstatus'] == 'Single' ? ' selected' : ''; ?> >Single</option>
 					      <option value="Married" <?php echo $_SESSION['info']['cstatus'] == 'Married' ? ' selected' : ''; ?> >Married</option>
 					      <option value="Widowed" <?php echo $_SESSION['info']['cstatus'] == 'Widowed' ? ' selected' : ''; ?> >Widowed</option>
 					      <option value="Separated" <?php echo $_SESSION['info']['cstatus'] == 'Separated' ? ' selected' : ''; ?> >Separated</option>
@@ -122,6 +122,7 @@
 
 					  <div class="input-field col s12">
 					    <select name="estatus" value="<?= isset($_SESSION['info']['estatus']) ? $_SESSION ['info']['estatus'] : ''?>">
+						<option value="<?php echo isset($_SESSION['info']['estatus']) ? '' : $_SESSION ['info']['estatus'] = "" ?>" disabled></option>
 					      <option value="Employed" <?php echo $_SESSION['info']['estatus'] == 'Employed' ? ' selected' : ''; ?> >Employed</option>
 					      <option value="Unemployed" <?php echo $_SESSION['info']['estatus'] == 'Unemployed' ? ' selected' : ''; ?>>Unemployed</option>
 					    </select>
