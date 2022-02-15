@@ -6,18 +6,16 @@
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$query2 = "SELECT * FROM user ORDER BY app_id DESC LIMIT 1";
     $result2 = mysqli_query($conn,$query2);
-    $row = mysqli_fetch_array($result2);
-    $last_id = $row['app_id'];
-    if ($last_id == "")
-    {
-    	$applicant_id = "APP1";
-    }
-    else
-    {
-        $applicant_id = substr($last_id, 3);
+	if (mysqli_num_rows($result2) == 0) { 
+		$applicant_id = "APP1";
+	}
+	else {
+		$row = mysqli_fetch_array($result2);
+    	$last_id = $row['app_id'];
+		$applicant_id = substr($last_id, 3);
         $applicant_id = intval($applicant_id);
         $applicant_id = "APP" . ($applicant_id + 1);
-    }
+	}
 	if (isset($_POST['next'])) {
 		foreach ($_POST as $key => $value)
 		{
@@ -31,6 +29,7 @@
 		}
 
 		header("Location: userregistration2.php");
+		
 	}
 
 	
@@ -73,13 +72,12 @@
 			<div class="col l6 m6 s12">
 				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
-						<a href="./" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
-						<h3 class="center reg">UBRA</h3>
+						<a href="./"><h3 class="center reg">UBRA</h3></a>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 1 - Account</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="app_id" id="app_id" class="validate" value="<?php echo $applicant_id; ?>" placeholder="Applicant ID" readonly>
+							<input type="hidden" name="app_id" id="app_id" class="validate" value="<?php echo $applicant_id; ?>" placeholder="Applicant ID" readonly>
 						</div>
 
 						<div class="input-field col s12">
@@ -111,7 +109,6 @@
 						</div>
 							
 							<p class="center">
-							<a href="UserRegistration2.php" class="waves-effect waves-light btn blue">NEXT</a>
 							<button type="submit" name="next" class="waves-effect waves-light btn blue">Next</button>
 							</p>
 							<div class="clearfix"></div>

@@ -65,8 +65,7 @@
 			<div class="col l6 m6 s12">
 				<form action="" method="">
 					<div class="card-panel z-depth-5">
-						<a href="./" class="btn-floating btn waves-effect waves-light blue"><i class="material-icons">arrow_back</i></a>
-						<h3 class="center reg">UBRA</h3>
+						<a href="./"><h3 class="center reg">UBRA</h3></a>
 						<p class="center">Log In Now!</p>
 							
 						<div class="input-field col s12">

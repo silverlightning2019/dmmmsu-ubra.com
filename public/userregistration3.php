@@ -13,6 +13,10 @@
 			unset($_SESSION['info']['next']);
 		}
 
+		echo "<pre>";
+		print_r ($_SESSION['info']);
+		echo "</pre>";
+
 		header("Location: userregistration4.php");
 	}	
 ?>
@@ -64,7 +68,12 @@
 			<div class="col l6 m6 s12">
 				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
-						<h3 class="center reg">UBRA</h3>
+						<?php
+							/* echo "<pre>";
+							print_r ($_SESSION['info']);
+							echo "</pre>"; */
+						?>
+						<a href="./"><h3 class="center reg">UBRA</h3></a>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 3 - Educational</p>
 
