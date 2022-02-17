@@ -79,54 +79,56 @@
 
 						<div class="input-field col s12">
 						<p class="center">
-							<a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Educational</a>
+							<a href = "javascript:void(0)" class="waves-effect blue btn"><i class="material-icons left">add</i>Add Educational</a>
 						</p>
 						</div>
-
-						<div class="input-field col s12">
-					    <select>
-					      <option value="" disabled selected>Level</option>
-					      <option value="1">Elementary</option>
-					      <option value="2">High School</option>
-					      <option value="2">Vocational/Trade Course</option>
-					      <option value="2">College</option>
-					      <option value="2">Graduate Studies</option>
-					      <option value="2">N/A</option>
-					    </select>
-					  </div>
-						
-						<div class="input-field col s12">
-							<input type="text" name="school" class="validate" placeholder="Name of School">
-						</div>
-
-						<div class="input-field col s12">
-							<input type="text" name="basic" class="validate" placeholder="Basic Education/Degree/Course">
-						</div>
-								
-						<div class="input-field col s12">
-							<input type="text" name="to" class="validate" placeholder="Year" placeholder="From">
-						</div>
+						<form>
+							<a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">close</i></a>
+							<div class="input-field col s10">
+							<select>
+							<option value="" disabled selected>Level</option>
+							<option value="1">Elementary</option>
+							<option value="2">High School</option>
+							<option value="2">Vocational/Trade Course</option>
+							<option value="2">College</option>
+							<option value="2">Graduate Studies</option>
+							<option value="2">N/A</option>
+							</select>
+							</div>
 							
-						<div class="input-field col s12">
-							<input type="text" name="to" class="validate" placeholder="Year" placeholder="To">
-						</div>
-								  
-						<div class="input-field col s12">
-							<input type="text" name="hlevel" class="validate" placeholder="Highest Level/Unit Earned">
-						</div>
+							<div class="input-field col s12">
+								<input type="text" name="school" class="validate" placeholder="Name of School">
+							</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="graduated" class="validate" placeholder="Year Graduated">
-						</div>
+							<div class="input-field col s12">
+								<input type="text" name="basic" class="validate" placeholder="Basic Education/Degree/Course">
+							</div>
+									
+							<div class="input-field col s12">
+								<input type="text" name="to" class="validate" placeholder="Year" placeholder="From">
+							</div>
+								
+							<div class="input-field col s12">
+								<input type="text" name="to" class="validate" placeholder="Year" placeholder="To">
+							</div>
+									
+							<div class="input-field col s12">
+								<input type="text" name="hlevel" class="validate" placeholder="Highest Level/Unit Earned">
+							</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="scholarsip" class="validate" placeholder="Scholarship/Academic Honors Received">
-						</div>
+							<div class="input-field col s12">
+								<input type="text" name="graduated" class="validate" placeholder="Year Graduated">
+							</div>
 
-							<p class="center">
+							<div class="input-field col s12">
+								<input type="text" name="scholarsip" class="validate" placeholder="Scholarship/Academic Honors Received">
+							</div>
+						</form>
+
+						<p class="center">
 							<a href="userregistration2.php" class="waves-effect waves-light btn blue">PREVIOUS</a>
 							<button type="submit" name="next" class="waves-effect waves-light btn blue">Next</button>
-							</p>
+						</p>
 							
 							<div class="clearfix"></div>
 					</div>

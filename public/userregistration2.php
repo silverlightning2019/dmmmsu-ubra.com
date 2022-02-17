@@ -64,9 +64,9 @@
 				<form action="" method="POST">
 					<div class="card-panel z-depth-5">
 						<?php
-							echo "<pre>";
+							/* echo "<pre>";
 							print_r ($_SESSION['info']);
-							echo "</pre>";
+							echo "</pre>"; */
 						?> 
 						<a href="./"><h3 class="center reg">UBRA</h3></a>
 						<p class="center">Register Now!</p>
