@@ -70,12 +70,12 @@
 							
 						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i>
-							<input type="email" name="email" class="validate" placeholder="Enter Username/Email Address">
+							<input type="email" name="email" id="email" class="validate" placeholder="Enter Username/Email Address">
 						</div>
 								  
 						<div class="input-field col s12">
 							<i class="material-icons prefix">lock</i>
-							<input type="password" name="pass1" placeholder="Enter Password">
+							<input type="password" name="psword" id="psword" placeholder="Enter Password">
 						</div>
 						
 						<p class="right-align">Create Account?<a href="userregistration1.php" class="blue-text click"> Register Here!</a></p>

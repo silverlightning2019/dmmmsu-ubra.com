@@ -5,7 +5,7 @@
     require '../src/vendor/autoload.php';
     $app = new \Slim\App;
 
-    //LOGIN
+    //REGISTER
     $app->post('/register', function (Request $request, Response $response,array $args) {
 
         $data=json_decode($request->getBody());
@@ -48,5 +48,41 @@
         }
         $conn = null;
     });
+
+    //LOGIN
+    $app->post('/login', function (Request $request, Response $response,array $args) {
+
+        session_start();
+        
+        $data=json_decode($request->getBody());
+        $email =$data->email;
+        $psword =$data->psword;
+        
+        include 'database.php';
+        
+        $conn = new mysqli($servername, $username, $password,$dbname);
+
+        if ($conn->connect_error) 
+        {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM user WHERE email='". $email ."' OR uname='". $email ."' AND psword='". $psword ."'";
+        $result = $conn->query($sql);	
+        $row  = mysqli_fetch_array($result);
+        $_SESSION['email'] = $email;	
+                    if ($result->num_rows > 0)  
+                    {
+                        $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
+                    } 
+                    else 
+                    {
+                        $response->getBody()->write(json_encode(array("status"=>"fail","data"=>array("title"=>"Access Denied!"))));
+                    }
+        $conn->close();
+
+        return $response;
+	});
+
     $app->run();
 ?>

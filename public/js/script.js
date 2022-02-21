@@ -31,6 +31,24 @@ $(document).ready(function(){
 	});
 
 	$("#login").click(function(){
-		alert("Hello! Here we go. Say what????????");
+		var email=$("#email").get(0).value;
+		var psword=$("#psword").get(0).value;
+		$.post("http://localhost/ubra/public/login",JSON.stringify({
+				email:email,	
+				psword:psword
+		}),
+		function(data, status)
+		{
+			var json=JSON.parse(data);
+			if(json.status=="success"){
+				if(email=="admin"){
+					self.location="http://localhost/ubra/public/admin.php";
+				}else{
+					self.location="http://localhost/ubra/public/home.php";
+				}
+			}else{
+				alert(json.data.title);
+			}
+		});
 	});
 });
