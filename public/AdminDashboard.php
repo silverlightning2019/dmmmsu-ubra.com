@@ -114,8 +114,8 @@
 <!--Manage-->
 <div class="container">
 <div class="row">
-
-    <div class="col s12 m4">
+<div class="container">
+    <div class="col s12 m6">
       <a href="AdminUser.php">
       <div class="card hoverable">
         <div class="card-image">
@@ -128,7 +128,7 @@
       </a>
     </div>
 
-    <div class="col s12 m4">
+    <div class="col s12 m6">
       <a href="AdminCompany.php">
       <div class="card hoverable">
         <div class="card-image">
@@ -140,23 +140,86 @@
       </div>
       </a>
     </div>
-
-    <div class="col s12 m4">
-      <a href="AdminReport.php">
-      <div class="card hoverable">
-        <div class="card-image">
-          <img src="img/reports.png">
-        </div>
-        <div class="card-content">
-          <p class="center abc">Reports</p><br>
-        </div>
-      </div>
-    </a>
-    </div>
-
-  </div><br>
+  </div>
+  </div>
 </div>
 
+<!--Banner2-->
+  <div class="section no-pad-bot work" id="index-banner">
+    <div class="container">
+      <h4 class="header left-align blue-grey-text">See Status Here!</h4>
+      <h5 class="col s12 light">Here we list our site stats and how many people we've helped find a job and companies have found recruits.</h5><br>
+    </div>
+  </div>
+
+<div class="container">
+<div class="row">
+        <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="icon-block icon">
+                <h2 class="center light-blue-text"><i class="material-icons">groups</i></h2>
+                  <p class="number center">100</p>
+                  <h5 class="center blue-grey-text">Registered User</h5><br>
+            </div>
+          </div>
+      </div>
+
+        <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="icon-block icon">
+                <h2 class="center light-blue-text"><i class="material-icons ">engineering</i></h2>
+                   <p class="number center">50</p>
+                  <h5 class="center blue-grey-text">Applicants</h5><br> 
+            </div>
+          </div>
+      </div>
+
+      <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="icon-block icon">
+                <h2 class="center light-blue-text"><i class="material-icons">work_history</i></h2>
+                  <p class="number center">14</p>
+                  <h5 class="center blue-grey-text">Match Jobs</h5><br>
+            </div>
+          </div>
+      </div>
+
+      <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="icon-block icon">
+                <h2 class="center light-blue-text"><i class="material-icons">business</i></h2>
+                  <p class="number center">1</p>
+                  <h5 class="center blue-grey-text">Registered Company</h5><br>
+            </div>
+          </div>
+      </div>
+
+      <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="icon-block icon">
+                <h2 class="center light-blue-text"><i class="material-icons">post_add</i></h2>
+                  <p class="number center">145</p>
+                  <h5 class="center blue-grey-text">Jobs Posted</h5><br>
+            </div>
+          </div>
+      </div>
+
+      <div class="col s12 m4">
+            <div class="card hoverable">
+              <div class="icon-block icon">
+                <h2 class="center light-blue-text"><i class="material-icons ">task</i></h2>
+                   <p class="number center">50</p>
+                  <h5 class="center blue-grey-text">Jobs Filled</h5><br> 
+            </div>
+          </div>
+      </div>
+       
+
+      </div>
+      <br>
+  </div>
+</div>
+</div>
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
