@@ -123,7 +123,8 @@
               <th>Email Address</th>
               <th>User Name</th>
               <th>Password</th>
-              <th>Number of Posted Jobs</th>
+              <th>Posted Jobs</th>
+              <th>Applicants</th>
               <th>Action</th>
           </tr>
         </thead>
@@ -136,13 +137,16 @@
             <td>DMMMSU-MLUC@gmail.com</td>
             <td>DMMMSU-MLUC</td>
             <td>123456</td>
-            <td>4 Posted Jobs</td>
+            <td>4 </td>
+            <td>10</td>
             <td>
               <a class="btn-small waves-effect waves-light red"><i class="material-icons">delete</i></a>
             </td>
           </tr>
         </tbody>
-      </table><br><br>
+      </table>
+      <p class="blue-grey-text">Total Posted Jobs: 4</p>
+      <p class="blue-grey-text">Total Number of Applicants: 10</p>
 </div>
 
 
