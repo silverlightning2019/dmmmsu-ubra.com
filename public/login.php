@@ -79,7 +79,7 @@
 						</div>
 						
 						<p class="right-align">Create Account?<a href="userregistration1.php" class="blue-text click"> Register Here!</a></p>
-						<input type="submit" name="submit" value="Log In" class="blue white-text btn left col s12">
+						<a id="login" name="login" class="blue white-text waves-effect btn left col s12">Log In</a>
 						<div class="clearfix"></div>
 					</div>
 				</form>
@@ -93,6 +93,8 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
   
 
   </body>

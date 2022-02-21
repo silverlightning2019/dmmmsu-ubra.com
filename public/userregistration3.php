@@ -79,49 +79,13 @@
 
 						<div class="input-field col s12">
 						<p class="center">
-							<a href = "javascript:void(0)" class="waves-effect blue btn"><i class="material-icons left">add</i>Add Educational</a>
+							<a href = "javascript:void(0)" class="add-more-form waves-effect blue btn"><i class="material-icons left">add</i>Add Educational</a>
 						</p>
 						</div>
 						<form>
-							<a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">close</i></a>
-							<div class="input-field col s10">
-							<select>
-							<option value="" disabled selected>Level</option>
-							<option value="1">Elementary</option>
-							<option value="2">High School</option>
-							<option value="2">Vocational/Trade Course</option>
-							<option value="2">College</option>
-							<option value="2">Graduate Studies</option>
-							<option value="2">N/A</option>
-							</select>
-							</div>
-							
-							<div class="input-field col s12">
-								<input type="text" name="school" class="validate" placeholder="Name of School">
-							</div>
 
-							<div class="input-field col s12">
-								<input type="text" name="basic" class="validate" placeholder="Basic Education/Degree/Course">
-							</div>
-									
-							<div class="input-field col s12">
-								<input type="text" name="to" class="validate" placeholder="Year" placeholder="From">
-							</div>
-								
-							<div class="input-field col s12">
-								<input type="text" name="to" class="validate" placeholder="Year" placeholder="To">
-							</div>
-									
-							<div class="input-field col s12">
-								<input type="text" name="hlevel" class="validate" placeholder="Highest Level/Unit Earned">
-							</div>
+							<div class="paste-new-forms">
 
-							<div class="input-field col s12">
-								<input type="text" name="graduated" class="validate" placeholder="Year Graduated">
-							</div>
-
-							<div class="input-field col s12">
-								<input type="text" name="scholarsip" class="validate" placeholder="Scholarship/Academic Honors Received">
 							</div>
 						</form>
 
@@ -136,10 +100,47 @@
 			</div>
 		</div>
 </div>
-<!--  Scripts-->
+<!--  	s-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+	  $(document).ready(function (){
+		  $(document).on('click', '.add-more-form', function(){
+			$('.paste-new-forms').append('<a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">close</i></a>\
+							<div class="input-field col s10">\
+							<select>\
+								<option value="" disabled selected>Level</option>\
+								<option value="1">Elementary</option>\
+								<option value="2">High School</option>\
+								<option value="2">Vocational/Trade Course</option>\
+								<option value="2">College</option>\
+								<option value="2">Graduate Studies</option>\
+								<option value="2">N/A</option>\
+							</select>\
+							</div>\
+							<div class="input-field col s12">\
+								<input type="text" name="basic" class="validate" placeholder="Basic Education/Degree/Course">\
+							</div>\
+							<div class="input-field col s12">\
+								<input type="text" name="to" class="validate" placeholder="Year" placeholder="From">\
+							</div>\
+							<div class="input-field col s12">\
+								<input type="text" name="to" class="validate" placeholder="Year" placeholder="To">\
+							</div>\
+							<div class="input-field col s12">\
+								<input type="text" name="hlevel" class="validate" placeholder="Highest Level/Unit Earned">\
+							</div>\
+							<div class="input-field col s12">\
+								<input type="text" name="graduated" class="validate" placeholder="Year Graduated">\
+							</div>\
+							<div class="input-field col s12">\
+								<input type="text" name="scholarsip" class="validate" placeholder="Scholarship/Academic Honors Received">\
+							</div>')
+		  });
+	  });
+  </script>
   
 
   </body>

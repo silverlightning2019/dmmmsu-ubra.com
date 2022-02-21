@@ -29,4 +29,8 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#login").click(function(){
+		alert("Hello! Here we go. Say what????????");
+	});
 });
