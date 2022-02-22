@@ -112,11 +112,12 @@
 						</p>
 						</div>
 
-						<div class="input-field col s8">
-							<input type="text" class="datepicker" placeholder="From">
+						<div class="input-field col s4 m4">
+							<input type="text" class="datepicker" placeholder="">
+							<label for="">From (Year)</label>
 						</div>
 
-						<div class="input-field col s4">
+						<div class="input-field col s4 m4">
 							 <form action="#">
 							    <p>
 							      <label>
@@ -127,20 +128,24 @@
 							  </form>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" class="datepicker" placeholder="To">
+						<div class="input-field col s4 m4">
+							<input type="text" class="datepicker" placeholder="">
+							<label for="">To (Year)</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="position" class="validate" placeholder="Position Title">
+						<div class="input-field col s12 m6">
+							<input type="text" name="position" class="validate" placeholder="">
+							<label for="position">Position Title</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="agency" class="validate" placeholder="Agency/Company">
+						<div class="input-field col s12 m6">
+							<input type="text" name="agency" class="validate" placeholder="">
+							<label for="agency">Agency/Company</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="status" class="validate" placeholder="Status Appointment">
+						<div class="input-field col s12 m12">
+							<input type="text" name="status" class="validate" placeholder="">
+							<label for="status">Status Appointment</label>
 						</div>
 
 							<p class="center">
