@@ -1,7 +1,14 @@
 <?php
-    session_start();
-    session_destroy();
+	session_start();
+	session_destroy();
 ?>
+<?php
+	if (!isset($_SESSION['emp_uname'])){
+		header("location: home.php");
+	}
+	session_start();
+?>
+
 <!DOCTYpE html>
 <html lang="en">
 <head>
@@ -69,20 +76,20 @@
 			<div class="col l6 m6 s12">
 				<form action="" method="">
 					<div class="card-panel z-depth-5">
-						<a href="./"><h3 class="center reg">UBRA</h3></a>
-						<p class="center">Log In Now!</p>
+						<a href="../"><h3 class="center reg">UBRA</h3></a>
+						<p class="center">Welcome Employer!</p>
 							
 						<div class="input-field col s12">
 							<i class="material-icons prefix">email</i>
-							<input type="email" name="email" id="email" class="validate" placeholder="Enter Username/Email Address">
+							<input type="text" name="emp_uname" id="emp_uname" class="validate" placeholder="Enter Username">
 						</div>
 								  
 						<div class="input-field col s12">
 							<i class="material-icons prefix">lock</i>
-							<input type="password" name="psword" id="psword" placeholder="Enter Password">
+							<input type="password" name="emp_pass" id="emp_pass" placeholder="Enter Password">
 						</div>
 						
-						<p class="right-align">Create Account?<a href="userregistration1.php" class="blue-text click"> Register Here!</a></p>
+						<p class="right-align">Create Account?<a href="registration.php" class="blue-text click"> Register Here, Employer!</a></p>
 						<a id="login" name="login" class="blue white-text waves-effect btn left col s12">Log In</a>
 						<div class="clearfix"></div>
 					</div>
@@ -103,7 +110,6 @@
 	  function preventBack(){window.history.forward()};
 	  setTimeout("preventBack()",0);
 			window.onunload=function(){null;}
-
   </script>
   
 

@@ -1,13 +1,9 @@
-<?php
-    session_start();
-    session_destroy();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Dashboard</title>
+  <title>User Dashboard</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -58,14 +54,6 @@
       display: inline-flex;
       vertical-align: top;
       margin-right: 10px;
-      color: #64b5f6;
-    }
-
-    .material1{
-      display: inline-flex;
-      vertical-align: top;
-      margin-right: 10px;
-      margin-bottom: 5px;
     }
 
     .job{
@@ -96,25 +84,12 @@
       background-color: #e0e0e0 ;
     }
 
-    .reg{
-        color:#64b5f6;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-    .caption{
-      margin-top: -50px;
+    .material1{
+      display: inline-flex;
+      vertical-align: top;
+      margin-right: 10px;
+      margin-bottom: 5px;
     }
-
-    .content{
-      margin-top: 50px;
-    }
-
-    .modal{
-        height: 400px !important;
-        width: 300px !important;
-      }
-
   </style>
 </head>
 <body class="body">
@@ -123,23 +98,21 @@
   <nav class=" blue darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="logo">UBRA</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="GuestDashboard.php">Home</a></li>
-        <li><a href="GuestJobOffer.php">Job Offers</a></li>
-        <li><a href="GuestJobEvents.php">Job Events</a></li>
-        <li><a href="">My Applications</a></li>
-        <li><a href="login.php">Log In</a></li>
-        <li><a href="userregistration1.php">Sign Up</a></li>
-        <li><a href="employer/" class="waves-effect blue btn">Employer</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="job-offer.php">Job Offers</a></li>
+        <li><a href="job-events.php">Job Events</a></li>
+        <li><a href="application.php">My Applications</a></li>
+        <li><a href="profile.php">Profile</a></li>
+        <li><a href="./">Log Out</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-       <li><a href="GuestDashboard.php">Home</a></li>
-        <li><a href="GuestJobOffer.php">Job Offers</a></li>
-        <li><a href="GuestJobEvents.php">Job Events</a></li>
-        <li><a href="">My Applications</a></li>
-        <li><a href="login.php">Log In</a></li>
-        <li><a href="userregistration1.php">Sign Up</a></li>
-        <li><a href="employer/" class="waves-effect blue btn">Employer</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="job-offer.php">Job Offers</a></li>
+        <li><a href="job-events.php">Job Events</a></li>
+        <li><a href="application.php">My Applications</a></li>
+        <li><a href="profile.php">Profile</a></li>
+        <li><a href="./">Log Out</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
@@ -150,7 +123,7 @@
 <section class="slider">
   <ul class="slides">
     <li>
-      <img src="img/image.jpg">
+      <img src="image.jpg">
       <div class="caption center-align">
         <h3 class="welcome">Welcome to <span class="logo">UBRA</span> : DMMMSU-MLUC Job Finder System</h3>
         <h5 class="slogan">"You can find the Job that suits you!"</h5><br>        
@@ -236,7 +209,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">health_and_safety</i></h2>
                   <h5 class="center black-text">HealthCare</h5>
-                    <p class="center black-text">(1 Jobs)</p>
+                    <p class="center black-text">(1 Jobs)</p> 
             </div>
             </a>
           </div>
@@ -320,14 +293,14 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/Engineers.jpg">
+                <img src="Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -335,14 +308,14 @@
          <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/Engineers.jpg">
+                <img src="Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="Details.html"class="waves-effect btn-flat" >Show Details</a></p>
               </div>
             </div>
           </div>
@@ -350,14 +323,14 @@
           <div class="col s12 m4">
             <div class="card hoverable">
               <div class="card-image">
-                <img src="img/Engineers.jpg">
+                <img src="Engineers.jpg">
               </div>
               <div class="card-content">
                 <p class="job">Civil Engineer</p>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
                 <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="GuestDetails.php" class="waves-effect btn-flat">Show Details</a></p>
+                <p class="center"><a href="Details.html" class="waves-effect btn-flat" href="Details.html">Show Details</a></p>
               </div>
             </div>
           </div>
@@ -383,7 +356,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons ">task</i></h2>
                    <p class="number center">50</p>
-                  <h5 class="center blue-grey-text">Jobs Filled</h5><br> 
+                  <h5 class="center black-text">Jobs Filled</h5> 
             </div>
           </div>
       </div>
@@ -393,7 +366,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">groups</i></h2>
                   <p class="number center">100</p>
-                  <h5 class="center blue-grey-text">Members</h5><br>
+                  <h5 class="center black-text">Members</h5>
             </div>
           </div>
       </div>
@@ -403,7 +376,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">corporate_fare</i></h2>
                   <p class="number center">1</p>
-                  <h5 class="center blue-grey-text">Companies</h5><br>
+                  <h5 class="center black-text">Companies</h5>
             </div>
           </div>
       </div>
@@ -413,7 +386,7 @@
               <div class="icon-block icon">
                 <h2 class="center light-blue-text"><i class="material-icons">post_add</i></h2>
                   <p class="number center">145</p>
-                  <h5 class="center blue-grey-text">Jobs Posted</h5><br>
+                  <h5 class="center black-text">Jobs Posted</h5>
             </div>
           </div>
       </div>
@@ -431,7 +404,7 @@
         <h5 class="col s12 light start">UBRA helps job seekers and employers the right fit everyday.
         </h5>
          <div class="row">
-          <div class="col s12 m3">
+          <div class="col s6 m3">
             <div class="card hoverable">
               <div class="card-image">
                 <img src="dmmmsu.jpg">

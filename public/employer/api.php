@@ -10,14 +10,24 @@
 
         $data=json_decode($request->getBody());
 	
-        $app_id =$data->app_id;
-        $fname =$data->fname;
-        $mname =$data->mname;
-        $lname =$data->lname;
-        $uname =$data->uname;
-        $email =$data->email;
-        $pass1 =$data->pass1;
-        $pass2 =$data->pass2;
+        $emp_id =$data->emp_id;
+        $emp_uname =$data->emp_uname;
+        $emp_pass =$data->emp_pass;
+        $emp_cpass =$data->emp_cpass;
+        $emp_name =$data->emp_name;
+        $emp_brand =$data->emp_brand;
+        $tax_id =$data->tax_id;
+        $emp_type =$data->emp_type;
+        $emp_num =$data->emp_num;
+        $emp_municipal =$data->emp_municipal;
+        $emp_province =$data->emp_province;
+        $emp_barangay =$data->emp_barangay;
+        $emp_person =$data->emp_person;
+        $emp_position =$data->emp_position;
+        $emp_telephone =$data->emp_telephone;
+        $emp_mobile =$data->emp_mobile;
+        $emp_email =$data->emp_email;
+        
 
         include 'database.php';
         
@@ -27,13 +37,13 @@
 
             $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 
-            $query = "SELECT * FROM user WHERE email='". $email ."'";
+            $query = "SELECT * FROM employer WHERE tax_id='". $tax_id ."'";
             
             $result = $conn->query($query);
             
             if ($result->rowCount() == 0) 
             {
-                $sql = "INSERT INTO user (app_id, fname, mname, lname, uname, email, pass1, pass2) VALUES ('". $app_id ."', '". $fname ."', '". $mname ."', '". $lname ."', '". $uname ."','". $email ."','". $pass1 ."','". $pass2 ."')";
+                $sql = "INSERT INTO employer (emp_id, emp_uname, emp_pass, emp_cpass, emp_name, emp_brand, tax_id, emp_type, emp_num, emp_municipal, emp_province, emp_barangay, emp_person, emp_position, emp_telephone, emp_mobile, emp_email) VALUES ('". $emp_id ."', '". $emp_uname ."', '". $emp_pass ."', '". $emp_cpass ."', '". $emp_name ."', '". $emp_brand ."', '". $tax_id ."', '". $emp_type ."', '". $emp_num ."', '". $emp_municipal ."', '". $emp_province ."', '". $emp_barangay ."', '". $emp_person ."', '". $emp_position ."', '". $emp_telephone ."', '". $emp_mobile ."', '". $emp_email ."')";
                 $conn->exec($sql);
                 $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
             }
@@ -55,8 +65,8 @@
         session_start();
         
         $data=json_decode($request->getBody());
-        $email =$data->email;
-        $psword =$data->psword;
+        $emp_uname=$data->emp_uname;
+        $emp_pass=$data->emp_pass;
         
         include 'database.php';
         
@@ -67,10 +77,10 @@
             die("Connection failed: " . $conn->connect_error);
         }
 
-        $sql = "SELECT * FROM user WHERE email='". $email ."' OR uname='". $email ."' AND pass1='". $psword ."'";
+        $sql = "SELECT * FROM employer WHERE emp_uname='". $emp_uname ."' AND emp_pass='". $emp_pass ."'";
         $result = $conn->query($sql);	
         $row  = mysqli_fetch_array($result);
-        $_SESSION['email'] = $email;	
+        $_SESSION['emp_uname'] = $emp_uname;	
                     if ($result->num_rows > 0)  
                     {
                         $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
