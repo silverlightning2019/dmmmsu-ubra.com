@@ -47,15 +47,18 @@
 						<p class="step center">Employer Account Details</p>
 
 						<div class="input-field col s12">
-							<input type="text" name="uname1" class="validate" placeholder="Enter User Name">
+							<input type="text" name="uname1" class="validate" placeholder="">
+							<label for="uname1">User Name</label>
 						</div>
 					  
 						<div class="input-field col s12">
-							<input type="password" name="password1" placeholder="Enter Password">
+							<input type="password" name="password1" placeholder="">
+							<label for="password1">Password</label>
 						</div>
 
 						<div class="input-field col s12">
-							<input type="password" name="pass1" placeholder="Confirm Password">
+							<input type="password" name="cpass1" placeholder="">
+							<label for="cpass1">Confirm Password</label>
 						</div>
 						
 						<p class="center"><a href="CompanyRegistration2.html" class="waves-effect waves-light btn btn1">NEXT</a></p>
