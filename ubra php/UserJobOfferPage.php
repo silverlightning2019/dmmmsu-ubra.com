@@ -49,9 +49,11 @@
     }
 
     .btn1{
-      width:250px;
-      background-color:#64b5f6;
-      font-weight: bolder;
+     background-color:#64b5f6;
+      width: 100%;
+      display: inline-block;
+      font-size:15px;
+      font-weight: 500;
     }
 
     .job{
@@ -145,13 +147,18 @@
                   <i class="material-icons prefix">work</i>
                   <select>
                     <option value="" disabled selected>All Job Specialization</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
+                    <option value="" disabled selected>All Job Specialization</option>
+                    <option value="1">HealthCare</option>
+                    <option value="2">Construction</option>
+                    <option value="3">Educational</option>
+                    <option value="4">Restaurant/Food Service</option>
+                    <option value="5">Sales/Marketing</option>
+                    <option value="6">IT Solution</option>
                   </select>
                 </div>
 
                 <div class="input-field col s12 m3">
-                  <a class="waves-effect blue btn-large btn1">Job Matching</a>
+                  <a class="waves-effect blue btn-large btn1">Job Match</a>
                 </div>
 
               </div>
