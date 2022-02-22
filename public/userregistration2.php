@@ -94,7 +94,7 @@
 								
 						<div class="input-field col s12 m4">
 							<input type="text" class="datepicker" name="date" value="<?= isset($_SESSION['info']['date']) ? $_SESSION ['info']['date'] : ''?>" placeholder="">
-							<label>Birth Date</label>
+							<label for="date">Birth Date</label>
 						</div>
 						
 						<div class="input-field col s12 m4">
