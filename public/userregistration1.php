@@ -80,32 +80,39 @@
 							<input type="hidden" name="app_id" id="app_id" class="validate" value="<?php echo $applicant_id; ?>" placeholder="Applicant ID" readonly>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="fname" class="validate" value="<?= isset($_SESSION['info']['fname']) ? $_SESSION ['info']['fname'] : ''?>" placeholder="Enter First Name">
+						<div class="input-field col s12 m4">
+							<input type="text" name="fname" class="validate" value="<?= isset($_SESSION['info']['fname']) ? $_SESSION ['info']['fname'] : ''?>" placeholder="">
+							<label for="fname">First Name</label>
 						</div>
 						
-						<div class="input-field col s12">
-							<input type="text" name="mname" class="validate" value="<?= isset($_SESSION['info']['mname']) ? $_SESSION ['info']['mname'] : ''?>" placeholder="Enter Middle Name">
+						<div class="input-field col s12 m4">
+							<input type="text" name="mname" class="validate" value="<?= isset($_SESSION['info']['mname']) ? $_SESSION ['info']['mname'] : ''?>" placeholder="">
+							<label for="mname">Middle Name</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="lname" class="validate" value="<?= isset($_SESSION['info']['lname']) ? $_SESSION ['info']['lname'] : ''?>" placeholder="Enter Last Name">
+						<div class="input-field col s12 m4">
+							<input type="text" name="lname" class="validate" value="<?= isset($_SESSION['info']['lname']) ? $_SESSION ['info']['lname'] : ''?>" placeholder="">
+							<label for="lname">Last Name</label>
 						</div>
-								
-						<div class="input-field col s12">
-							<input type="text" name="uname" class="validate" value="<?= isset($_SESSION['info']['uname']) ? $_SESSION ['info']['uname'] : ''?>" placeholder="Enter User Name">
+						
+						<div class="input-field col s12 m12">
+							<input type="email" name="email" class="validate" value="<?= isset($_SESSION['info']['email']) ? $_SESSION ['info']['email'] : ''?>" placeholder="">
+							<label for="email">Email Address</label>
+						</div>
+						
+						<div class="input-field col s12 m4">
+							<input type="text" name="uname" class="validate" value="<?= isset($_SESSION['info']['uname']) ? $_SESSION ['info']['uname'] : ''?>" placeholder="">
+							<label for="uname">User Name</label>
+						</div>
+		  
+						<div class="input-field col s12 m4">
+							<input type="password" name="pass1" value="<?= isset($_SESSION['info']['pass1']) ? $_SESSION ['info']['pass1'] : ''?>" placeholder="">
+							<label for="pass1">Password</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="email" name="email" class="validate" value="<?= isset($_SESSION['info']['email']) ? $_SESSION ['info']['email'] : ''?>" placeholder="Enter Email Address">
-						</div>
-								  
-						<div class="input-field col s12">
-							<input type="password" name="pass1" value="<?= isset($_SESSION['info']['pass1']) ? $_SESSION ['info']['pass1'] : ''?>" placeholder="Enter Password">
-						</div>
-
-						<div class="input-field col s12">
-							<input type="password" name="pass2" value="<?= isset($_SESSION['info']['pass2']) ? $_SESSION ['info']['pass2'] : ''?>" placeholder="Confirm Password">
+						<div class="input-field col s12 m4">
+							<input type="password" name="pass2" value="<?= isset($_SESSION['info']['pass2']) ? $_SESSION ['info']['pass2'] : ''?>" placeholder="">
+							<label for="pass2">Confirm Password</label>
 						</div>
 							
 							<p class="center">

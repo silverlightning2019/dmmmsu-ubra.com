@@ -71,46 +71,53 @@
 						<a href="./"><h3 class="center reg">UBRA</h3></a>
 						<p class="center">Register Now!</p>
 						<p class="step center">Step 2 - Personal</p>
-
-						<div class="input-field col s12">
-							<input type="text" name="province" class="validate" value="<?= isset($_SESSION['info']['province']) ? $_SESSION ['info']['province'] : ''?>" placeholder="Province">
+						
+						<div class="input-field col s12 m3">
+							<input type="text" name="house" class="validate" value="<?= isset($_SESSION['info']['house']) ? $_SESSION ['info']['house'] : ''?>" placeholder="">
+							<label for="house">House #/Stress #</label>
 						</div>
 						
-						<div class="input-field col s12">
-							<input type="text" name="municipality" class="validate" value="<?= isset($_SESSION['info']['municipality']) ? $_SESSION ['info']['municipality'] : ''?>" placeholder="Municipality">
+						<div class="input-field col s12 m3">
+							<input type="text" name="barangay" class="validate" value="<?= isset($_SESSION['info']['barangay']) ? $_SESSION ['info']['barangay'] : ''?>" placeholder="">
+							<label for="barangay">Barangay</label>
 						</div>
-
-						<div class="input-field col s12">
-							<input type="text" name="barangay" class="validate" value="<?= isset($_SESSION['info']['barangay']) ? $_SESSION ['info']['barangay'] : ''?>" placeholder="Barangay">
+						
+						<div class="input-field col s12 m3">
+							<input type="text" name="municipality" class="validate" value="<?= isset($_SESSION['info']['municipality']) ? $_SESSION ['info']['municipality'] : ''?>" placeholder="">
+							<label for="municipality">Municipality</label>
+						</div>
+						
+						<div class="input-field col s12 m3">
+							<input type="text" name="province" class="validate" value="<?= isset($_SESSION['info']['province']) ? $_SESSION ['info']['province'] : ''?>" placeholder="">
+							<label for="province">Province</label>
 						</div>
 								
-						<div class="input-field col s12">
-							<input type="text" name="house" class="validate" value="<?= isset($_SESSION['info']['house']) ? $_SESSION ['info']['house'] : ''?>" placeholder="House Number/Street Number">
-						</div>
-							
-						<div class="input-field col s12">
-							<input type="text" class="datepicker" name="date" value="<?= isset($_SESSION['info']['date']) ? $_SESSION ['info']['date'] : ''?>" placeholder="Birth Date">
+						<div class="input-field col s12 m4">
+							<input type="text" class="datepicker" name="date" value="<?= isset($_SESSION['info']['date']) ? $_SESSION ['info']['date'] : ''?>" placeholder="">
+							<label for="date">Birth Date</label>
 						</div>
 						
-						<div class="input-field col s12">
-							<input type="text" name="age" class="validate" value="<?= isset($_SESSION['info']['age']) ? $_SESSION ['info']['age'] : ''?>" placeholder="Age">
+						<div class="input-field col s12 m4">
+							<input type="text" name="age" class="validate" value="<?= isset($_SESSION['info']['age']) ? $_SESSION ['info']['age'] : ''?>" placeholder="">
+							<label for="age">Age</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="cnumber" class="validate" value="<?= isset($_SESSION['info']['cnumber']) ? $_SESSION ['info']['cnumber'] : ''?>" placeholder="Contact Number">
+						<div class="input-field col s12 m4">
+							<input type="text" name="cnumber" class="validate" value="<?= isset($_SESSION['info']['cnumber']) ? $_SESSION ['info']['cnumber'] : ''?>" placeholder="">
+							<label for="cnumber">Contact Number</label>
 						</div>
 
-						<div class="input-field col s12">
+						<div class="input-field col s12 m4">
 							<select name="gender" value="<?= isset($_SESSION['info']['gender']) ? $_SESSION ['info']['gender'] : ''?>">
 							<option value="<?php echo isset($_SESSION['info']['gender']) ? '' : $_SESSION ['info']['gender'] = "Male" ?>" disabled></option>
 							<option value="Male" <?php echo $_SESSION['info']['gender'] == 'Male' ? 'selected' : ''; ?> >Male</option>
 							<option value="Female" <?php echo $_SESSION['info']['gender'] == 'Female' ? 'selected' : ''; ?> >Female</option>
 							</select>
-							<label>Sex</label>
+							<label for="gender">Gender</label>
 					 	</div>
 						
-						<div class="input-field col s12">
-					    <select name="cstatus" value="<?= isset($_SESSION['info']['cstatus']) ? $_SESSION ['info']['cstatus'] : ''?>" placeholder="Civil Status">
+						<div class="input-field col s12 m4">
+					    <select name="cstatus" value="<?= isset($_SESSION['info']['cstatus']) ? $_SESSION ['info']['cstatus'] : ''?>" placeholder="">
 						  <option value="<?php echo isset($_SESSION['info']['cstatus']) ? '' : $_SESSION ['info']['cstatus'] = "" ?>" disabled></option>
 						  <option value="Single" <?php echo $_SESSION['info']['cstatus'] == 'Single' ? ' selected' : ''; ?> >Single</option>
 					      <option value="Married" <?php echo $_SESSION['info']['cstatus'] == 'Married' ? ' selected' : ''; ?> >Married</option>
@@ -118,14 +125,16 @@
 					      <option value="Separated" <?php echo $_SESSION['info']['cstatus'] == 'Separated' ? ' selected' : ''; ?> >Separated</option>
 					      <option value="Live In" <?php echo $_SESSION['info']['cstatus'] == 'Live In' ? ' selected' : ''; ?> >Live In</option>
 					    </select>
+						<label for="cstatus">Civil Status</label>
 					  </div>
 
-					  <div class="input-field col s12">
+					  <div class="input-field col s12 m4">
 					    <select name="estatus" value="<?= isset($_SESSION['info']['estatus']) ? $_SESSION ['info']['estatus'] : ''?>">
 						<option value="<?php echo isset($_SESSION['info']['estatus']) ? '' : $_SESSION ['info']['estatus'] = "" ?>" disabled></option>
 					      <option value="Employed" <?php echo $_SESSION['info']['estatus'] == 'Employed' ? ' selected' : ''; ?> >Employed</option>
 					      <option value="Unemployed" <?php echo $_SESSION['info']['estatus'] == 'Unemployed' ? ' selected' : ''; ?>>Unemployed</option>
 					    </select>
+						  <label for="estatus">Employment Status</label>
 					  </div>
 							
 							<p class="center">

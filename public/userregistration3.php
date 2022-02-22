@@ -109,9 +109,9 @@
 	  $(document).ready(function (){
 		  $(document).on('click', '.add-more-form', function(){
 			$('.paste-new-forms').append('<a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">close</i></a>\
-							<div class="input-field col s10">\
+							<div class="input-field col s12 m6">\
 							<select>\
-								<option value="" disabled selected>Level</option>\
+								<option value="" disabled selected></option>\
 								<option value="1">Elementary</option>\
 								<option value="2">High School</option>\
 								<option value="2">Vocational/Trade Course</option>\
@@ -119,24 +119,35 @@
 								<option value="2">Graduate Studies</option>\
 								<option value="2">N/A</option>\
 							</select>\
+							 <label for="">Level</label>\
 							</div>\
-							<div class="input-field col s12">\
-								<input type="text" name="basic" class="validate" placeholder="Basic Education/Degree/Course">\
+							<div class="input-field col s12 m6">\
+								<input type="text" name="school" class="validate" placeholder="">\
+								<label for="school">Name of School</label>\
 							</div>\
-							<div class="input-field col s12">\
-								<input type="text" name="to" class="validate" placeholder="Year" placeholder="From">\
+							<div class="input-field col s12 m4">\
+								<input type="text" name="basic" class="validate" placeholder="">\
+								<label for="basic">Basic Education/Degree/Course</label>\
 							</div>\
-							<div class="input-field col s12">\
-								<input type="text" name="to" class="validate" placeholder="Year" placeholder="To">\
+							<div class="input-field col s12 m4">\
+								<input type="text" name="from" class="validate" placeholder="">\
+								<label for="from">From (Year)</label>\
 							</div>\
-							<div class="input-field col s12">\
-								<input type="text" name="hlevel" class="validate" placeholder="Highest Level/Unit Earned">\
+							<div class="input-field col s12 m4">\
+								<input type="text" name="to" class="validate" placeholder="">\
+								<label for="to">To (Year)</label>\
 							</div>\
-							<div class="input-field col s12">\
-								<input type="text" name="graduated" class="validate" placeholder="Year Graduated">\
+							<div class="input-field col s12 m6">\
+								<input type="text" name="hlevel" class="validate" placeholder="">\
+								<label for="hlevel">Highest Level/Unit Earned</label>\
 							</div>\
-							<div class="input-field col s12">\
-								<input type="text" name="scholarsip" class="validate" placeholder="Scholarship/Academic Honors Received">\
+							<div class="input-field col s12 m6">\
+								<input type="text" name="graduated" class="validate" placeholder="">\
+								<label for="graduated">Year Graduated</label>\
+							</div>\
+							<div class="input-field col s12 m12">\
+								<input type="text" name="scholarsip" class="validate" placeholder="">\
+								<label for="scholarship">Scholarship/Academic Honors Received</label>\
 							</div>')
 		  });
 	  });

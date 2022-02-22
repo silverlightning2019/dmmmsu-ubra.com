@@ -44,69 +44,82 @@
 						<p class="center">Employer Registration</p>
 						<p class="step center">Employer Other Details</p>
 
-						<div class="input-field col s12">
-							<input type="text" name="cname" class="validate" placeholder="Employer/Company Name">
+						<div class="input-field col s12 m4">
+							<input type="text" name="cname" class="validate" placeholder="">
+							<label for="cname">Employer/Company Name</label>
 						</div>
 
-						<div class="input-field col s12">
-							<input type="text" name="cbrand" class="validate" placeholder="Employer/Company Brand">
+						<div class="input-field col s12 m4">
+							<input type="text" name="cbrand" class="validate" placeholder="">
+							<label for="cbrand">Employer/Company Brand</label>
 						</div>
 					  
-					  <div class="input-field col s12">
-					  	<input type="text" name="ctax" class="validate" placeholder="Tax Identification">
+					  <div class="input-field col s12 m4">
+					  	<input type="text" name="ctax" class="validate" placeholder="">
+					  	<label for="ctax">Tax Identification</label>
 					  </div>
 						
-						<div class="input-field col s6">
+						<div class="input-field col s12 m6">
 							<select>
-					      <option value="" disabled selected>Employer Type</option>
+					      <option value="" disabled selected></option>
 					      <option value="1">Government</option>
 					      <option value="2">Private</option>
 					      <option value="3">Local</option>
 					      <option value="4">Overseas</option>
 					    </select>
+					    <label for="">Employer Type</label>
 					  </div>
 						
-						<div class="input-field col s6">
+						<div class="input-field col s12 m6">
 							<select>
-					      <option value="" disabled selected>Employee's Number</option>
+					      <option value="" disabled selected></option>
 					      <option value="1">1-9</option>
 					      <option value="2">10-99</option>
 					      <option value="3">100-199</option>
 					      <option value="3">200 and up</option>
 					    </select>
+					    <label for="">Employee's Number</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="text" name="municipality" class="validate" placeholder="Municipality">
+					  <div class="input-field col s12 m4">
+					  	<input type="text" name="barangay" class="validate" placeholder="">
+					  	<label for="barangay">Barangay</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="text" name="province" class="validate" placeholder="Province">
+					  <div class="input-field col s12 m4">
+					  	<input type="text" name="municipality" class="validate" placeholder="">
+					  	<label for="municipality">Municipality</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="text" name="barangay" class="validate" placeholder="Barangay">
+					  <div class="input-field col s12 m4">
+					  	<input type="text" name="province" class="validate" placeholder="">
+					  	<label for="province">Province</label>
 					  </div>
 
 					  <p class="step center">Employer Contact Details</p>
-					  <div class="input-field col s12">
-					  	<input type="text" name="cperson" class="validate" placeholder="Contact Person (Full Name)">
+					  <div class="input-field col s12 m6">
+					  	<input type="text" name="cperson" class="validate" placeholder="">
+					  	<label for="cperson">Contact Person (Full Name)</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="text" name="cposition" class="validate" placeholder="Position">
+					  <div class="input-field col s12 m6">
+					  	<input type="text" name="cposition" class="validate" placeholder="">
+					  	<label for="cposition">Postion</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="text" name="ctelephone" class="validate" placeholder="Telephone Number">
+					  <div class="input-field col s12 m4">
+					  	<input type="text" name="ctelephone" class="validate" placeholder="">
+					  	<label for="ctelephone">Telephone Number</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="text" name="cmobile" class="validate" placeholder="Mobile Number">
+					  <div class="input-field col s12 m4">
+					  	<input type="text" name="cmobile" class="validate" placeholder="">
+					  	<label for="cmobile">Mobile Number</label>
 					  </div>
 
-					  <div class="input-field col s12">
-					  	<input type="email" name="cemail" class="validate" placeholder="Email Address">
+					  <div class="input-field col s12 m4">
+					  	<input type="email" name="cemail" class="validate" placeholder="">
+					  	<label for="cemail">Email Address</label>
 					  </div>
 
 					  <p class="center">
