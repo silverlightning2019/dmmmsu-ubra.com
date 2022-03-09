@@ -184,94 +184,93 @@
          <div class="row">
           <div class="col s12 m4">
             <div class="card hoverable">
-              <div class="card-image">
+              <div class="card-image left-align">
                 <img src="Engineers.jpg">
               </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
+              <div class="card-content" style="padding: 10px 10px 10px 10px;">
+                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
 
          <div class="col s12 m4">
             <div class="card hoverable">
-              <div class="card-image">
+              <div class="card-image left-align">
                 <img src="Engineers.jpg">
               </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
+              <div class="card-content" style="padding: 10px 10px 10px 10px;">
+                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
 
           <div class="col s12 m4">
             <div class="card hoverable">
-              <div class="card-image">
+              <div class="card-image left-align">
                 <img src="Engineers.jpg">
               </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
+              <div class="card-content" style="padding: 10px 10px 10px 10px;">
+                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
 
           <div class="col s12 m4">
             <div class="card hoverable">
-              <div class="card-image">
+              <div class="card-image left-align">
                 <img src="Engineers.jpg">
               </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
+              <div class="card-content" style="padding: 10px 10px 10px 10px;">
+                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-               <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
 
           <div class="col s12 m4">
             <div class="card hoverable">
-              <div class="card-image">
+              <div class="card-image left-align">
                 <img src="Engineers.jpg">
               </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
+              <div class="card-content" style="padding: 10px 10px 10px 10px;">
+                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
 
           <div class="col s12 m4">
             <div class="card hoverable">
-              <div class="card-image">
+              <div class="card-image left-align">
                 <img src="Engineers.jpg">
               </div>
-              <div class="card-content">
-                <p class="job">Civil Engineer</p>
+              <div class="card-content" style="padding: 10px 10px 10px 10px;">
+                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
                 <i class="material material-icons">place</i>San Fernando City of La Union<br>
                 <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-                <p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
+                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
+                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
               </div>
             </div>
           </div>
-
         </div>
   </div>
 </div>
