@@ -1,14 +1,9 @@
 <?php
 	session_start();
-	session_destroy();
-?>
-<?php
-	if (!isset($_SESSION['emp_uname'])){
+	if (isset($_SESSION['emp_uname'])){
 		header("location: home.php");
 	}
-	session_start();
 ?>
-
 <!DOCTYpE html>
 <html lang="en">
 <head>
@@ -65,6 +60,11 @@
 
 			.click{
 				font-weight: bold;
+			}
+			.error{
+				font-size: 13px;
+				color: red;
+				float: right;
 			}
 		</style>
 </head>

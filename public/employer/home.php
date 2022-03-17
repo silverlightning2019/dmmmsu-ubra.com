@@ -106,7 +106,7 @@
         <li><a href="profile.php">Company Profile</a></li>
         <li><a href="job-annoucements.php">Job Announcements</a></li>
         <li><a href="job-registered.php">Job Registered</a></li>
-        <li><a href="./"><i class="material-icons">logout</i></a></li>
+        <li><a href="logout.php"><i class="material-icons">logout</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -114,7 +114,7 @@
         <li><a href="profile.php">Company Profile</a></li>
         <li><a href="job-annoucements.php">Job Announcements</a></li>
         <li><a href="job-registered.php">Job Registered</a></li>
-        <li><a href="./">Log Out</a></li>
+        <li><a href="logut.php">Log Out</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
@@ -135,10 +135,10 @@
 <div class="row">
 
     <div class="col s12 m4">
-      <a href="CompanyAnnouncement.php">
+      <a href="company-annoucements.php">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="img/applicants.png">
+          <img src="../img/applicants.png">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -150,10 +150,10 @@
     </div>
 
     <div class="col s12 m4">
-      <a href="CompanyJobRegistration.php">
+      <a href="company-job-registration.php">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="img/offer.png">
+          <img src="../img/offer.png">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -168,7 +168,7 @@
       <a href="CompanyApplicants.php">
       <div class="card hoverable">
         <div class="card-image">
-          <img src="img/announce.png">
+          <img src="../img/announce.png">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -399,6 +399,5 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
   </body>
 </html>

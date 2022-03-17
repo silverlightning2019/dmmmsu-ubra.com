@@ -54,7 +54,7 @@
         <li><a href="profile.php">Company Profile</a></li>
         <li><a href="job-annoucements.php">Job Announcements</a></li>
         <li><a href="job-registered.php">Job Registered</a></li>
-        <li><a href="./"><i class="material-icons">logout</i></a></li>
+        <li><a href="logout.php"><i class="material-icons">logout</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
@@ -62,7 +62,7 @@
         <li><a href="profile.php">Company Profile</a></li>
         <li><a href="job-annoucements.php">Job Announcements</a></li>
         <li><a href="job-registered.php">Job Registered</a></li>
-        <li><a href="./">Log Out</a></li>
+        <li><a href="logout.php">Log Out</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
