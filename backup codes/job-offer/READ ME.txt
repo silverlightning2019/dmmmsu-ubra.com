@@ -1,0 +1,27 @@
+IMPORT DATABASE TO phpAdmin
+-if error just create a database named "hub" them import the hub.sql
+-----------------------------------------------------------------------------
+To CHECK/REVIEW
+-Pa check po nung job-offer.php at job-offer2.php
+-----------------------------------------------------------------------------
+QUICK SUMMARY FOR job-offer.php and job-offer2.php
+
+job-offer.php
+-working pagination
+-working auto-suggestion(custom but still relies on bootstrap)
+-working data passing to next page
+
+job-offer2.php
+-working search/filter of job list
+-working pagination
+-working auto-suggestion(custom but still relies on bootstrap)
+-design and function issue(s) | mainly because of materialize script and bootstrap script
+-working data passing to next page
+
+
+-----------------------------------------------------------------------------
+ISSUE(S)
+-May conflict ng script, script ng materialize at script ng bootstrap.
+-no problem kung magsama script ng bootstrap at css ng materialize pero ibang usapan ng kung script ng bootstrap at script ng materialize
+-hindi gagana yung auto-suggestion sa search/filter function kung magkasama yung script ng materialize at bootstrap.
+
