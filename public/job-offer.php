@@ -1,3 +1,6 @@
+<?php 
+include('jobcount.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -86,6 +89,10 @@
       margin-right: 10px;
       margin-bottom: 5px;
     }
+	#pmargin a{
+		margin:10px 10px 10px 10px;
+	}
+	
   </style>
 </head>
 <body class="body">
@@ -117,7 +124,7 @@
 
 
 
-
+<form action="" method="POST">
 <!--Part 1-->
 <div class="container">
       <div class="card">
@@ -126,36 +133,31 @@
               <div class="row">
                 <div class="input-field col s12 m3">
                   <i class="material-icons prefix">search</i>
-                  <input id="icon_prefix" type="text" class="validate" placeholder="Input Keywords Here..">
+                  <input type="text" id="j_name" name="j_name" type="text" class="validate" placeholder="Input Keywords Here..">
                 </div>
 
                 <div class="input-field col s12 m3">
                   <i class="material-icons prefix">location_on</i>
-                  <select>
-                    <option value="" disabled selected>All Location</option>
-                    <option value="1">Local</option>
-                    <option value="2">Overseas</option>
-                  </select>
+				  <input list="area" id="j_area" name="j_area" placeholder="Select Area">
+                  <datalist id="area">
+					<option value="Local">
+					<option value="Overseas">
+				  </datalist>
                 </div>
 
                 <div class="input-field col s12 m3">
                   <i class="material-icons prefix">work</i>
-                  <select>
-                    <option value="" disabled selected>All Job Specialization</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                  </select>
+                  <input type="text" id="j_specialization" name="j_specialization" placeholder="Specialization...">
                 </div>
 
                 <div class="input-field col s12 m3">
-                  <a class="waves-effect waves-effect blue lighten-2 btn-large btn1">Job Match</a>
+                  <button class="waves-effect waves-effect blue lighten-2 btn-large btn1" name="filter" id="filter" >Job Match</button>
                 </div>
 
               </div>
             </form>
           </div>
-      </div>   
-  
+</form>
 <!--Part 2-->
 <div class="card">
     <div class="card horizontal">
@@ -167,7 +169,7 @@
             </div>
             <div class="right-side" style="float: right;">
               <p class="right-align blue-grey-text" style="font-size: 15px; font-weight:500;">Result: 
-              <span style="color:#64b5f6;">0 Job(s)</span></p>
+              <span style="color:#64b5f6;"><?php echo $result[0]; ?> Job(s)</span></p>
             </div>
           </div>
         </div>
@@ -177,113 +179,106 @@
 </div>
 
 <!--Part 3-->
+<form action="pass.php" method="POST">
 <div class="card2">
-  <!--Featured Jobs-->
-  <div class="container">
-        <!--Featured Jobs List-->
-         <div class="row">
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
+	<div class="row">
+			<?php
 
-         <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
+			include('conndb.php');
+			
+			$per_page_record = 6;  // Number of entries to show in a page.   
+			// Look for a GET variable page if not found default is 1.        
+			if (isset($_GET["page"])) {    
+				$page  = $_GET["page"];    
+			}    
+			else {    
+			  $page=1;    
+			}    
+		
+			$start_from = ($page-1) * $per_page_record; 
+			
+			if(ISSET($_POST['filter'])){
+			$j_name=$_POST['j_name'];
+			$j_area=$_POST['j_area'];
+			$j_specialization=$_POST['j_specialization'];
+									 
 
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
+				if($j_name=="" AND $j_area=="" AND $j_specialization=="" || $j_name==NULL AND $j_area==NULL AND $j_specialization==NULL){
+					$query=mysqli_query($conn, "SELECT * FROM `job_tbl` WHERE j_id='0'") or die(mysqli_error());
+					echo "<tr><td><h4><span style='color:#64b5f6;'>No Result(s) Found...</span></h4></td></tr>";
+				}elseif($j_name!="" AND $j_area!=""){
+					$query=mysqli_query($conn, "SELECT * FROM `job_tbl` WHERE `j_name`='$j_name' AND `j_area`='$j_area' LIMIT $per_page_record ") or die(mysqli_error());
+				}elseif($j_name!=""){
+					$query=mysqli_query($conn, "SELECT * FROM `job_tbl` WHERE `j_name`='$j_name' LIMIT $per_page_record ") or die(mysqli_error());
+				}elseif($j_area!=""){
+					$query=mysqli_query($conn, "SELECT * FROM `job_tbl` WHERE `j_area`='$j_area' LIMIT $per_page_record ") or die(mysqli_error());
+				}else{
+					$query=mysqli_query($conn, "SELECT * FROM `job_tbl` WHERE `j_name`='$j_name' AND `j_area`='$j_area' AND `j_specialization`='$j_specialization' LIMIT $per_page_record ") or die(mysqli_error());
+				}
+			}else{
+				$query=mysqli_query($conn, "SELECT * FROM `job_tbl` LIMIT $start_from, $per_page_record ") or die(mysqli_error());
 
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
+			}
+			while($row=mysqli_fetch_array($query)){
+			?>
+			  <div class="col s12 m6 l4">
+				<div class="card hoverable">
+				  <div class="card-image left-align" >
+					<img src="img/<?php echo $row['j_img']; ?>">
+				  </div>
+				  <div class="card-content" style="padding: 10px 10px 10px 10px;">
+					<p class="job"><?php echo $row['j_name']; ?></p>
+					<i class="material material-icons">place</i><?php echo $row['j_location']; ?><br>
+					<i class="material material-icons">business</i><?php echo $row['j_organization']; ?><br>
+					<i class="material material-icons">check_circle_outline</i><?php echo $row['j_count']; ?><br><br>
+					<center><button name="show" value="<?php echo $row['j_id']; ?>" class="waves-effect btn-flat">Show Details</button></center>
+				  </div>
+				</div>
+			  </div>
+		<?php } ?>
+	</div>
 </div>
+</form>
 
 <!--Part 4-->
 <div class="container">
+<div id="pmargin">
   <ul class="pagination page">
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class=" waves-effect"><a href="#!">1</a></li>
-    <li class=" waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+   <?php  
+        $query = "SELECT COUNT(*) FROM job_tbl";
+        $rs_result = mysqli_query($conn, $query);     
+        $row = mysqli_fetch_row($rs_result);     
+        $total_records = $row[0];     
+          
+		echo "</br>";     
+        // Number of pages required.   
+        $total_pages = ceil($total_records / $per_page_record);     
+        $pagLink = "";       
+		
+		if($page>=2){   
+            echo "<a  class = 'btn active' href='job-offer.php?page=".($page-1)."'><i class='material-icons'>chevron_left</i></a>";   
+        }       
+                    
+          if ($i = $page) {   
+              $pagLink .= "<a class = 'btn active' href='job-offer.php?page=" .$i."'>".$i." </a>";   
+          }  
+          else  {   
+              $pagLink .= "<a href='job-offer.php?page=".$i."'> ".$i." </a>";     
+          }   
+    
+        echo $pagLink;   
+  
+        if($page<$total_pages){   
+            echo "<a  class = 'btn active' href='job-offer.php?page=".($page+1)."'><i class='material-icons'>chevron_right</i></a>";   
+        } 
+  
+				  
+		
+      ?>    
   </ul>
 </div>
+</div>
+
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
@@ -327,6 +322,21 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <!-- jQuery UI -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  
+  	<script type="text/javascript">
+	  $(function() {
+		 $( "#j_name" ).autocomplete({
+		   source: 'db-search.php',
+		 });
+		 $( "#j_specialization" ).autocomplete({
+		   source: 'db-search2.php',
+		 });
+	  });
+	</script>
+	
 
   </body>
 </html>
