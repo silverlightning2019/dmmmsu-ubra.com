@@ -11,10 +11,6 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
-    .search{
-      background: white;
-    }
-
     .work{
       padding: 5px;
     }
@@ -90,6 +86,39 @@
       margin-right: 10px;
       margin-bottom: 5px;
     }
+	.frmSearch {
+		border: 1px solid #a8d4b1;
+		background-color: #c6f7d0;
+		margin: 2px 0px;padding:40px;
+		border-radius:4px;
+	}
+	#job-list{
+		float:left;
+		list-style:none;
+		margin-top:-3px;
+		padding:0;
+		width:90.5%;
+		position: absolute;
+	}
+	#job-list li{
+		padding: 10px;
+		background: #f0f0f0;
+		border-bottom: #bbb9b9 1px solid;
+		color:#64b5f6;
+		width:100%;
+		font-size:20px;
+		text-align:left;
+	}
+	#job-list li:hover{
+		background:#ece3d2;
+		cursor: pointer;
+		width:100%;
+	}
+	#search{
+		padding: 10px;
+		border: #a8d4b1 1px solid;
+		border-radius:4px;
+	}
   </style>
 </head>
 <body class="body">
@@ -121,27 +150,30 @@
 
 <!--Slider-->
 <section class="slider">
-  <ul class="slides">
-    <li>
-      <img src="image.jpg">
-      <div class="caption center-align">
-        <h3 class="welcome">Welcome to <span class="logo">UBRA</span> : DMMMSU-MLUC Job Finder System</h3>
-        <h5 class="slogan">"You can find the Job that suits you!"</h5><br>        
-          <!--Search Bar-->
-          <div class="container">
-            <nav>
-              <div class="nav-wrapper search">
-                <form>
-                  <div class="input-field">
-                    <input id="search" type="search" placeholder="Search Job Here.." required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                    <i class="material-icons">close</i>
-                  </div>
-                </form>
-              </div>
-            </nav>
-          </div>
-    </div>
+    <div class="caption center-align">
+    <h3 class="welcome">Welcome to <span class="logo">UBRA</span> : DMMMSU-MLUC Job Finder System</h3>
+    <h5 class="slogan">"You can find the Job that suits you!"</h5><br>    
+	<!--Search Bar-->
+        <div class="container">
+			<nav>
+				<div class="nav-wrapper search">
+					<?php 
+					if(isset($_POST['search'])){
+						$search=$_POST["search"];
+					}
+					?>
+					<form action="job.php" method="POST">
+						<div class="input-field">
+							<div class="frmSearch">
+								<input type="search" name="search" id="search" placeholder="Job Name/Title..." />
+								<div id="suggesstion-box"></div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</nav>
+		</div>
+	</div>
 </section>
 <!--End-->
 
@@ -466,6 +498,26 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+	$(document).ready(function(){
+		$("#search").keyup(function(){
+			$.ajax({
+			type: "POST",
+			url: "readJob.php",
+			data:'keyword='+$(this).val(),
+			success: function(data){
+				$("#suggesstion-box").show();
+				$("#suggesstion-box").html(data);
+				$("#search").css("background","#FFF");
+			}
+			});
+		});
+	});
 
+	function selectJob(val) {
+	$("#search").val(val);
+	$("#suggesstion-box").hide();
+	}
+  </script>
   </body>
 </html>

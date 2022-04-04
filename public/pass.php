@@ -1,7 +1,5 @@
 <?php
-    $show=$_POST["show"];
-	
-	
+$show=$_POST["show"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -119,43 +117,77 @@
   </style>
 </head>
 <body class="body">
-	
-		<?php
-			$servername = "localhost";
-			$username = "root";
-			$password = "";
-			$dbname = "hub";
-			
-			
-			// Create connection
-			$conn = new mysqli($servername, $username, $password, $dbname);
-			// Check connection
-			if ($conn->connect_error) {
-				die("Connection failed: " . $conn->connect_error);
-			}
-			
-			
-			
-			$sql = "SELECT j_name, j_location, j_organization, j_count, j_description FROM job_tbl WHERE j_id='".$show."'";
-			$result = $conn->query($sql);
-								
-			if ($result->num_rows > 0) 
-			{
-				// output data of each row
-				while($row = $result->fetch_assoc()) 
-				{
-		?>	
-					<p class="job"><?php echo $row['j_name']; ?></p>
-					<i class="material material-icons">place</i><?php echo $row['j_location']; ?><br>
-					<i class="material material-icons">business</i><?php echo $row['j_organization']; ?><br>
-					<i class="material material-icons">check_circle_outline</i><?php echo $row['j_count']; ?><br>
-					<i class="material material-icons">check_circle_outline</i><?php echo $row['j_description']; ?><br>
-		<?php }?> 
-		<?php }else{ ?>
-			<?php echo "error"; ?>
-		<?php } ?>
-	
+<!--Navigation Bar-->
+<nav class=" blue darken-4" role="navigation">
+	<div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="logo">UBRA</span></a>
+		<ul class="right hide-on-med-and-down">
+			<li><a href="home.php">Home</a></li>
+			<li><a href="job-offer.php">Job Offers</a></li>
+			<li><a href="job-events.php">Job Events</a></li>
+			<li><a href="application.php">My Applications</a></li>
+			<li><a href="profile.php">Profile</a></li>
+			<li><a href="./">Log Out</a></li>
+		</ul>
 
+		<ul id="nav-mobile" class="sidenav">
+			<li><a href="home.php">Home</a></li>
+			<li><a href="job-offer.php">Job Offers</a></li>
+			<li><a href="job-events.php">Job Events</a></li>
+			<li><a href="application.php">My Applications</a></li>
+			<li><a href="profile.php">Profile</a></li>
+			<li><a href="./">Log Out</a></li>
+		</ul>
+		<a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
+	</div>
+</nav>
+<!--End-->
+<div class="container">
+      <div class="card">
+		<form action="apply.php" method="POST">
+			<div class="card2">
+				<div class="row">	
+				<?php
+				$servername = "localhost";
+				$username = "root";
+				$password = "";
+				$dbname = "hub";
+					
+					
+				// Create connection
+				$conn = new mysqli($servername, $username, $password, $dbname);
+				// Check connection
+				if ($conn->connect_error) {
+					die("Connection failed: " . $conn->connect_error);
+				}
+					
+					
+					
+				$sql = "SELECT * FROM job_tbl WHERE j_id='".$show."'";
+				$result = $conn->query($sql);
+									
+				if ($result->num_rows > 0) 
+				{
+					// output data of each row
+					while($row = $result->fetch_assoc()) 
+					{
+				?>	
+							<p class="job"><?php echo $row['j_name']; ?></p>
+							<i class="material material-icons">work</i><?php echo $row['j_specialization']; ?><br>
+							<i class="material material-icons">place</i><?php echo $row['j_area']; ?><br>
+							<i class="material material-icons">place</i><?php echo $row['j_location']; ?><br>
+							<i class="material material-icons">business</i><?php echo $row['j_organization']; ?><br>
+							<i class="material material-icons">group</i><?php echo $row['j_count']; ?><br>
+							<i class="material material-icons">description</i><?php echo $row['j_description']; ?><br><br>
+							<button name="apply" value="<?php echo $row['j_id']; ?>" class="waves-effect waves-effect blue lighten-2 btn-large btn1">Apply</button>
+				<?php }?> 
+				<?php }else{ ?>
+					<?php echo "error"; ?>
+				<?php } ?>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
 
 
 
