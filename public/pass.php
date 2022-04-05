@@ -1,5 +1,10 @@
 <?php
 $show=$_POST["show"];
+if($show==NULL || $show==""){
+	echo"show has no value or null";
+	header("Refresh:5; url=job-offer.php");	
+}else{
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,7 +118,14 @@ $show=$_POST["show"];
         height: 400px !important;
         width: 300px !important;
       }
-
+	.child{
+		padding:10px 10px 10px 10px;
+		text-align: justify;
+		float: left;
+		width: 50%;
+		height: 100%;
+		box-sizing: border-box;
+	}
   </style>
 </head>
 <body class="body">
@@ -142,10 +154,12 @@ $show=$_POST["show"];
 </nav>
 <!--End-->
 <div class="container">
-      <div class="card">
-		<form action="apply.php" method="POST">
-			<div class="card2">
-				<div class="row">	
+    <div class="card">
+	<form action="apply.php" method="POST">
+	<section class="parent">
+		<div class="card2">
+		<div class="row">
+		<section class="child">	
 				<?php
 				$servername = "localhost";
 				$username = "root";
@@ -160,17 +174,19 @@ $show=$_POST["show"];
 					die("Connection failed: " . $conn->connect_error);
 				}
 					
-					
-					
+				
 				$sql = "SELECT * FROM job_tbl WHERE j_id='".$show."'";
 				$result = $conn->query($sql);
-									
+					
 				if ($result->num_rows > 0) 
 				{
 					// output data of each row
 					while($row = $result->fetch_assoc()) 
 					{
 				?>	
+							<div class="card-image left-align" >
+								<img src="img/<?php echo $row['j_img']; ?>">
+							</div>
 							<p class="job"><?php echo $row['j_name']; ?></p>
 							<i class="material material-icons">work</i><?php echo $row['j_specialization']; ?><br>
 							<i class="material material-icons">place</i><?php echo $row['j_area']; ?><br>
@@ -178,18 +194,27 @@ $show=$_POST["show"];
 							<i class="material material-icons">business</i><?php echo $row['j_organization']; ?><br>
 							<i class="material material-icons">group</i><?php echo $row['j_count']; ?><br>
 							<i class="material material-icons">description</i><?php echo $row['j_description']; ?><br><br>
-							<button name="apply" value="<?php echo $row['j_id']; ?>" class="waves-effect waves-effect blue lighten-2 btn-large btn1">Apply</button>
+							<center>
+								<button name="apply" value="<?php echo $row['j_id']; ?>" class="waves-effect waves-effect blue lighten-2 btn-large btn1" >Apply</button>
+							</center>
+							
+		</section>
+		<section class="child">
+		<h4>What is Lorem Ipsum?</h4>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+		</section>
+		</div>
+		</div>
+	</section>
+	
 				<?php }?> 
 				<?php }else{ ?>
 					<?php echo "error"; ?>
 				<?php } ?>
-				</div>
-			</div>
-		</form>
+				<?php } ?>
+	</form>
 	</div>
 </div>
-
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>

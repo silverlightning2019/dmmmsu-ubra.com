@@ -126,7 +126,7 @@ $rst = mysqli_fetch_array($rs);
 <!--Part 1-->
 <div class="container">
 	<div class="card">
-		<form action="homesearch.php" method="POST">
+		<form action="job-offer.php" method="POST">
         <div class="card1">
             <form class="col s12">
 				<div class="row">
