@@ -1,7 +1,8 @@
 .frmSearch {
-	border: 1px solid #a8d4b1;
-	background-color: #c6f7d0;
-	margin: 2px 0px;padding:40px;
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	margin: 2px 0px;
+	padding:40px;
 	border-radius:4px;
 	width:100%;
 }
@@ -11,6 +12,7 @@
 	margin-top:-3px;
 	padding:0;
 	position: absolute;
+	width:100%;
 }
 #job-list li{
 	padding: 10px;
@@ -19,6 +21,7 @@
 	color:#64b5f6;
 	font-size:20px;
 	text-align:left;
+	width:90.8%;
 }
 #job-list li:hover{
 	background:#ece3d2;
@@ -26,6 +29,6 @@
 }
 #j_name{
 	padding: 10px;
-	border: #a8d4b1 1px solid;
+	border: #4267B2 3px solid;
 	border-radius:4px;
 }

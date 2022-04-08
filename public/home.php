@@ -116,6 +116,7 @@
       margin-bottom: 5px;
     }
 	
+	
 		
 	</style>
 	
@@ -123,7 +124,7 @@
 <body class="body">
 
 <!--Navigation Bar-->
-<nav class=" blue darken-4" role="navigation">
+<nav class=" blue darken-4" role="navigation" >
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="logo">UBRA</span></a>
 		<ul class="right hide-on-med-and-down">
 			<li><a href="home.php">Home</a></li>
@@ -154,7 +155,7 @@
     <h5 class="slogan">"You can find the Job that suits you!"</h5><br>    
 	<!--Search Bar-->
         <div class="container">
-			<nav>
+			<div>
 				<div class="nav-wrapper search">
 					<?php 
 					if(isset($_POST['j_name'])){
@@ -170,7 +171,7 @@
 						</div>
 					</form>
 				</div>
-			</nav>
+			<div>
 		</div>
 	</div>
 </section>
