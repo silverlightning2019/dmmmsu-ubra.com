@@ -8,7 +8,7 @@ $(document).ready(function(){
 		var email=$("#email").get(0).value;
 		var pass1=$("#pass1").get(0).value;
 		var pass2=$("#pass2").get(0).value;
-		$.post("http://www.localhost/ubra/public/register",JSON.stringify ({
+		$.post("http://www.localhost/dmmmsu-ubra.com/public/register",JSON.stringify ({
 			app_id: app_id,
 			fname: fname,
 			mname: mname,
@@ -22,10 +22,10 @@ $(document).ready(function(){
 			alert("Data: " + data + "\nStatus: " + status);
 			var json=JSON.parse(data);
 			if(json.status=="success"){
-				self.location="http://localhost/ubra/public/index.php";
+				self.location="http://localhost/dmmmsu-ubra.com/public/index.php";
 			}else{
 				alert(json.data.title);
-				self.location="http://localhost/ubra/public/index.php";
+				self.location="http://localhost/dmmmsu-ubra.com/public/index.php";
 			}
 		});
 	});
@@ -33,7 +33,7 @@ $(document).ready(function(){
 	$("#login").click(function(){
 		var email=$("#email").get(0).value;
 		var psword=$("#psword").get(0).value;
-		$.post("http://localhost/ubra/public/login",JSON.stringify({
+		$.post("http://localhost/dmmmsu-ubra.com/public/login",JSON.stringify({
 				email:email,	
 				psword:psword
 		}),
@@ -42,13 +42,32 @@ $(document).ready(function(){
 			var json=JSON.parse(data);
 			if(json.status=="success"){
 				if(email=="admin"){
-					self.location="http://localhost/ubra/public/admin.php";
+					self.location="http://localhost/dmmmsu-ubra.com/public/admin.php";
 				}else{
-					self.location="http://localhost/ubra/public/home.php";
+					self.location="http://localhost/dmmmsu-ubra.com/public/home.php";
 				}
 			}else{
 				alert(json.data.title);
 			}
 		});
 	});
+	
+	$("#apply").click(function(){
+		var apply=$("#apply").get(0).value;
+		$.post("http://www.localhost/dmmmsu-ubra.com/public/register",JSON.stringify ({
+			apply: apply
+		}),
+		function(data,status){
+			alert("Data: " + data + "\nStatus: " + status);
+			var json=JSON.parse(data);
+			if(json.status=="success"){
+				self.location="http://localhost/dmmmsu-ubra.com/public/pass.php";
+			}else{
+				alert(json.data.title);
+				self.location="http://localhost/dmmmsu-ubra.com/public/pass.php";
+			}
+		});
+	});
+	
+	
 });

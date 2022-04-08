@@ -1,9 +1,5 @@
 <?php
-include('conndb.php');
-$search=$_POST["search"];
-$sql = ("SELECT COUNT(j_id) FROM job_tbl WHERE j_name='".$search."' ");
-$rs = $conn->query($sql);
-$rst = mysqli_fetch_array($rs);
+$j_name=$_POST["j_name"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +7,18 @@ $rst = mysqli_fetch_array($rs);
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <title>Dashboard</title>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	
+	<!-- Script -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script type="text/javascript" src="js/home.js"></script>
+	
+	<!-- CSS  -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
   <style>
     .material{
@@ -147,7 +150,7 @@ $rst = mysqli_fetch_array($rs);
 					</div>
 					<div class="right-side" style="float: right;">
 					  <p class="right-align blue-grey-text" style="font-size: 15px; font-weight:500;">Result: 
-					  <span style="color:#64b5f6; text-align:left;"><?php echo $rst[0]; ?> Job(s)</span></p>
+					  <span style="color:#64b5f6; text-align:left;">Job(s)</span></p>
 					</div>
 				  </div>
 				</div>
@@ -158,63 +161,26 @@ $rst = mysqli_fetch_array($rs);
 		</form>
 
 <!--Part 3-->
-		<form action="pass.php" method="POST">
+		<?php 
+		if(isset($_POST['j_name'])){
+			$j_name=$_POST["j_name"];
+		}
+		
+		if(isset($_POST['show'])){
+			$show=$_POST["show"];
+		}
+		?>
+		
+		<form action="apply.php" method="POST">
+		<input type="text" name="j_name" id="j_name" value="<?php echo $j_name ?>" hidden>
 		<div class="card2">
 			<div class="row">
-			<?php
-				$servername = "localhost";
-				$username = "root";
-				$password = "";
-				$dbname = "hub";
-				
-				
-				// Create connection
-				$conn = new mysqli($servername, $username, $password, $dbname);
-				// Check connection
-				if ($conn->connect_error) {
-					die("Connection failed: " . $conn->connect_error);
-				}
-				
-				
-				
-				$sql = "SELECT * FROM job_tbl WHERE j_name='".$search."'";
-				$result = $conn->query($sql);
-									
-				if ($result->num_rows > 0) 
-				{
-					// output data of each row
-					while($row = $result->fetch_assoc()) 
-					{
-			?>	
-			<div class="col s12 m6 l4">
-				<div class="card hoverable">
-					<div class="card-image left-align" >
-						<img src="img/<?php echo $row['j_img']; ?>">
-					</div>
-					<div class="card-content" style="padding: 10px 10px 10px 10px;">
-						<p class="job"><?php echo $row['j_name']; ?></p>
-						<i class="material material-icons">work</i><?php echo $row['j_specialization']; ?><br>
-						<i class="material material-icons">place</i><?php echo $row['j_location']; ?><br>
-						<i class="material material-icons">business</i><?php echo $row['j_organization']; ?><br>
-						<i class="material material-icons">check_circle_outline</i><?php echo $row['j_count']; ?><br><br>
-						<center><button name="show" value="<?php echo $row['j_id']; ?>" class="waves-effect btn-flat">Show Details</button></center>
-					</div>
-				</div>
-			</div>
-			<?php } ?>
-		<?php } ?>
+				<div id="data"></div>
 			</div>
 		</div>
 		</form>
 	</div>
 </div>
-
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
 
 </body>
 </html>
