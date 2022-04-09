@@ -1,0 +1,34 @@
+.frmSearch {
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	margin: 2px 0px;
+	padding:40px;
+	border-radius:4px;
+	width:100%;
+}
+#job-list{
+	float:left;
+	list-style:none;
+	margin-top:-3px;
+	padding:0;
+	position: absolute;
+	width:100%;
+}
+#job-list li{
+	padding: 10px;
+	background: #f0f0f0;
+	border-bottom: #bbb9b9 1px solid;
+	color:#64b5f6;
+	font-size:20px;
+	text-align:left;
+	width:90.8%;
+}
+#job-list li:hover{
+	background:#ece3d2;
+	cursor: pointer;
+}
+#j_name{
+	padding: 10px;
+	border: #4267B2 3px solid;
+	border-radius:4px;
+}

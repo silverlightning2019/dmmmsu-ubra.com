@@ -1,3 +1,5 @@
+<?php 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +11,7 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
 
   <style>
     .material{
@@ -86,6 +89,54 @@
       margin-right: 10px;
       margin-bottom: 5px;
     }
+	#pmargin a{
+		margin:10px 10px 10px 10px;
+	}
+	#job-list{
+		float:left;
+		list-style:none;
+		margin-top:-1px;
+		padding:0;
+		position: absolute;
+		width:90.5%;
+	}
+	#job-list li{
+		padding: 10px;
+		background: #f0f0f0;
+		border-bottom: #bbb9b9 1px solid;
+		color:#64b5f6;
+		font-size:20px;
+		text-align:left;
+	}
+	#job-list li:hover{
+		background:#ece3d2;
+		cursor: pointer;
+	}
+	#myBtn {
+	  display: none;
+	  position: fixed;
+	  bottom: 20px;
+	  right: 30px;
+	  z-index: 99;
+	  font-size: 18px;
+	  border: none;
+	  outline: none;
+	  background-color: red;
+	  color: white;
+	  cursor: pointer;
+	  padding: 15px;
+	  border-radius: 4px;
+	  width:55px;
+	}
+
+	#myBtn:hover {
+	  background-color: #555;
+	}
+	html {
+	  scroll-behavior: smooth;
+	}
+	
+	
   </style>
 </head>
 <body class="body">
@@ -119,214 +170,154 @@
 
 
 <!--Part 1-->
-<div class="container">
-      <div class="card">
-          <div class="card1">
+
+<form>
+	<div class="container">
+		<div class="card">
+			<div class="card1">
             <form class="col s12">
-              <div class="row">
-                <div class="input-field col s12 m3">
-                  <i class="material-icons prefix">search</i>
-                  <input id="icon_prefix" type="text" class="validate" placeholder="Input Keywords Here..">
-                </div>
+				<div class="row">
+					<div class="frmSearch">
+						<div class="input-field col s12 m3">
+							<input type="search" name="j_name" id="j_name" placeholder="Job Name/Title..." >
+							<div id="suggesstion-box"></div>
+						</div>
+						<div class="input-field col s12 m3">
+							<select id="j_area">
+								<option value="Local">Local</option>
+								<option value="Overseas">Overseas</option>
+							</select>
+						</div>
+						<div class="input-field col s12 m3">
+							<input type="text" id="j_specialization" name="j_specialization" placeholder="Specialization...">
+							<div id="suggesstion-box2"></div>
+						</div>
+						<div class="input-field col s12 m3">
+							<button type="button" name="searchbtn" id="searchbtn" class="waves-effect waves-effect blue lighten-2 btn-large btn1">search</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</form>
+<!--End-->
 
-                <div class="input-field col s12 m3">
-                  <i class="material-icons prefix">location_on</i>
-                  <select>
-                    <option value="" disabled selected>All Location</option>
-                    <option value="1">Local</option>
-                    <option value="2">Overseas</option>
-                  </select>
-                </div>
-
-                <div class="input-field col s12 m3">
-                  <i class="material-icons prefix">work</i>
-                  <select>
-                    <option value="" disabled selected>All Job Specialization</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                  </select>
-                </div>
-
-                <div class="input-field col s12 m3">
-                  <a class="waves-effect waves-effect blue lighten-2 btn-large btn1">Job Match</a>
-                </div>
-
-              </div>
-            </form>
-          </div>
-      </div>   
-  
 <!--Part 2-->
-<div class="card">
-    <div class="card horizontal">
-      <div class="card-stacked">
-        <div class="card-content">
-          <div class="row" style="margin-bottom: 0;">
-            <div class="left-side" style="float: left; display: flex;align-items: center;">
-              <i class="material-icons" style="font-size:1.5rem">format_list_bulleted</i><span style="font-size:15px;font-weight: 500;">Job Lists:</span>
-            </div>
-            <div class="right-side" style="float: right;">
-              <p class="right-align blue-grey-text" style="font-size: 15px; font-weight:500;">Result: 
-              <span style="color:#64b5f6;">0 Job(s)</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container" style="margin-top:3%;">
+	<div class="card">
+		<div class="card horizontal">
+			<div class="card-stacked">
+				<div class="card-content">
+					<div class="row" style="margin-bottom: 0;">
+						<div class="left-side" style="float: left; display: flex;align-items: center;">
+						  <i class="material-icons" style="font-size:1.5rem">format_list_bulleted</i><span style="font-size:15px;font-weight: 500;">Job Lists:</span>
+						</div>
+						<div class="right-side" style="float: right;">
+						  <p class="right-align blue-grey-text" style="font-size: 15px; font-weight:500;">Result: 
+						  <span style="color:#64b5f6; text-align:left;">Job(s)</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
 </div>
-
-<!--Part 3-->
-<div class="card2">
-  <!--Featured Jobs-->
-  <div class="container">
-        <!--Featured Jobs List-->
-         <div class="row">
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-         <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col s12 m4">
-            <div class="card hoverable">
-              <div class="card-image left-align">
-                <img src="Engineers.jpg">
-              </div>
-              <div class="card-content" style="padding: 10px 10px 10px 10px;">
-                <p class="job" style="margin: 1px 1px;">Civil Engineer</p><hr>
-                <i class="material material-icons">place</i>San Fernando City of La Union<br>
-                <i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-                <i class="material material-icons">check_circle_outline</i>3 positions available<br><hr>
-                <p class="center"><a href="Details.php" class="waves-effect btn-flat">Show Details</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-  </div>
-</div>
+<!--End-->
+<?php 	
+if(isset($_POST['show'])){
+	$show=$_POST["show"];
+}
+?>
+<form form action="apply.php" method="POST">
+	<!--Display Part-->
+	<div class="container">
+		<div class="card2">
+			<div class="row">            
+				<div id="data"></div>
+			</div>
+		</div>
+	</div>
+</form>
 
 <!--Part 4-->
-<div class="container">
-  <ul class="pagination page">
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-    <li class=" waves-effect"><a href="#!">1</a></li>
-    <li class=" waves-effect"><a href="#!">2</a></li>
-    <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-  </ul>
-</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="material material-icons">arrow_upward</i></button>
+
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
 
 <!--Footer-->
-  <footer class="page-footer  blue darken-4">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">About Us</h5>
-          <p class="grey-text text-lighten-4">UBRA is a Job Finder System by DMMMSU-MLUC to help
-          people, graduates and working students find the suitable job for them.</p>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect With Us</h5>
-          <ul>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">phone</i>09997589145</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">mail</i>DMMMSU-MLUC EMAIL</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">facebook</i>DMMMSU-MLUC FACEBOOK</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Categories</h5>
-          <ul>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">arrow_right</i>HealthCare</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">arrow_right</i>Construction</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">arrow_right</i>Educational</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">arrow_right</i>Restaurant/Food Service</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">arrow_right</i>Sales & Marketing</a></li>
-            <li><a class="white-text" href="#!"><i class="material-icons material1">arrow_right</i>IT Solution</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      <a class="orange-text text-lighten-3" href="#">Copyright © 2022 UBRA. All rights reserved.</a>
-      </div>
-    </div>
-  </footer>
+<?php
+include('footer.php');
+?>
 
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/job-offer.js"></script>
+  
+	<!--  script for search-->
+	<script>
+	$(document).ready(function(){
+		$("#j_name").keyup(function(){
+			$.ajax({
+			type: "POST",
+			url: "readJobOffer.php",
+			data:'keyword='+$(this).val(),
+			success: function(data){
+				$("#suggesstion-box").show();
+				$("#suggesstion-box").html(data);
+				$("#j_name").css("background","#FFF");
+			}
+			});
+		});
+		
+		$("#j_specialization").keyup(function(){
+			$.ajax({
+			type: "POST",
+			url: "readJobOffer.php",
+			data:'keyword1='+$(this).val(),
+			success: function(data){
+				$("#suggesstion-box2").show();
+				$("#suggesstion-box2").html(data);
+				$("#j_specialization").css("background","#FFF");
+			}
+			});
+		});
+	});
 
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
+	function selectJob(val) {
+		$("#j_name").val(val);
+		$("#suggesstion-box").hide();
+	}
+	function selectSpecialization(val) {
+		$("#j_specialization").val(val);
+		$("#suggesstion-box2").hide();
+	}
+	</script>
+	
 
-  </body>
+</body>
 </html>
