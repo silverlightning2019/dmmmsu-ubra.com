@@ -69,5 +69,26 @@ $(document).ready(function(){
 		});
 	});
 	
+	//DISPLAY JOB CATEGORY
+	$.post("http://www.localhost/dmmmsu-ubra.com/public/category",
+	function(data, status){
+		var json=JSON.parse(data);
+		var row="";
+		for(var i=0;i<json.data.length;i++){
+			row=row+"<div class='col s12 m6 l4'>"+
+						"<div class='card hoverable'>"+
+							"<div class='card-content' style='padding: 10px 10px 10px 10px;'>"+
+								"<h2 class='center light-blue-text'><i class='material-icons'>work</i></h2>"+
+								"<h5 class='center black-text'>"+json.data[i].j_category+"</h5>"+
+								"<p class='center black-text'>( Jobs)</p><br>"+
+								"<center><button type='submit' name='showCat' id='showCat' value='"+json.data[i].j_category+"' class='waves-effect btn-flat'>Show Details</button></center>"+
+							"</div>"+		
+						"</div>"+		
+					"</div>";
+			}	
+		$("#data").get(0).innerHTML=row
+		console.log(JSON.parse(data));
+	});
+	
 	
 });

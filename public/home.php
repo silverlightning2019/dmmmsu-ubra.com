@@ -1,4 +1,5 @@
 <?php
+include('categoryCount.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,6 +11,7 @@
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.js"></script>
 	<script src="js/init.js"></script>
+	<script src="js/script.js"></script>
 	<!--  script for search-->
 	<script>
 	$(document).ready(function(){
@@ -236,21 +238,17 @@
 		<h1 class="header center blue-grey-text">Job Categories</h1>
 		<div class="row center">
         <h5 class="col s12 light start">Start your search by using any of the following job categories.</h5>
-
+		
+			<form action="category.php" method="POST">
 			<!--Job Cards-->
-			<div class="row">
-				<div class="col s12 m4">
-					<a href="">
-					<div class="card hoverable">
-						<div class="icon-block icon">
-							<h2 class="center light-blue-text"><i class="material-icons">health_and_safety</i></h2>
-							<h5 class="center black-text">HealthCare</h5>
-							<p class="center black-text">(1 Jobs)</p> 
-						</div>
-					</a>
+			<div class="container">
+				<div class="card2">
+					<div class="row">            
+						<div id="data"></div>				
 					</div>
 				</div>
 			</div>
+			</form>
 			
 		</div>
 		<!--End-->

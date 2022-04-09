@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2022 at 05:08 PM
+-- Generation Time: Apr 09, 2022 at 06:44 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -29,17 +29,20 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `application_tbl` (
   `app_id` int(11) NOT NULL,
-  `app_job` varchar(255) NOT NULL
+  `app_jobid` varchar(255) NOT NULL,
+  `app_jobname` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `application_tbl`
 --
 
-INSERT INTO `application_tbl` (`app_id`, `app_job`) VALUES
-(6, 'Programmer'),
-(7, 'Nurse'),
-(8, 'Programmer');
+INSERT INTO `application_tbl` (`app_id`, `app_jobid`, `app_jobname`) VALUES
+(1, '9', 'SUPER IDOL'),
+(2, '9', 'SUPER IDOL'),
+(3, '4', 'Aeroplane Mechanic'),
+(4, '9', 'SUPER IDOL'),
+(5, '6', 'Programmer');
 
 -- --------------------------------------------------------
 
@@ -65,15 +68,16 @@ CREATE TABLE `job_tbl` (
 --
 
 INSERT INTO `job_tbl` (`j_id`, `j_name`, `j_area`, `j_specialization`, `j_location`, `j_organization`, `j_count`, `j_description`, `j_img`, `j_category`) VALUES
-(1, 'Civil Engineer', 'Local', 'Structural Engineering', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 3, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', ''),
-(2, 'Info Systems Admin', 'Local', 'Systems Analyst', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', ''),
-(3, 'Guidance Counselor', 'Local', 'Career/Lifestyle', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', ''),
-(4, 'Aeroplane Mechanic', 'Local', 'Aircraft Systems', 'City of San Fernando, La Union', 'San Fernando Airport', 2, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', ''),
-(5, 'IDL Engineer', 'Overseas', 'Semicondoctors', 'Taipei, Taiwan', 'EyeQuest International Manpower Agency', 150, 'Salary NT$ 26,500 + OT', 'Engineers.jpg', ''),
+(1, 'Civil Engineer', 'Local', 'Structural Engineering', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 3, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Structures'),
+(2, 'Info Systems Admin', 'Local', 'Systems Analyst', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'IT Solutions'),
+(3, 'Guidance Counselor', 'Local', 'Career/Lifestyle', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Counseling'),
+(4, 'Aeroplane Mechanic', 'Local', 'Aircraft Systems', 'City of San Fernando, La Union', 'San Fernando Airport', 2, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Mechanical Systems'),
+(5, 'IDL Engineer', 'Overseas', 'Semicondoctors', 'Taipei, Taiwan', 'EyeQuest International Manpower Agency', 150, 'Salary NT$ 26,500 + OT', 'Engineers.jpg', 'Technology'),
 (6, 'Programmer', 'Local', 'Web Development', 'City of San Fernando, La Union', 'PC4Me', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions'),
 (7, 'Nurse', 'Local', 'ER Nurse', 'City of San Fernando, La Union', 'ITRMC', 10, 'Must have ADN', 'Engineers.jpg', 'Health Care'),
 (8, 'Programmer', 'Local', 'Data Analysis', 'City of San Fernando, La Union', 'TaskUs', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions'),
-(9, 'SUPER IDOL', 'Overseas', 'Social Credit', 'Beijing, China', 'Chinese Central TV', 105, 'Must know Red Sun in the Sky', 'super-idol.gif', '');
+(9, 'SUPER IDOL', 'Overseas', 'Social Credit', 'Beijing, China', 'Chinese Central TV', 105, 'Must know Red Sun in the Sky', 'super-idol.gif', 'Entertainment'),
+(10, 'GIGACHAD', 'Overseas', 'Anti-Karen', 'New York, USA', 'Confederate Gigachad', 7, 'The Ultimate Man, the Chad to out Chad all Chads, the Alpha Male of the Alpha Males. If a woman were to look in his direction she would immediately orgasm. His jawline is a perfect 116 degrees.', 'gigachad.gif', 'Educational');
 
 -- --------------------------------------------------------
 
@@ -105,9 +109,7 @@ INSERT INTO `users_tbl` (`id`, `uname`, `email`, `psword`) VALUES
 -- Indexes for table `application_tbl`
 --
 ALTER TABLE `application_tbl`
-  ADD PRIMARY KEY (`app_id`),
-  ADD KEY `app_id` (`app_id`),
-  ADD KEY `app_id_2` (`app_id`);
+  ADD PRIMARY KEY (`app_id`);
 
 --
 -- Indexes for table `job_tbl`
@@ -126,10 +128,16 @@ ALTER TABLE `users_tbl`
 --
 
 --
+-- AUTO_INCREMENT for table `application_tbl`
+--
+ALTER TABLE `application_tbl`
+  MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `job_tbl`
 --
 ALTER TABLE `job_tbl`
-  MODIFY `j_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `j_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users_tbl`
