@@ -44,19 +44,19 @@
   <nav class=" blue darken-4" role="navigation">
     <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><span class="logo">UBRA</span></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="CompanyDashboard.php">Home</a></li>
-        <li><a href="CompanyProfile.php">Company Profile</a></li>
-        <li><a href="CompanyJobAnnouncement.php">Job Announcements</a></li>
-        <li><a href="CompanyJobPosted.php">Job Registered</a></li>
-        <li><a href="CompanyLogIn.php"><i class="material-icons">logout</i></a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="profile.php">Company Profile</a></li>
+        <li><a href="job-annoucements.php">Job Announcements</a></li>
+        <li><a href="job-registered.php">Job Registered</a></li>
+        <li><a href="logout.php"><i class="material-icons">logout</i></a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="CompanyDashboard.php">Home</a></li>
-        <li><a href="CompanyProfile.php">Company Profile</a></li>
-        <li><a href="CompanyJobAnnouncement.php">Job Announcements</a></li>
-        <li><a href="CompanyJobPosted.php">Job Registered</a></li>
-        <li><a href="CompanyLogIn.php">Log Out</a></li>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="profile.php">Company Profile</a></li>
+        <li><a href="job-annoucements.php">Job Announcements</a></li>
+        <li><a href="job-registered.php">Job Registered</a></li>
+        <li><a href="logout.php"><i class="material-icons">logout</i></a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons icon">menu</i></a>
     </div>
@@ -79,12 +79,6 @@
           <div class="row">
             <form class="col s12">
               <div class="row">
-
-                <p class="right-align">
-                  <button class="btn waves-effect blue"><i class="material-icons">post_add</i></button>
-                  <button class="btn waves-effect red"><i class="material-icons">clear</i></button>
-                </p>
-
                 <div class="input-field col s12">
                   <form action="#">
                     <div class="file-field input-field">
@@ -116,11 +110,15 @@
                         <i class="material-icons prefix">mode_edit</i>
                         <textarea placeholder="Write Description Here!" id="icon_prefix2" class="materialize-textarea"></textarea>
                         <label for="icon_prefix2">Job Announcement Description </label>
+                        <p class="center-align">
+                          <button class="btn waves-effect blue"><i class="material-icons">post_add</i></button>
+                          <button class="btn waves-effect red"><i class="material-icons">clear</i></button>
+                        </p>
                       </div>
                     </div>
                   </form>
                 </div>
-
+              
               </div>
             </form>
           </div>
