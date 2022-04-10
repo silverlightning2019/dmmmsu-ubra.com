@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 09, 2022 at 06:44 PM
+-- Generation Time: Apr 10, 2022 at 06:00 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -60,24 +60,26 @@ CREATE TABLE `job_tbl` (
   `j_count` int(11) NOT NULL,
   `j_description` varchar(255) NOT NULL,
   `j_img` varchar(255) NOT NULL,
-  `j_category` varchar(255) NOT NULL
+  `j_category` varchar(255) NOT NULL,
+  `j_featured` varchar(255) NOT NULL,
+  `j_stats` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `job_tbl`
 --
 
-INSERT INTO `job_tbl` (`j_id`, `j_name`, `j_area`, `j_specialization`, `j_location`, `j_organization`, `j_count`, `j_description`, `j_img`, `j_category`) VALUES
-(1, 'Civil Engineer', 'Local', 'Structural Engineering', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 3, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Structures'),
-(2, 'Info Systems Admin', 'Local', 'Systems Analyst', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'IT Solutions'),
-(3, 'Guidance Counselor', 'Local', 'Career/Lifestyle', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Counseling'),
-(4, 'Aeroplane Mechanic', 'Local', 'Aircraft Systems', 'City of San Fernando, La Union', 'San Fernando Airport', 2, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Mechanical Systems'),
-(5, 'IDL Engineer', 'Overseas', 'Semicondoctors', 'Taipei, Taiwan', 'EyeQuest International Manpower Agency', 150, 'Salary NT$ 26,500 + OT', 'Engineers.jpg', 'Technology'),
-(6, 'Programmer', 'Local', 'Web Development', 'City of San Fernando, La Union', 'PC4Me', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions'),
-(7, 'Nurse', 'Local', 'ER Nurse', 'City of San Fernando, La Union', 'ITRMC', 10, 'Must have ADN', 'Engineers.jpg', 'Health Care'),
-(8, 'Programmer', 'Local', 'Data Analysis', 'City of San Fernando, La Union', 'TaskUs', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions'),
-(9, 'SUPER IDOL', 'Overseas', 'Social Credit', 'Beijing, China', 'Chinese Central TV', 105, 'Must know Red Sun in the Sky', 'super-idol.gif', 'Entertainment'),
-(10, 'GIGACHAD', 'Overseas', 'Anti-Karen', 'New York, USA', 'Confederate Gigachad', 7, 'The Ultimate Man, the Chad to out Chad all Chads, the Alpha Male of the Alpha Males. If a woman were to look in his direction she would immediately orgasm. His jawline is a perfect 116 degrees.', 'gigachad.gif', 'Educational');
+INSERT INTO `job_tbl` (`j_id`, `j_name`, `j_area`, `j_specialization`, `j_location`, `j_organization`, `j_count`, `j_description`, `j_img`, `j_category`, `j_featured`, `j_stats`) VALUES
+(1, 'Civil Engineer', 'Local', 'Structural Engineering', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 3, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Structures', 'Yes', 'Not Filled'),
+(2, 'Info Systems Admin', 'Local', 'Systems Analyst', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'IT Solutions', 'Yes', 'Not Filled'),
+(3, 'Guidance Counselor', 'Local', 'Career/Lifestyle', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Counseling', 'Yes', 'Not Filled'),
+(4, 'Aeroplane Mechanic', 'Local', 'Aircraft Systems', 'City of San Fernando, La Union', 'San Fernando Airport', 2, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Mechanical Systems', 'No', 'Filled'),
+(5, 'IDL Engineer', 'Overseas', 'Semicondoctors', 'Taipei, Taiwan', 'EyeQuest International Manpower Agency', 150, 'Salary NT$ 26,500 + OT', 'Engineers.jpg', 'Technology', 'Yes', 'Not Filled'),
+(6, 'Programmer', 'Local', 'Web Development', 'City of San Fernando, La Union', 'PC4Me', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions', 'No', 'Filled'),
+(7, 'Nurse', 'Local', 'ER Nurse', 'City of San Fernando, La Union', 'ITRMC', 10, 'Must have ADN', 'Engineers.jpg', 'Health Care', 'No', 'Not Filled'),
+(8, 'Programmer', 'Local', 'Data Analysis', 'City of San Fernando, La Union', 'TaskUs', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions', 'No', 'Filled'),
+(9, 'SUPER IDOL', 'Overseas', 'Social Credit', 'Beijing, China', 'Chinese Central TV', 105, 'Must know Red Sun in the Sky', 'super-idol.gif', 'Entertainment', 'Yes', 'Not Filled'),
+(10, 'GIGACHAD', 'Overseas', 'Anti-Karen', 'New York, USA', 'Confederate Gigachad', 7, 'The Ultimate Man, the Chad to out Chad all Chads, the Alpha Male of the Alpha Males. If a woman were to look in his direction she would immediately orgasm. His jawline is a perfect 116 degrees.', 'gigachad.gif', 'Educational', 'Yes', 'Not Filled');
 
 -- --------------------------------------------------------
 
@@ -89,17 +91,18 @@ CREATE TABLE `users_tbl` (
   `id` int(11) NOT NULL,
   `uname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `psword` varchar(255) NOT NULL
+  `psword` varchar(255) NOT NULL,
+  `type` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users_tbl`
 --
 
-INSERT INTO `users_tbl` (`id`, `uname`, `email`, `psword`) VALUES
-(1, 'root', '', ''),
-(2, '', '', ''),
-(3, '', '', '');
+INSERT INTO `users_tbl` (`id`, `uname`, `email`, `psword`, `type`) VALUES
+(1, 'root', 'root', 'adminroot', 'admin'),
+(2, 'user1', 'user1', 'user1', 'user'),
+(3, 'user2', 'user2', 'user2', 'company');
 
 --
 -- Indexes for dumped tables

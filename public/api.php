@@ -304,6 +304,37 @@
 		return $response;
 	});
 	
+	//endpoint post featured display featured jobs
+	$app->post('/featured', function (Request $request, Response $response, array $args) {
+		
+		
+		$data=json_decode($request->getBody());
+				
+		
+		//Database
+		include('conndb.php');
+		
+		
+		$sql = "SELECT * FROM job_tbl WHERE j_featured='Yes' LIMIT 6";
+		
+		$result = $conn->query($sql);
+		if ($result->num_rows > 0) {
+		$data=array();
+		while($row = $result->fetch_assoc()) {
+		array_push($data,array("j_id"=>$row["j_id"],"j_name"=>$row["j_name"],"j_specialization"=>$row["j_specialization"],"j_img"=>$row["j_img"]
+		,"j_area"=>$row["j_area"],"j_description"=>$row["j_description"],"j_location"=>$row["j_location"],"j_organization"=>$row["j_organization"]
+		,"j_count"=>$row["j_count"]));
+		}
+		$data_body=array("status"=>"success","data"=>$data);
+		$response->getBody()->write(json_encode($data_body));
+		} else {
+		$response->getBody()->write(array("status"=>"success","data"=>null));
+		}
+		$conn->close();
+		
+		return $response;
+	});
+	
 	
 
     $app->run();

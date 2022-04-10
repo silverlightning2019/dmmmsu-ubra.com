@@ -1,5 +1,10 @@
 <?php
 include('categoryCount.php');
+//For count section on HOME page
+include('homeCount.php');
+include('membersCount.php');
+include('companyCount.php');
+include('jobpostedCount.php');
 ?>
 <!DOCTYPE html>
 <html>
@@ -234,7 +239,7 @@ include('categoryCount.php');
 <div class="color1">
 	<div class="container">
 		<!--Part3-->
-		<!--Job Categories--><!-- Need some loop for data display -->
+		<!--Job Categories-->
 		<h1 class="header center blue-grey-text">Job Categories</h1>
 		<div class="row center">
         <h5 class="col s12 light start">Start your search by using any of the following job categories.</h5>
@@ -243,7 +248,8 @@ include('categoryCount.php');
 			<!--Job Cards-->
 			<div class="container">
 				<div class="card2">
-					<div class="row">            
+					<div class="row">
+						<!-- Display category data -->
 						<div id="data"></div>				
 					</div>
 				</div>
@@ -264,24 +270,20 @@ include('categoryCount.php');
 				<div class="row center">
 					<h5 class="col s12 light">Featured Jobs available in UBRA. Apply to Editorial Specialist, Account Manager, Human Resources Specialist and more!</h5>
 				</div>
-
+				
+				<?php 
+				if(isset($_POST['show'])){
+					$show=$_POST["show"];
+				}
+				?>
+				<form action="apply.php" method="POST">
 				<!--Featured Jobs List-->
 				<div class="row">
-					<div class="col s12 m4">
-						<div class="card hoverable">
-							<div class="card-image">
-								<img src="img/Engineers.jpg">
-							</div>
-							<div class="card-content">
-								<p class="job">Civil Engineer</p>
-								<i class="material material-icons">place</i>San Fernando City of La Union<br>
-								<i class="material material-icons">business</i>DMMMSU-MLUC Human Resource<br>
-								<i class="material material-icons">check_circle_outline</i>3 positions available<br><br>
-								<p class="center"><a href="Details.html" class="waves-effect btn-flat">Show Details</a></p>
-							</div>
-						</div>
-					</div>
+					<!-- Display Featured Jobs -->
+					<div id="featured"></div>
 				</div>
+				</form>
+				
 			</div>
 		</div>
 		<!--End-->
@@ -303,7 +305,7 @@ include('categoryCount.php');
 					<div class="card hoverable">
 						<div class="icon-block icon">
 							<h2 class="center light-blue-text"><i class="material-icons ">task</i></h2>
-							<p class="number center">50</p>
+							<p class="number center"><?php echo $result1[0]; ?></p>
 							<h5 class="center black-text">Jobs Filled</h5> 
 						</div>
 					</div>
@@ -313,7 +315,7 @@ include('categoryCount.php');
 					<div class="card hoverable">
 						<div class="icon-block icon">
 							<h2 class="center light-blue-text"><i class="material-icons">groups</i></h2>
-							<p class="number center">100</p>
+							<p class="number center"><?php echo $result2[0]; ?></p>
 							 <h5 class="center black-text">Members</h5>
 						</div>
 					</div>
@@ -323,7 +325,7 @@ include('categoryCount.php');
 					<div class="card hoverable">
 						<div class="icon-block icon">
 							<h2 class="center light-blue-text"><i class="material-icons">corporate_fare</i></h2>
-							<p class="number center">1</p>
+							<p class="number center"><?php echo $result3[0]; ?></p>
 							<h5 class="center black-text">Companies</h5>
 						</div>
 					</div>
@@ -333,7 +335,7 @@ include('categoryCount.php');
 					<div class="card hoverable">
 						<div class="icon-block icon">
 							<h2 class="center light-blue-text"><i class="material-icons">post_add</i></h2>
-							<p class="number center">145</p>
+							<p class="number center"><?php echo $result4[0]; ?></p>
 							<h5 class="center black-text">Jobs Posted</h5>
 						</div>
 					</div>
