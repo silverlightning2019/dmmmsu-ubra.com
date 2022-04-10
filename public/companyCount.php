@@ -2,7 +2,7 @@
 include('conndb.php');
 
 //Count for COMPANIES
-$sql3=("SELECT COUNT(id) FROM users_tbl WHERE type='company' ");
+$sql3=("SELECT COUNT(id) FROM users_tbl WHERE type='employer' ");
 $rs3 = $conn->query($sql3);
  //-----------^  need to run query here
  

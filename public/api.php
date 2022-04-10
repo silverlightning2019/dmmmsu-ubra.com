@@ -335,6 +335,35 @@
 		return $response;
 	});
 	
+	//endpoint employers display at home
+	$app->post('/displayEmployers', function (Request $request, Response $response, array $args) {
+		
+		
+		$data=json_decode($request->getBody());
+				
+		
+		//Database
+		include('conndb.php');
+		
+		
+		$sql = "SELECT * FROM employer_tbl";
+		
+		$result = $conn->query($sql);
+		if ($result->num_rows > 0) {
+		$data=array();
+		while($row = $result->fetch_assoc()) {
+		array_push($data,array("emp_id"=>$row["emp_id"], "emp_name"=>$row["emp_name"], "emp_department"=>$row["emp_department"], "emp_img"=>$row["emp_img"]));
+		}
+		$data_body=array("status"=>"success","data"=>$data);
+		$response->getBody()->write(json_encode($data_body));
+		} else {
+		$response->getBody()->write(array("status"=>"success","data"=>null));
+		}
+		$conn->close();
+		
+		return $response;
+	});
+	
 	
 
     $app->run();

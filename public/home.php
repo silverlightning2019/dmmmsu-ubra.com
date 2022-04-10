@@ -353,20 +353,12 @@ include('jobpostedCount.php');
     <h1 class="header center blue-grey-text">Employers</h1>
 		<div class="row center">
         <h5 class="col s12 light start">UBRA helps job seekers and employers the right fit everyday.</h5>
+		<form>
 			<div class="row">
-				<div class="col s6 m3">
-					<div class="card hoverable">
-						<div class="card-image">
-							<img src="img/dmmmsu.jpg">
-						</div>
-						<div class="card-content">
-							<p class="center">Don Mariano Marcos Memorial State University</p><br>
-							<p class="center blue-grey-text">Human Resource Management</p><br>
-							<a class="waves-effect btn-flat">5 open positions</a>
-						</div>
-					</div>
-				</div>
+				<!--Display Employers-->
+				<div id="employers"></div>
 			</div>
+		</form>
 		</div>
 	</div>
 </div>

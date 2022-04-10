@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 10, 2022 at 06:00 AM
+-- Generation Time: Apr 10, 2022 at 10:31 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -47,6 +47,33 @@ INSERT INTO `application_tbl` (`app_id`, `app_jobid`, `app_jobname`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `employer_tbl`
+--
+
+CREATE TABLE `employer_tbl` (
+  `emp_id` int(11) NOT NULL,
+  `emp_name` varchar(255) NOT NULL,
+  `emp_department` varchar(255) NOT NULL,
+  `emp_img` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `employer_tbl`
+--
+
+INSERT INTO `employer_tbl` (`emp_id`, `emp_name`, `emp_department`, `emp_img`) VALUES
+(1, 'DMMMSU-MLUC', 'Human Resource Management', 'dmmmsu - Copy.jpg'),
+(2, 'San Fernando Airport', 'Aircraft Maintenance', 'default.jpg'),
+(3, 'EyeQuest IMA', 'Engineering', 'default.jpg'),
+(4, 'PC4Me', 'Computer Operations', 'default.jpg'),
+(5, 'ITRMC', 'Emergency Department', 'default.jpg'),
+(6, 'TaskUs', 'Systems Management', 'default.jpg'),
+(7, 'Chinese Central TV', 'Social Entertainment', 'super-idol.gif'),
+(8, 'Confederate Gigachad', 'GIGA Security', 'gigachad.gif');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `job_tbl`
 --
 
@@ -74,7 +101,7 @@ INSERT INTO `job_tbl` (`j_id`, `j_name`, `j_area`, `j_specialization`, `j_locati
 (2, 'Info Systems Admin', 'Local', 'Systems Analyst', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'IT Solutions', 'Yes', 'Not Filled'),
 (3, 'Guidance Counselor', 'Local', 'Career/Lifestyle', 'City of San Fernando, La Union', 'DMMMSU-MLUC', 1, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Counseling', 'Yes', 'Not Filled'),
 (4, 'Aeroplane Mechanic', 'Local', 'Aircraft Systems', 'City of San Fernando, La Union', 'San Fernando Airport', 2, 'Lorem Ipsom asmogus susgus beef amomogus abigus asmolgus.', 'Engineers.jpg', 'Mechanical Systems', 'No', 'Filled'),
-(5, 'IDL Engineer', 'Overseas', 'Semicondoctors', 'Taipei, Taiwan', 'EyeQuest International Manpower Agency', 150, 'Salary NT$ 26,500 + OT', 'Engineers.jpg', 'Technology', 'Yes', 'Not Filled'),
+(5, 'IDL Engineer', 'Overseas', 'Semicondoctors', 'Taipei, Taiwan', 'EyeQuest IMA', 150, 'Salary NT$ 26,500 + OT', 'Engineers.jpg', 'Technology', 'Yes', 'Not Filled'),
 (6, 'Programmer', 'Local', 'Web Development', 'City of San Fernando, La Union', 'PC4Me', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions', 'No', 'Filled'),
 (7, 'Nurse', 'Local', 'ER Nurse', 'City of San Fernando, La Union', 'ITRMC', 10, 'Must have ADN', 'Engineers.jpg', 'Health Care', 'No', 'Not Filled'),
 (8, 'Programmer', 'Local', 'Data Analysis', 'City of San Fernando, La Union', 'TaskUs', 2, 'Preferable with 1-2 years of work experience', 'programming.jpg', 'IT Solutions', 'No', 'Filled'),
@@ -102,7 +129,7 @@ CREATE TABLE `users_tbl` (
 INSERT INTO `users_tbl` (`id`, `uname`, `email`, `psword`, `type`) VALUES
 (1, 'root', 'root', 'adminroot', 'admin'),
 (2, 'user1', 'user1', 'user1', 'user'),
-(3, 'user2', 'user2', 'user2', 'company');
+(3, 'user2', 'user2', 'user2', 'employer');
 
 --
 -- Indexes for dumped tables
@@ -113,6 +140,12 @@ INSERT INTO `users_tbl` (`id`, `uname`, `email`, `psword`, `type`) VALUES
 --
 ALTER TABLE `application_tbl`
   ADD PRIMARY KEY (`app_id`);
+
+--
+-- Indexes for table `employer_tbl`
+--
+ALTER TABLE `employer_tbl`
+  ADD PRIMARY KEY (`emp_id`);
 
 --
 -- Indexes for table `job_tbl`
@@ -135,6 +168,12 @@ ALTER TABLE `users_tbl`
 --
 ALTER TABLE `application_tbl`
   MODIFY `app_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `employer_tbl`
+--
+ALTER TABLE `employer_tbl`
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `job_tbl`

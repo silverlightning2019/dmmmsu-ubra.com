@@ -116,4 +116,27 @@ $(document).ready(function(){
 		console.log(JSON.parse(data));
 	});
 	
+	//DISPLAY EMPLOYERS HOME
+	$.post("http://www.localhost/dmmmsu-ubra.com/public/displayEmployers",
+	function(data, status){
+		var json=JSON.parse(data);
+		var row="";
+		for(var i=0;i<json.data.length;i++){
+			row=row+"<div class='col s12 m6 l4'>"+
+						"<div class='card hoverable'>"+
+							"<div class='card-image left-align'>"+
+								"<img src='img/"+json.data[i].emp_img+"' style='width:100%; height:300px;'>"+
+							"</div>"+
+								"<p class='center'>"+json.data[i].emp_name+"</p><br>"+
+								"<p class='center blue-grey-text'>"+json.data[i].emp_department+"</p><br>"+
+								"<button name='show' value='"+json.data[i].emp_name+"' class='waves-effect btn-flat'>Show Job Position(s)</button><br><br>"+
+							"</div>"+
+						"</div>"+
+					"</div>";
+		}	
+		$("#employers").get(0).innerHTML=row
+		console.log(JSON.parse(data));
+	});
+	
+	
 });
