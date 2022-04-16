@@ -1,3 +1,27 @@
+<?php
+  session_start();
+	if (!isset($_SESSION['emp_uname'])){
+		header("location: ./");
+	}
+?>
+<?php
+
+	include 'database.php';
+
+	$conn = mysqli_connect($servername, $username, $password, $dbname);
+	$query2 = "SELECT * FROM job ORDER BY job_id DESC LIMIT 1";
+    $result2 = mysqli_query($conn,$query2);
+	if (mysqli_num_rows($result2) == 0) { 
+		$job_id = "JOB1";
+	}
+	else {
+		$row = mysqli_fetch_array($result2);
+    	$last_id = $row['job_id'];
+		  $job_id = substr($last_id, 3);
+      $job_id = intval($job_id);
+      $job_id = "JOB" . ($job_id + 1);
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +33,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
 
   <style>
     .logo{
@@ -92,80 +119,92 @@
           <div class="row">
             <form class="col s12">
               <div class="row">
-
                 <div class="input-field col s12">
-                  <form action="#">
-                    <div class="file-field input-field">
-                      <div class="blue btn">
-                        <span>File</span>
-                        <input type="file">
-                      </div>
-                      <div class="file-path-wrapper">
-                        <input class="file-path validate" type="text" placeholder="Upload Image Here!">
-                      </div>
-                    </div>
-                  </form>
+                  <input type="text" name="job_id" id="job_id" class="validate" value="<?php echo $job_id; ?>" placeholder="Job ID" readonly>
                 </div>
+                <?php
+                  include 'database.php';
 
-                 <div class="input-field col s6">
-                  <input placeholder="Post Here!" id="jobtitle" type="text" class="validate">
+                  $conn = new mysqli($servername, $username, $password,$dbname);
+
+                  if ($conn->connect_error) 
+                  {
+                    die("Connection failed: " . $conn->connect_error);
+                  }
+
+                  $sql = "SELECT * FROM employer WHERE emp_uname='{$_SESSION['emp_uname']}'";
+                  $result = $conn->query($sql);	
+                  if ($result->num_rows > 0)  
+                  {
+                    while ($row = mysqli_fetch_assoc($result)){
+                ?>
+                <div class="input-field col s6">
+                  <input placeholder="Job Position" id="job_position" name="job_position" type="text" class="validate">
                   <label for="jobtitle">Job Position</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input placeholder="Post Here!" id="location" type="text" class="validate">
+                  <input placeholder="Location" id="location" name="location" type="text" class="validate">
                   <label for="location">Location</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input placeholder="Post Here!" id="employer" type="text" class="validate">
+                  <input placeholder="Company/Employer" id="employer" name="employer" type="text" class="validate" value="<?php echo $row["emp_name"]; ?> " disabled>
                   <label for="Date">Company/Employer</label>
                 </div>
 
                 <div class="input-field col s6">
-                  <input placeholder="Post Here!" id="available" type="text" class="validate">
+                  <input placeholder="Job Position Available" id="available" name="available" type="text" class="validate">
                   <label for="available">Job Position Available</label>
                 </div>
 
                 <!--Job Qualification-->
                 <p class="center-align kenneth">Job Qualification/s</p><br>
 
-                 <p class="right-align">
-                  <a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Job Qualification</a>
+                 <p class="center-align">
+                  <a href = "javascript:void(0)" class="add-qualification waves-effect blue btn"><i class="material-icons left">add</i>Add Job Qualification</a>
                 </p>
-
-                <div class="input-field col s12">
-                  <input placeholder="Post Here!" id="jobquali" type="text" class="validate">
-                  <label for="jobquali">Job Qualification</label>
+                <div class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Job Qualification" id="jobquali" type="text" class="validate">
+                    </div>
+                  </div>
                 </div>
+                <form>
+                  <div class="paste-new-qualification">
+                  </div>
+                </form>
 
                 <!--Job Requirements-->
                 <p class="center-align kenneth">Job Requirement/s</p><br>
 
-                 <p class="right-align">
-                  <a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Job Requirements</a>
+                <p class="center-align">
+                  <a href = "javascript:void(0)" class="add-requirement waves-effect blue btn"><i class="material-icons left">add</i>Add Job Requirement</a>
                 </p>
-
-                <div class="input-field col s12">
-                  <input placeholder="Post Here!" id="jobreq" type="text" class="validate">
-                  <label for="jobreq">Job Requirements</label>
+                <div class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Job Requirement" id="jobreq" type="text" class="validate">
+                    </div>
+                  </div>
                 </div>
 
-                 <!--Other Notes-->
-                <p class="center-align kenneth">Other Note/s</p><br>
+                <form>
+                  <div class="paste-new-requirement">
+                  </div>
+                </form>
 
-                 <p class="right-align">
-                  <a class="waves-effect blue btn"><i class="material-icons left">add</i>Add Note</a>
-                </p>
+                 <!--Other Notes-->
+                <p class="center-align kenneth">Other Notes</p>
 
                 <div class="input-field col s12">
-                  <input placeholder="Post Here!" id="notes" type="text" class="validate">
-                  <label for="notes">Other Notes</label>
+                  <input placeholder="Additional Notes" id="notes" type="text" class="validate">
                 </div>
 
                 <p class="center-align">
-                  <a class="btn waves-effect blue"><i class="material-icons">post_add</i></a>
-                  <a class="btn waves-effect red"><i class="material-icons">clear</i></a>
+                  <a id="postjob" name="postjob" class="btn waves-effect blue"><i class="material-icons">post_add</i></a>
+                  <a id="updatep" name="updatep" class="btn waves-effect red"><i class="material-icons">clear</i></a>
                 </p>
 
               </div>
@@ -176,7 +215,10 @@
     </div>
   </div><br><br>
 </div>
-
+<?php
+  }
+} 
+?>
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
@@ -206,9 +248,50 @@
 
 
   <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
+  <script>
+	  $(document).ready(function (){
+		  $(document).on('click', '.add-qualification', function(){
+        $('.paste-new-qualification').append('<div class="quali">\
+                    <div class="col s12">\
+                      <div class="row">\
+                          <div class="input-field col s10">\
+                            <input placeholder="Job Qualification" id="jobquali" type="text" class="validate">\
+                          </div>\
+                          <a id="remove" name="remove" class="remove-quali btn waves-effect red"><i class="material-icons">clear</i></a>\
+                      </div>\
+                  </div>\
+                </div>\
+        ')
+		  });
+
+      $(document).on('click', '.remove-quali', function(){
+        $(this).closest('.quali').remove();
+      });
+
+      $(document).on('click', '.add-requirement', function(){
+        $('.paste-new-requirement').append('<div class="req">\
+                    <div class="col s12">\
+                      <div class="row">\
+                          <div class="input-field col s10">\
+                          <input placeholder="Job Requirement" id="jobreq" type="text" class="validate">\
+                          </div>\
+                          <a id="remove" name="remove" class="remove-req btn waves-effect red"><i class="material-icons">clear</i></a>\
+                      </div>\
+                  </div>\
+                </div>\
+        ')
+		  });
+
+      $(document).on('click', '.remove-req', function(){
+        $(this).closest('.req').remove();
+      });
+
+	  });
+  </script>
 
   </body>
 </html>

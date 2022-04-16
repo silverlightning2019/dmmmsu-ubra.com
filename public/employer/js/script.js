@@ -217,4 +217,30 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#postjob").click(function(){
+		var job_id=$("#job_id").get(0).value;
+		var job_position=$("#job_position").get(0).value;
+		var location=$("#location").get(0).value;
+		var employer=$("#employer").get(0).value;
+		var available=$("#available").get(0).value;
+
+		$.post("http://www.localhost/ubra/public/employer/postjob",JSON.stringify ({
+			job_id: job_id,
+			job_position: job_position,
+			location: location,
+			employer: employer,
+			available: available,
+		}),
+		function(data,status){
+			alert("Data: " + data + "\nStatus: " + status);
+			var json=JSON.parse(data);
+			if(json.status=="success"){
+				self.location="http://www.localhost/ubra/public/employer/home.php";
+			}else{
+				alert(json.data.title);
+				self.location="http://www.localhost/ubra/public/employer/home.php";
+			}
+		});
+	});
 });
