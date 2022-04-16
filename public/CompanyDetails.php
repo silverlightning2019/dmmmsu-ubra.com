@@ -47,6 +47,11 @@
      margin-bottom:15px !important;
     }
 
+    .job-title1{
+      font-size: 20px;
+      margin: 0 auto;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body class="body">
@@ -77,45 +82,52 @@
 <!--Banner-->
   <div class="section no-pad-bot work" id="index-banner">
     <div class="container">
-      <div class="row">
-        <h4 class="header center-align blue-grey-text">Details</h4>
-        <h5 class="center-align light">See Details Here!</h5>
-      </div>
+      <h5 class="header blue-grey-text">Details</h5>
+      <h5 class="light">See Details Here!</h5>
     </div>
   </div>
 
 <!--Details-->
 <div class="container">
-  <br>
-  <div class="col s12 m7">
-      <div class="card horizontal card1">
-        <div class="card-stacked">
-          <div class="card-content">
-            <h3 class="center job-title">Job Title</h3><hr><br>
-            <h4 class="job-title1">Job Qualification/s:</h4><br>
-            <p class="left-align qualifications"> Qualifications </p>
-            <p class="left-align qualifications"> Qualifications </p>
-            <p class="left-align qualifications"> Qualifications </p>
-            <p class="left-align qualifications"> Qualifications </p>
-            <p class="left-align qualifications"> Qualifications </p><br>
+  <div class="row">
+    <div class="col s12 m8">
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <h3 class="center job-title">Job Title</h3><hr><br>
+              <h5 class="job-title1">Job Qualification/s:</h5><br>
+              <p class="left-align qualifications"> Qualifications </p>
+              <p class="left-align qualifications"> Qualifications </p>
+              <p class="left-align qualifications"> Qualifications </p>
+              <p class="left-align qualifications"> Qualifications </p>
+              <p class="left-align qualifications"> Qualifications </p><br>
 
-            <h4 class="job-title1">Job Requirement/s:</h4><br>
-            <p class="left-align qualifications"> Requirements </p>
-            <p class="left-align qualifications"> Requirements </p>
-            <p class="left-align qualifications"> Requirements </p>
-            <p class="left-align qualifications"> Requirements </p><br>
+              <h4 class="job-title1">Job Requirement/s:</h4><br>
+              <p class="left-align qualifications"> Requirements </p>
+              <p class="left-align qualifications"> Requirements </p>
+              <p class="left-align qualifications"> Requirements </p>
+              <p class="left-align qualifications"> Requirements </p><br>
 
-            <h4 class="job-title1">Other Note/s:</h4><br>
-            <p class="left-align qualifications"> Requirements </p>
-            <br><br>
+              <h4 class="job-title1">Other Note/s:</h4><br>
+              <p class="left-align qualifications"> Requirements </p>
+              
+            </div>
           </div>
         </div>
       </div>
-    </div><br>
-  </div>       
 
-
-
+    <div class="col s12 m4">  
+      <div class="card-content">
+        <ul class="collection with-header">
+          <li class="collection-header"><h5 class="center-align" style="font-size:500">Job Summary</h5></li>
+          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Company Name: <span class="grey-text">DMMMSU-MLUC</span></li>
+          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Category: <span class="grey-text">ALALLALA</span></li>
+          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Vacancy: <span class="grey-text">3 position Available</span></li>
+        </ul>
+      </div> 
+    </div>
+  </div><br>
+</div>  
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
@@ -126,7 +138,7 @@
           <p class="grey-text text-lighten-4">UBRA is a Job Finder System by DMMMSU-MLUC to help
           people, graduates and working students find the suitable job for them.</p>
         </div>
-        <div class="col l4 offset-l2 s12">
+        <div class="col l3 s12">
           <h5 class="white-text">Connect With Us</h5>
           <ul>
             <li><a class="white-text" href="#!"><i class="material-icons material1">phone</i>09997589145</a></li>
