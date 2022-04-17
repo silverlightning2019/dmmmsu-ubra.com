@@ -3,6 +3,17 @@
 	if (!isset($_SESSION['emp_uname'])){
 		header("location: ./");
 	}
+
+  $conn = mysqli_connect("localhost","root","","ubra");
+  $query = "SELECT * FROM employer WHERE emp_uname='{$_SESSION['emp_uname']}'";
+  $result = mysqli_query($conn, $query);
+  if ($result->num_rows > 0)
+  {
+    while($row = mysqli_fetch_assoc($result)){
+      $_SESSION['employer']=$row["emp_name"];
+      //echo $_SESSION['employer'];
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -157,7 +168,7 @@
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
-          <p class="center abc">Post/Edit Job Registration</p><br>
+          <p class="center abc">Post Job Registration</p><br>
           <p class="center blue-grey-text abcd">Post Now!</p>
         </div>
       </div>

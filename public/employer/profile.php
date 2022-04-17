@@ -15,10 +15,10 @@
   }
 
   $sql = "SELECT * FROM employer WHERE emp_uname='{$_SESSION['emp_uname']}'";
-  $result = $conn->query($sql);	
-  if ($result->num_rows > 0)  
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0)
   {
-    while ($row = mysqli_fetch_assoc($result)){
+    while($row = mysqli_fetch_assoc($result)){
 ?>
 <!DOCTYPE html>
 <html lang="en">

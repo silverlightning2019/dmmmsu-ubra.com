@@ -10,7 +10,7 @@
 
 	$conn = mysqli_connect($servername, $username, $password, $dbname);
 	$query2 = "SELECT * FROM job ORDER BY job_id DESC LIMIT 1";
-  $result2 = mysqli_query($conn,$query2);
+    $result2 = mysqli_query($conn,$query2);
 	if (mysqli_num_rows($result2) == 0) { 
 		$job_id = "JOB1";
 	}
@@ -21,27 +21,13 @@
       $job_id = intval($job_id);
       $job_id = "JOB" . ($job_id + 1);
 	}
-  if (isset($_POST['next'])) {
-		foreach ($_POST as $key => $value)
-		{
-			$_SESSION ['info'][$key] = $value;
-		}
-
-		$keys = array_keys($_SESSION['info']);
-
-		if (in_array('next', $keys)) {
-			unset($_SESSION['info']['next']);
-		}
-	}
-
-    $_SESSION['job_id'] = $job_id;
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Post/Edit Job Registration/Step 1</title>
+  <title>Post/Edit Job Registration</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -108,7 +94,7 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="home.php">Home</a></li>
         <li><a href="profile.php">Company Profile</a></li>
-        <li><a href="job-annoucements.php">Job Announcements</a></li>
+        <li><a href="job-annoucements.php">Job Announcements</a></l
         <li><a href="job-registered.php">Job Registered</a></li>
         <li><a href="logout.php">Log Out</a></li>
       </ul>
@@ -120,22 +106,22 @@
 <!--Banner-->
   <div class="section no-pad-bot work" id="index-banner">
     <div class="container">
-      <h5 class="header left-align blue-grey-text">Step 1!</h5>
+      <h4 class="header left-align blue-grey-text">Job Registration Here!</h4>
     </div>
   </div>
 
 <!--Post and Edit-->
 <div class="container">
 <div class="col s12 m7">
-    <div class="card horizontal" style="margin-top:20px;margin-bottom: 107px;">
+    <div class="card horizontal">
       <div class="card-stacked">
         <div class="card-content cardhorizontal">
           <div class="row">
             <form class="col s12">
               <div class="row">
-
-                <input type="hidden" name="job_id" id="job_id" class="validate" value="<?php echo $job_id; ?>" placeholder="Job ID">
-
+                <div class="input-field col s12">
+                  <input type="text" name="job_id" id="job_id" class="validate" value="<?php echo $job_id; ?>" placeholder="Job ID" readonly>
+                </div>
                 <?php
                   include 'database.php';
 
@@ -152,38 +138,82 @@
                   {
                     while ($row = mysqli_fetch_assoc($result)){
                 ?>
-                
-                <div class="input-field col s12 m6">
+                <div class="input-field col s6">
                   <input placeholder="Job Position" id="job_position" name="job_position" type="text" class="validate">
                   <label for="jobtitle">Job Position</label>
                 </div>
 
-                <div class="input-field col s12 m6">
-                  <input placeholder="Location" id="job_location" name="job_location" type="text" class="validate" value="<?php echo $row["emp_barangay"]. $row["emp_municipal"].$row["emp_province"];?>" disabled>
-                  <label for="job_location">Location</label>
+                <div class="input-field col s6">
+                  <input placeholder="Location" id="location" name="location" type="text" class="validate">
+                  <label for="location">Location</label>
                 </div>
 
-                <div class="input-field col s12 m6">
+                <div class="input-field col s6">
                   <input placeholder="Company/Employer" id="employer" name="employer" type="text" class="validate" value="<?php echo $row["emp_name"]; ?> " disabled>
                   <label for="Date">Company/Employer</label>
                 </div>
 
-                <div class="input-field col s12 m6">
+                <div class="input-field col s6">
                   <input placeholder="Job Position Available" id="available" name="available" type="text" class="validate">
                   <label for="available">Job Position Available</label>
                 </div>
 
-                <div class="center ">
-                  <a class="btn btn-medium waves-effect waves-light blue disabled"><i class="material-icons">navigate_before</i></a>
-                  <a id="postjob" name="postjob" class="btn btn-medium waves-effect waves-light blue"><i class="material-icons">navigate_next</i></a>
+                <!--Job Qualification-->
+                <p class="center-align kenneth">Job Qualification/s</p><br>
+
+                 <p class="center-align">
+                  <a href = "javascript:void(0)" class="add-qualification waves-effect blue btn"><i class="material-icons left">add</i>Add Job Qualification</a>
+                </p>
+                <div class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Job Qualification" id="jobquali" type="text" class="validate">
+                    </div>
+                  </div>
                 </div>
+                <form>
+                  <div class="paste-new-qualification">
+                  </div>
+                </form>
+
+                <!--Job Requirements-->
+                <p class="center-align kenneth">Job Requirement/s</p><br>
+
+                <p class="center-align">
+                  <a href = "javascript:void(0)" class="add-requirement waves-effect blue btn"><i class="material-icons left">add</i>Add Job Requirement</a>
+                </p>
+                <div class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <input placeholder="Job Requirement" id="jobreq" type="text" class="validate">
+                    </div>
+                  </div>
+                </div>
+
+                <form>
+                  <div class="paste-new-requirement">
+                  </div>
+                </form>
+
+                 <!--Other Notes-->
+                <p class="center-align kenneth">Other Notes</p>
+
+                <div class="input-field col s12">
+                  <input placeholder="Additional Notes" id="notes" type="text" class="validate">
+                </div>
+
+                <p class="center-align">
+                  <a id="postjob" name="postjob" class="btn waves-effect blue"><i class="material-icons">post_add</i></a>
+                  <a id="updatep" name="updatep" class="btn waves-effect red"><i class="material-icons">clear</i></a>
+                </p>
+
               </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div><br><br>
 </div>
 <?php
   }
@@ -199,7 +229,7 @@
           <p class="grey-text text-lighten-4">UBRA is a Job Finder System by DMMMSU-MLUC to help
           people, graduates and working students find the suitable job for them.</p>
         </div>
-        <div class="col l3 s12">
+        <div class="col l4 offset-l2 s12">
           <h5 class="white-text">Connect With Us</h5>
           <ul>
             <li><a class="white-text" href="#!"><i class="material-icons material1">phone</i>09997589145</a></li>
@@ -218,13 +248,49 @@
 
 
   <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script type="text/javascript">
-	  function preventBack(){window.history.forward()};
-	  setTimeout("preventBack()",0);
-			window.onunload=function(){null;}
+  <script>
+	  $(document).ready(function (){
+		  $(document).on('click', '.add-qualification', function(){
+        $('.paste-new-qualification').append('<div class="quali">\
+                    <div class="col s12">\
+                      <div class="row">\
+                          <div class="input-field col s10">\
+                            <input placeholder="Job Qualification" id="jobquali" type="text" class="validate">\
+                          </div>\
+                          <a id="remove" name="remove" class="remove-quali btn waves-effect red"><i class="material-icons">clear</i></a>\
+                      </div>\
+                  </div>\
+                </div>\
+        ')
+		  });
+
+      $(document).on('click', '.remove-quali', function(){
+        $(this).closest('.quali').remove();
+      });
+
+      $(document).on('click', '.add-requirement', function(){
+        $('.paste-new-requirement').append('<div class="req">\
+                    <div class="col s12">\
+                      <div class="row">\
+                          <div class="input-field col s10">\
+                          <input placeholder="Job Requirement" id="jobreq" type="text" class="validate">\
+                          </div>\
+                          <a id="remove" name="remove" class="remove-req btn waves-effect red"><i class="material-icons">clear</i></a>\
+                      </div>\
+                  </div>\
+                </div>\
+        ')
+		  });
+
+      $(document).on('click', '.remove-req', function(){
+        $(this).closest('.req').remove();
+      });
+
+	  });
   </script>
 
   </body>

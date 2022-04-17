@@ -173,12 +173,12 @@
 	
         $job_id =$data->job_id;
         $job_position =$data->job_position;
-        $location =$data->location;
+        $job_location =$data->job_location;
         $employer =$data->employer;
         $available =$data->available;
 
         include 'database.php';
-        
+
         try 
         {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
@@ -188,10 +188,12 @@
             $query = "SELECT * FROM job WHERE job_position='". $job_position ."' AND employer='". $employer ."'";
             
             $result = $conn->query($query);
+
             
+
             if ($result->rowCount() == 0) 
             {
-                $sql = "INSERT INTO job (job_id, job_position, location, employer, available) VALUES ('". $job_id ."', '". $job_position ."', '". $location ."', '". $employer ."', '". $available ."')";
+                $sql = "INSERT INTO job (job_id, job_position, job_location, employer, available) VALUES ('". $job_id ."', '". $job_position ."', '". $job_location ."', '". $employer ."', '". $available ."')";
                 $conn->exec($sql);
                 $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
             }
@@ -203,6 +205,34 @@
         catch(PDOException $e)
         {
             $response->getBody()->write(json_encode(array("status"=>"error","message"=>$e->getMessage())));
+        }
+        $conn = null;
+    });
+
+    //ADD NOTES
+    $app->post('/addnotes', function (Request $request, Response $response,array $args) {
+
+        $data=json_decode($request->getBody());
+	
+        $job_id =$data->job_id;
+        $notes =$data->notes;
+
+        include 'database.php';
+        
+        try 
+        {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
+
+            $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+            $query = "UPDATE job SET notes='". $notes ."' WHERE job_id='". $job_id ."'";;
+            
+            $conn->exec($query);
+            $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
+        }
+        catch(PDOException $e)
+        {
+            $response->getBody()->write(json_encode(array("status"=>"fail","data"=>array("title"=>"Other notes not added!"))));
         }
         $conn = null;
     });
