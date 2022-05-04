@@ -121,16 +121,32 @@
             <img src="img/dmmmsu.png">
           </div>
           <div class="card-content">
+            <form action="job-details.php" method="POST">
+            <input type="hidden" name="id" id="job_id" value="<?php echo $rows['job_id'];?>">
             <p class="job"><?php echo $rows['job_position'];?></p>
               <i class="material material-icons">place</i><?php echo $rows['job_location'];?><br>
               <i class="material material-icons">business</i><?php echo $rows['employer'];?><br>
               <i class="material material-icons">check_circle_outline</i><?php echo $rows['available'];?> position/s available<br><br>
               <p class="center-align">
-                  <a href="company-details.php" class="btn waves-effect blue"><i class="material-icons">info</i></a>
-                  <a href="CompanyJobRegistration.php" class="btn waves-effect blue"><i class="material-icons">edit</i></a>
-                  <a class="btn waves-effect red"><i class="material-icons">delete</i></a>
+                <button type="submit" class="btn waves-effect blue">SEE JOB DETAILS</button>
               </p>
+            </form>
+            <br>
+            <form action="edit-job.php" method="POST">
+              <input type="hidden" name="id" id="job_id" value="<?php echo $rows['job_id'];?>">
+              <p class="center-align">
+                <button type="submit" class="btn waves-effect blue">EDIT</button>
+              </p>
+            </form>
+            <br>
+            <form action="delete-job.php" method="POST">
+              <input type="hidden" name="id" id="job_id" value="<?php echo $rows['job_id'];?>">
+              <p class="center-align">
+                <button type="submit" class="btn waves-effect red">DELETE</button>
+              </p>
+            </form>
           </div>
+    
     </div>
   </div>
       
@@ -171,6 +187,12 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-
+  <script>
+    $(document).ready(function (){
+      $('.edit-btn').on('click', function(){
+        window.location.href="edit-job.php";
+      });
+    });
+  </script>
   </body>
 </html>

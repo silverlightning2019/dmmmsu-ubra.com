@@ -1,3 +1,21 @@
+<?php
+  include 'database.php';
+
+  $conn = new mysqli($servername, $username, $password,$dbname);
+
+  if ($conn->connect_error) 
+  {
+    die("Connection failed: " . $conn->connect_error);
+  }
+
+  $id = $_POST['id'];
+
+  $sql = "SELECT * FROM job WHERE job_id='$id'";
+  $result = $conn->query($sql);
+  if ($result->num_rows > 0)
+  {
+    while($row = mysqli_fetch_assoc($result)){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -94,23 +112,77 @@
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
-              <h3 class="center job-title">Job Title</h3><hr><br>
+              <h3 class="center job-title"><?php echo $row['job_position'];?></h3><hr><br>
+              <?php
+                }
+              }
+              ?>
               <h5 class="job-title1">Job Qualification/s:</h5><br>
-              <p class="left-align qualifications"> Qualifications </p>
-              <p class="left-align qualifications"> Qualifications </p>
-              <p class="left-align qualifications"> Qualifications </p>
-              <p class="left-align qualifications"> Qualifications </p>
-              <p class="left-align qualifications"> Qualifications </p><br>
+              <?php
+                include 'database.php';
+
+                $conn = new mysqli($servername, $username, $password,$dbname);
+              
+                if ($conn->connect_error) 
+                {
+                  die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM job_qualification WHERE job_id='$id'";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0)
+                {
+                  while($row = mysqli_fetch_assoc($result)){
+              ?>
+              <p class="left-align qualifications"> <?php echo $row['qualification'];?> </p>
+              <?php
+                  }
+                }
+              ?>
+              <br>
 
               <h4 class="job-title1">Job Requirement/s:</h4><br>
-              <p class="left-align qualifications"> Requirements </p>
-              <p class="left-align qualifications"> Requirements </p>
-              <p class="left-align qualifications"> Requirements </p>
-              <p class="left-align qualifications"> Requirements </p><br>
+              <?php
+                include 'database.php';
+
+                $conn = new mysqli($servername, $username, $password,$dbname);
+              
+                if ($conn->connect_error) 
+                {
+                  die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM job_requirements WHERE job_id='$id'";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0)
+                {
+                  while($row = mysqli_fetch_assoc($result)){
+              ?>
+              <p class="left-align qualifications"> <?php echo $row['requirements'];?> </p>
+              <?php
+                  }
+                }
+              ?>
+              <br>
 
               <h4 class="job-title1">Other Note/s:</h4><br>
-              <p class="left-align qualifications"> Requirements </p>
+              <?php
+                include 'database.php';
+
+                $conn = new mysqli($servername, $username, $password,$dbname);
               
+                if ($conn->connect_error) 
+                {
+                  die("Connection failed: " . $conn->connect_error);
+                }
+
+                $sql = "SELECT * FROM job WHERE job_id='$id'";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0)
+                {
+                  while($row = mysqli_fetch_assoc($result)){
+              ?>
+              <p class="left-align qualifications"> <?php echo $row['notes'];?> </p>
             </div>
           </div>
         </div>
@@ -119,15 +191,21 @@
     <div class="col s12 m4">  
       <div class="card-content">
         <ul class="collection with-header">
-          <li class="collection-header"><h5 class="center-align" style="font-size:500">Job Summary</h5></li>
-          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Company Name: <span class="grey-text">DMMMSU-MLUC</span></li>
-          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Category: <span class="grey-text">ALALLALA</span></li>
-          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Vacancy: <span class="grey-text">3 position Available</span></li>
+          <li class="collection-header"><h5 class="center-align" style="font-size: 18px;font-weight: 500">Job Summary</h5></li>
+          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Company Name <br><span class="grey-text">DMMMSU-MLUC</span></li>
+          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Category <br><span class="grey-text">School</span></li>
+          <li class="collection-item" style="font-size: 18px;font-weight: 500;">Vacancy <br><span class="grey-text"><?php echo $row['available'];?> position/s Available</span></li>
         </ul>
       </div> 
     </div>
   </div><br>
-</div>  
+</div>
+<?php
+  }
+}
+?>
+
+
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
@@ -138,7 +216,7 @@
           <p class="grey-text text-lighten-4">UBRA is a Job Finder System by DMMMSU-MLUC to help
           people, graduates and working students find the suitable job for them.</p>
         </div>
-        <div class="col l3 s12">
+        <div class="col l6 s12">
           <h5 class="white-text">Connect With Us</h5>
           <ul>
             <li><a class="white-text" href="#!"><i class="material-icons material1">phone</i>09997589145</a></li>

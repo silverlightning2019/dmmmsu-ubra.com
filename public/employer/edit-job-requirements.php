@@ -1,55 +1,20 @@
 <?php
-  session_start();
-	if (!isset($_SESSION['emp_uname'])){
+	session_start();
+  if (!isset($_SESSION['emp_uname'])){
 		header("location: ./");
-	}
-?>
-<?php
-
-	include 'database.php';
-
-	$conn = mysqli_connect($servername, $username, $password, $dbname);
-	$query2 = "SELECT * FROM job ORDER BY job_id DESC LIMIT 1";
-  $result2 = mysqli_query($conn,$query2);
-	if (mysqli_num_rows($result2) == 0) { 
-		$job_id = "JOB1";
-	}
-	else {
-		$row = mysqli_fetch_array($result2);
-    	$last_id = $row['job_id'];
-		  $job_id = substr($last_id, 3);
-      $job_id = intval($job_id);
-      $job_id = "JOB" . ($job_id + 1);
-	}
-  if (isset($_POST['next'])) {
-		foreach ($_POST as $key => $value)
-		{
-			$_SESSION ['info'][$key] = $value;
-		}
-
-		$keys = array_keys($_SESSION['info']);
-
-		if (in_array('next', $keys)) {
-			unset($_SESSION['info']['next']);
-		}
-	}
-
-  $_SESSION['job_id'] = $job_id;
+	}	
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Post/Edit Job Registration/Step 1</title>
+  <title>Post/Edit Job Registration/Step 3</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/script.js"></script>
 
   <style>
     .logo{
@@ -120,62 +85,66 @@
 <!--Banner-->
   <div class="section no-pad-bot work" id="index-banner">
     <div class="container">
-      <h5 class="header left-align blue-grey-text">Step 1!</h5>
+      <h5 class="header left-align blue-grey-text">Step 3!</h5>
     </div>
   </div>
 
 <!--Post and Edit-->
 <div class="container">
 <div class="col s12 m7">
-    <div class="card horizontal" style="margin-top:20px;margin-bottom: 107px;">
+    <div class="card horizontal" style="margin-top:20px;margin-bottom: 145px;">
       <div class="card-stacked">
         <div class="card-content cardhorizontal">
           <div class="row">
-            <form class="col s12">
+            <form class="col s12" action="updaterequirements.php" method="POST">
               <div class="row">
+                <div class="center">
+                  <a href = "javascript:void(0)" class="add-requirement waves-effect waves-light btn blue" style="width:100%;margin-bottom: 10px;">Add Job Requirements</a>
+                </div>
 
-                <input type="hidden" name="job_id" id="job_id" class="validate" value="<?php echo $job_id; ?>" placeholder="Job ID">
+                <input type="hidden" name="job_id[]" id="job_id" class="validate" value="<?php echo $_SESSION['job_id']; ?>" placeholder="Job ID" readonly>
+                <?php
+                    include 'database.php';
+
+                    $conn = new mysqli($servername, $username, $password,$dbname);
+                
+                    if ($conn->connect_error) 
+                    {
+                    die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    $sql = "SELECT * FROM job_requirements WHERE job_id='{$_SESSION['job_id']}'";
+                    $result = $conn->query($sql);
+                    if ($result->num_rows > 0)
+                    {
+                    while($row = mysqli_fetch_assoc($result)){
+                ?>
+
+                <div class="req">
+                    <input type="hidden" name="job_id[]" id="job_id" class="validate" value="<?php echo $_SESSION['job_id']; ?>" placeholder="Job ID" readonly>
+                    <div class="col s12">
+                      <div class="row">
+                          <div class="input-field col s10">
+                          <input placeholder="Job Requirement" name="jobreq[]" id="jobreq" type="text" class="validate" value="<?php echo $row["requirements"]; ?>">
+                          </div>
+                          <a id="remove" name="remove" class="remove-req btn waves-effect red"><i class="material-icons">clear</i></a>
+                      </div>
+                  </div>
+                </div>
 
                 <?php
-                  include 'database.php';
-
-                  $conn = new mysqli($servername, $username, $password,$dbname);
-
-                  if ($conn->connect_error) 
-                  {
-                    die("Connection failed: " . $conn->connect_error);
                   }
-
-                  $sql = "SELECT * FROM employer WHERE emp_uname='{$_SESSION['emp_uname']}'";
-                  $result = $conn->query($sql);	
-                  if ($result->num_rows > 0)  
-                  {
-                    while ($row = mysqli_fetch_assoc($result)){
+                }
                 ?>
-                
-                <div class="input-field col s12 m6">
-                  <input placeholder="Job Position" id="job_position" name="job_position" type="text" class="validate">
-                  <label for="jobtitle">Job Position</label>
-                </div>
 
-                <div class="input-field col s12 m6">
-                  <input placeholder="Location" id="job_location" name="job_location" type="text" class="validate" value="<?php echo $row["emp_barangay"]. $row["emp_municipal"].$row["emp_province"];?>" disabled>
-                  <label for="job_location">Location</label>
-                </div>
+                <form>
+                  <div class="paste-new-requirement">
+                  </div>
+                </form>
 
-                <div class="input-field col s12 m6">
-                  <input placeholder="Company/Employer" id="employer" name="employer" type="text" class="validate" value="<?php echo $row["emp_name"]; ?> " disabled>
-                  <label for="Date">Company/Employer</label>
-                </div>
-
-                <div class="input-field col s12 m6">
-                  <input placeholder="Job Position Available" id="available" name="available" type="text" class="validate">
-                  <label for="available">Job Position Available</label>
-                </div>
-
-                <div class="center ">
-                  <a class="btn btn-medium waves-effect waves-light blue disabled"><i class="material-icons">navigate_before</i></a>
-                  <a id="postjob" name="postjob" class="btn btn-medium waves-effect waves-light blue"><i class="material-icons">navigate_next</i></a>
+                <div class="center">
+                  <a class="btn btn-medium waves-effect waves-light blue" href="Companyjrstep2.php"><i class="material-icons">navigate_before</i></a>
+                  <button type="submit" name="requirements" class="btn btn-medium waves-effect waves-light blue"><i class="material-icons">navigate_next</i></a>
                 </div>
               </div>
             </form>
@@ -185,10 +154,7 @@
     </div>
   </div>
 </div>
-<?php
-  }
-} 
-?>
+
 
 <!--Footer-->
   <footer class="page-footer  blue darken-4">
@@ -221,10 +187,29 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-  <script type="text/javascript">
-	  function preventBack(){window.history.forward()};
-	  setTimeout("preventBack()",0);
-			window.onunload=function(){null;}
+  <script>
+	  $(document).ready(function (){
+
+      $(document).on('click', '.add-requirement', function(){
+        $('.paste-new-requirement').append('<div class="req">\
+                    <input type="hidden" name="job_id[]" id="job_id" class="validate" value="<?php echo $_SESSION['job_id']; ?>" placeholder="Job ID" readonly>\
+                    <div class="col s12">\
+                      <div class="row">\
+                          <div class="input-field col s10">\
+                          <input placeholder="Job Requirement" name="jobreq[]" id="jobreq" type="text" class="validate">\
+                          </div>\
+                          <a id="remove" name="remove" class="remove-req btn waves-effect red"><i class="material-icons">clear</i></a>\
+                      </div>\
+                  </div>\
+                </div>\
+        ')
+		  });
+
+      $(document).on('click', '.remove-req', function(){
+        $(this).closest('.req').remove();
+      });
+
+	  });
   </script>
 
   </body>

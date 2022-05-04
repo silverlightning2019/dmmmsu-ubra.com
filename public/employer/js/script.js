@@ -228,11 +228,11 @@ $(document).ready(function(){
 		var available=$("#available").get(0).value;
 
 		if(job_position == '') {
-            $("#job_position").after('<span class="error">Please enter a job position.</span>');
+            alert("Please enter a Job Position");
             hasError = true;
         }
-		if(available == '') {
-            $("#available").after('<span class="error">Please enter available slots.</span>');
+		else if (available == '') {
+            alert("Please enter number of available spots for job.");
             hasError = true;
         }
 
@@ -278,5 +278,53 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$("#updatejob").click(function(){
+		var job_id=$("#job_id").get(0).value;
+		var job_position=$("#job_position").get(0).value;
+		var job_location=$("#job_location").get(0).value;
+		var employer=$("#employer").get(0).value;
+		var available=$("#available").get(0).value;
+
+		$.post("http://www.localhost/ubra/public/employer/updatejob",JSON.stringify ({
+			job_id: job_id,
+			job_position: job_position,
+			job_location: job_location,
+			employer: employer,
+			available: available
+		}),
+		function(data,status){
+			alert("Data: " + data + "\nStatus: " + status);
+			var json=JSON.parse(data);
+			if(json.status=="success"){
+				self.location="http://localhost/ubra/public/employer/edit-job-qualifications.php";
+			}else{
+				alert(json.data.title);
+				self.location="http://localhost/ubra/public/employer/edit-job-qualifications.php";
+			}
+		});
+	});
+
+	$("#updatenotes").click(function(){
+		var job_id=$("#job_id").get(0).value;
+		var notes=$("#notes").get(0).value;
+
+		$.post("http://www.localhost/ubra/public/employer/updatenotes",JSON.stringify ({
+			job_id: job_id,
+			notes: notes
+		}),
+		function(data,status){
+			alert("Data: " + data + "\nStatus: " + status);
+			var json=JSON.parse(data);
+			if(json.status=="success"){
+				self.location="http://localhost/ubra/public/employer/job-registered.php";
+			}else{
+				alert(json.data.title);
+				self.location="http://localhost/ubra/public/employer/job-registered.php";
+			}
+		});
+	});
+
+
 
 });

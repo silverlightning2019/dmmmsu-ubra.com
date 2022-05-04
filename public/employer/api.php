@@ -237,5 +237,64 @@
         $conn = null;
     });
 
+    //UPDATE JOB
+    $app->post('/updatejob', function (Request $request, Response $response,array $args) {
+
+        $data=json_decode($request->getBody());
+	
+        $job_id =$data->job_id;
+        $job_position =$data->job_position;
+        $job_location =$data->job_location;
+        $employer =$data->employer;
+        $available =$data->available;
+        
+        include 'database.php';
+        
+        try 
+        {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
+
+            $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+            $query = "UPDATE job SET job_position='". $job_position ."', job_location='". $job_location ."', employer='". $employer ."' , available='". $available ."' WHERE job_id='". $job_id ."'";;
+            
+            $conn->exec($query);
+            $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
+        }
+        catch(PDOException $e)
+        {
+            $response->getBody()->write(json_encode(array("status"=>"fail","data"=>array("title"=>"Profile not updated!"))));
+        }
+        $conn = null;
+    });
+
+    //UPDATE NOTES
+    $app->post('/updatenotes', function (Request $request, Response $response,array $args) {
+
+        $data=json_decode($request->getBody());
+	
+        $job_id =$data->job_id;
+        $notes =$data->notes;
+        
+        include 'database.php';
+        
+        try 
+        {
+            $conn = new PDO("mysql:host=$servername;dbname=$dbname",$username, $password);
+
+            $conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+
+            $query = "UPDATE job SET notes='". $notes ."' WHERE job_id='". $job_id ."'";;
+            
+            $conn->exec($query);
+            $response->getBody()->write(json_encode(array("status"=>"success","data"=>null)));
+        }
+        catch(PDOException $e)
+        {
+            $response->getBody()->write(json_encode(array("status"=>"fail","data"=>array("title"=>"Notes not updated!"))));
+        }
+        $conn = null;
+    });
+
     $app->run();
 ?>
