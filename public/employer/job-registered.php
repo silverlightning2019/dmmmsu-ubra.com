@@ -7,8 +7,6 @@
   $conn = mysqli_connect("localhost","root","","ubra");
   $query = "SELECT * FROM job WHERE employer='{$_SESSION['employer']}'";
   $result = mysqli_query($conn, $query);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
